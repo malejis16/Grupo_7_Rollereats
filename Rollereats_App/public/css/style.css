@@ -1,113 +1,90 @@
 .btn-login {
-    border-radius: 34px;
-};
+  border-radius: 34px;
+}
 
 #img-logo {
-    width: 158px;
-};
-
---------------------------------Cristian-------------------------------------
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
--------------------------------- Brayan -------------------------------------
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
---------------------------------- Alejandra -------------------------------------
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  width: 158px;
+}
+
+.container_0 {
+  font-family: Poppins;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.container_1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  background-color: antiquewhite;
+  height: 400px;
+  border-radius: 20px;
+  margin: 30px;
+  padding: 20px;
+}
+
+.container_2 {
+  align-self: stretch;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 10px;
+}
+.container_2 .c2h1 {
+  color: #ff702a;
+  font-weight: bold;
+  font-size: 20px;
+  align-self: center;
+  align-content: center;
+}
+
+.c2c2 {
+  background-color: antiquewhite;
+  transform: rotate(45deg);
+  width: 60px;
+  height: 60px;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+}
+.c2c2 .c2h2 {
+  padding: 10px;
+  color: #ff702a;
+  margin: 15px;
+  transform: rotate(-45deg);
+}
+.c2c3 {
+  background-color: #ff702a;
+  width: 100px;
+  border-radius: 20px;
+  height: 40px;
+  align-self: center;
+}
+.c2c3 .c2h3 {
+  color: black;
+  font-size: 10px;
+  margin: 2px;
+}
+
+.c2h3 .c2h3_1 {
+  font-size: 12px;
+  margin: 0px;
+}
+.c2h3 .c2h3_2 {
+  font-size: 12px;
+}
+
+.logo_1 {
+  width: 60px;
+  padding: 15px;
+  background: #fff;
+  border-radius: 10px;
+  margin: 0px;
+}
+.fas {
+}
