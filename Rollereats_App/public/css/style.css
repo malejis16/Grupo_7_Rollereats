@@ -6,6 +6,15 @@
   width: 158px;
 }
 
+.seccion-inicial {
+    background: img(../img/hotte_homebg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 250px 0;
+    position: relative;
+    z-index: 1;
+}
 .container_0 {
   font-family: Poppins;
   background-color: #fff;
