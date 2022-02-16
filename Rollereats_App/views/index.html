@@ -1,81 +1,95 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio | Rollereats</title>
-
-
-    <link rel="stylesheet" href="./css/Bootstrap.css"> 
     <link rel="stylesheet" href="./css/style.css">
-    <script src="https://kit.fontawesome.com/ea2382ba85.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    <div class="container">
-    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-        <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
-            <img id="img-logo" src="./img/Logo-FondoBlack.png" alt="logo">
+  </head>
+  <body>
+    <header>
+      <div class="bar-navegacion">
+        <a href="http://localhost:3001">
+          <img src="img/Logo-FondoBlackR.png" alt="Logo" id="logo" >
         </a>
-  
-        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-          <li><a href="#" class="nav-link px-2 link-secondary">Inicio</a></li>
-          <li><a href="#" class="nav-link px-2 link-dark">Restaurantes</a></li>
-          <li><a href="#" class="nav-link px-2 link-dark">Repartidor</a></li>
-          <li><a href="#" class="nav-link px-2 link-dark">Acerca de</a></li>
-          <li><a href="#" class="nav-link px-2 link-dark">About</a></li>
+        <div>
+          <p><i class="fa-solid fa-location-dot"></i> Bogota D.C</p>
+          <span> 00:00 pm</span>
+        </div>
+      </div>
+      <div class="" style="display: flex; align-items:center; align-content: center;">
+        <ul class="lista">
+          <li>
+            <a href="http://localhost:3001" class="text-li inicio"> Inicio</a>
+          </li>
+          <li>
+            <a href="#" class="text-li"> Restaurantes</a>
+          </li>
+          <li>
+            <a href="#"class="text-li"> Repartidor</a>
+          </li>
+          <li>
+            <a href="#" class="text-li"> Acerca de</a>
+          </li>
+          <li>
+            <a href="#" class="textW-li"> Ingreso</a>
+          </li>
         </ul>
-        <div class="col-md-3 text-end">
-          <button type="button" class="btn btn-dark me-2 px-4 btn-login">Ingreso</button>
-        </div>
-      </header>
+      </div>
+    </header>
 
-      <div class="seccion-inicial">
-        <div class="burbujas">
-          <img src="/img/Burbujas.png" alt="Burbujas">
+    <!-- Primera seccion del body - Header & buscador-->
+
+    <div class="primera-seccion">
+      <div class="barra-busqueda">
+        <h1>Pide <strong>Comida</strong> <br>y <strong class="vamonos">Vámonos</strong>.</h1>
+        <p>Encuentra restaurantes cerca de ti</p>
+        <form class="cont-form">
+          <input type="search" placeholder= " Ingresa aquí tu ubicación " id="buscar">
+          <input type="submit" value="Buscar" id="boton-buscar">
+        </form>
+      </div>
+      <a href="#"  id="ubi-actual"><i class="fa-solid fa-location-crosshairs"></i> Usar ubicación actual</a>
+      <img src="/img/Grupo 33.png" alt="Burbuja" id="burbuja">
+    </div>
+
+    <!-- Segunda seccion del body - Oferta especial-->
+
+    <section class = "container_0">
+      <div class = "container_1">
+        <div class = "logo_1">
+          <i class="fas fa-gift"></i>
         </div>
-        <div class="container">
-          <div class="row align-item-center">
-            <div primera_seccion_contenedor>
-              <h1>Pide <strong>Comida <br></strong>Y<strong> <u>Vámonos</u></strong>.</h1>
-              <p>Encuentra restaurantes cerca de ti</p>
-              <input type="text" class="icono-placeholder" placeholder="  Ingresa aquí tu ubicación">
+        <div class = "texto">
+          <h2><strong>Sorpresa Especial</strong></h2>
+          <span><strong>del dia de hoy</strong></span>
+          <p>Lorem ipsum dolor sit amet consectuter asdfre ftgrg sdgdsgds grrgsrg grgsrg fsrgfre</p>
+        </div>
+        <div class ="container_2">
+          <h3 class ="c2h1">20.700</h3>
+          <div class = c2c2>
+          <h3 class ="c2h2">01</h3>
+          </div>
+          <div class =c2c3>
+            <div class ="c2h3"> 
+              <h3 class ="c2h3_1">Ordenar</h3>
+              <h3 class ="c2h3_2">ahora</h3>
             </div>
           </div>
         </div>
       </div>
-
-      <section class = "container_0 text-center align-items-center">
-        <div class = "container_1 text-center">
-          <div class = "logo_1">
-            <i class="fas fa-gift"></i>
-          </div>
-          <div class = "texto">
-            <h2><strong>Sorpresa Especial</strong></h2>
-            <span><strong>del dia de hoy</strong></span>
-            <p>Lorem ipsum dolor sit amet consectuter asdfre ftgrg sdgdsgds grrgsrg grgsrg fsrgfre</p>
-          </div>
-          <div class ="container_2">
-            <h3 class ="c2h1">20.700</h3>
-            <div class = c2c2>
-              <h3 class ="c2h2">01</h3>
-            </div>
-            <div class =c2c3>
-              <div class ="c2h3"> 
-                <h3 class ="c2h3_1">Ordenar</h3>
-                <h3 class ="c2h3_2">ahora</h3>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class = "img_1">
-          <img src="img/food.png" alt ="imagen_1" width="450px">
-        </div>
-      </section>
-    </div>
+      <div class = "img_1">
+        <img src="/img/Hamburguesa.png" alt ="imagen_1">
+      </div>
+    </section>
 
     <footer>
 
     </footer>
-</body>
+
+    <!-- Documentacion .js -->
+    <script src="https://kit.fontawesome.com/ea2382ba85.js" crossorigin="anonymous"></script>
+    <script src="/js/main.js"></script> 
+  </body>
 </html>
