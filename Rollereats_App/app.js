@@ -11,3 +11,9 @@ app.listen(3001  , ()=>{
 app.get('/', (req,res)=>{
     res.sendFile(__dirname + '/views/index.html');
 });
+app.get('/Ingresar', (req,res)=>{
+    res.sendFile(__dirname + '/views/login.html');
+});
+app.get('/Registro', (req,res)=>{
+    res.sendFile(__dirname + '/views/register.html');
+});
