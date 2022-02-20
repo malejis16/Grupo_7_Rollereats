@@ -306,6 +306,7 @@ header span {
 }
 
 .logos {
+  font-size: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -327,4 +328,32 @@ header span {
 
 .texto .span_02 {
   font-size: 15px;
+}
+
+.container_01 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding-left: 30%;
+  padding-right: 30%;
+}
+.container_01 .T1 {
+  font-size: 15px;
+  font: normal normal 900 40px/70px Poppins;
+  color: #0a0626;
+}
+.container_01 .T2 {
+  font-size: 15px;
+  font: normal normal 900 40px/70px Poppins;
+  color: orangered;
+}
+.container_01 .T3 {
+  font-size: 8px;
+  color: gray;
+}
+
+.img_2 {
+  display: flex;
+  justify-content: center;
 }
