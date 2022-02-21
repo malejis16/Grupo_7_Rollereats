@@ -335,6 +335,7 @@ header span {
   justify-content: center;
   flex-direction: column;
   text-align: center;
+  padding-top: 2%;
   padding-left: 30%;
   padding-right: 30%;
 }
@@ -342,11 +343,13 @@ header span {
   font-size: 15px;
   font: normal normal 900 40px/70px Poppins;
   color: #0a0626;
+  height: 50px;
 }
 .container_01 .T2 {
   font-size: 15px;
   font: normal normal 900 40px/70px Poppins;
   color: orangered;
+  height: 50px;
 }
 .container_01 .T3 {
   font-size: 8px;
@@ -354,6 +357,7 @@ header span {
 }
 
 .img_2 {
+  margin-top: 2%;
   display: flex;
   justify-content: center;
 }
