@@ -17,3 +17,6 @@ app.get('/Ingresar', (req,res)=>{
 app.get('/Registro', (req,res)=>{
     res.sendFile(__dirname + '/views/register.html');
 });
+app.get('/Carrito', (req,res)=>{
+    res.sendFile(__dirname + '/views/productCart.html');
+});
