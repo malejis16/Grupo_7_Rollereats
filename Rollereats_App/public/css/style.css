@@ -291,7 +291,7 @@ header span {
   align-items: center;
   text-align: center;
   justify-content: space-around;
-  margin: 45px;
+  margin: 70px;
   border-radius: 15px;
   flex-direction: row;
 }
@@ -360,4 +360,19 @@ header span {
   margin-top: 2%;
   display: flex;
   justify-content: center;
+}
+
+.container_02 {
+  display: flex;
+  justify-content: center;
+}
+
+.Banner1 {
+  display: block;
+  height: 100%;
+}
+
+.container_03 {
+  display: block;
+  margin: 50px;
 }
