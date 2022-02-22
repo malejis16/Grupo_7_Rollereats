@@ -291,7 +291,10 @@ header span {
   align-items: center;
   text-align: center;
   justify-content: space-around;
-  margin: 70px;
+  margin-left: 110px;
+  margin-right: 110px;
+  margin-top: 50px;
+  margin-bottom: 50px;
   border-radius: 15px;
   flex-direction: row;
 }
@@ -335,9 +338,7 @@ header span {
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  padding-top: 2%;
-  padding-left: 30%;
-  padding-right: 30%;
+  padding: 3%;
 }
 .container_01 .T1 {
   font-size: 15px;
@@ -362,17 +363,29 @@ header span {
   justify-content: center;
 }
 
+.Banner {
+  width: 2000px;
+  margin-left: 110px;
+  margin-right: 110px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
 .container_02 {
   display: flex;
   justify-content: center;
+  height: 700px;
+  align-items: stretch;
+  margin: 0px;
 }
 
 .Banner1 {
-  display: block;
-  height: 100%;
+  width: 600px;
 }
 
 .container_03 {
   display: block;
-  margin: 50px;
+  width: 2200px;
+  position: relative;
+  left: 135px;
 }
