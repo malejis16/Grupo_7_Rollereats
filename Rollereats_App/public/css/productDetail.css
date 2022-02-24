@@ -1,0 +1,230 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+}
+/* Responsive web Design */
+/*320-767*/
+/*768-1023/
+/*1024 +*/
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+    header{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background: rgba(0, 0, 0, 0.22);
+        position: absolute;
+        width: 100%;
+        z-index: 1;
+    }
+
+        .header-item1{
+            display: flex;
+            align-items: center;
+        }
+            #logo{
+                padding: 5px 5px 5px 0;
+            }
+            .header-item1 p{
+                color: white;
+            }
+            #horario{
+                color: #ff702a;
+            }
+        .header-item2{
+
+        }
+            .h-item2-list{
+                display: flex;
+                list-style: none;
+                align-items: center;
+                background-color: #ff702a;
+                padding: 12px 15px;
+                border-radius: 7px;
+            }
+                .h-item2-list .text-li{
+                    display: none; 
+                    margin: 0 6px;
+                    text-decoration: none;
+                    color: black;
+                }
+                .h-item2-list .text-li-ingreso{
+                    background-color: black;
+                    color: white;
+                    padding: 12px 50px;
+                    border-radius: 36px;
+                }
+                .menu-Hamburguesa{
+                    background-color:#ff702a ;
+                    border-radius: 5px;
+                }
+    /* Sección portada */
+    
+    .imagen-Perfil{
+        background-image: url(/img/Img_Perfil.png);
+        background-repeat: no-repeat;
+        height: 450px;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items:flex-end;
+    }
+        .imagen-Perfil #Logotipo{
+            margin-bottom: -125px;
+            width: 250px;
+        }
+
+    /*Sección Descripcion*/
+
+    .descripcion{
+    
+    }
+        .descripcion-center{
+            text-align: center;
+            font-size: 1.4rem;
+            margin-top: 7.5rem;
+        }
+        .descripcion-item1{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 1rem 2rem;     
+        }
+            .descripcion-left p{
+                max-width: 230px;
+            }
+            .descripcion-rigth{
+                text-align: center;
+            }
+                .descripcion-rigth h4 span{
+                    color: #ff702a;
+                }
+
+    /* Seccion de barra de comidas y carrito  */
+
+    .barra-comidaAndcarrito{
+        display: flex;
+        align-items: center;
+        margin: 2rem 0;
+    }
+        .item-comidas{
+            display: flex;
+            overflow:auto;
+            white-space: nowrap;
+            width: 91%;
+            line-height: 3em;
+            background-color: #ff702a;
+
+        }   
+            .item-comidas a{
+                text-decoration: none;
+            }
+            .item-comidas a h4{
+                justify-content: center;
+                align-items: center;
+                color: black;
+                font-weight: 500;
+
+                padding: 0 2rem;
+            }
+            .item-comidas a h4:hover{
+                color: white;
+            }
+
+        .item-carrito{
+            display: flex;
+            justify-content: center;
+            color: white; 
+            background-color: black;
+            padding:  0 2rem;
+
+            text-align: center;
+        }
+            .item-carrito h4{
+                width: max-content; 
+                line-height: 3em;
+                font-weight: 500;
+            }
+
+    /* Seccion Articulos */
+
+    .articulos{
+        display: flex;
+        justify-content:center;
+        flex-wrap: wrap;
+        align-items: center;
+
+    }
+        .articulo-unico
+        {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #FAEFDE;
+            box-shadow: 12px 12px 24px 0 rgba(0, 0, 0, 0.2),
+            -12px -12px 24px 0 rgba(255, 255, 255, 0.5); 
+            margin: 0.5rem;
+            border-radius: 10px;
+        }
+            .imagen-articulo{
+                text-align: center;
+                height: 150px;
+                padding: 0.5rem 0;
+            }   
+            .descripcion-articulo{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-top:  1.5px #e1d7c8 solid ;
+                background: linear-gradient(145deg, #ffffee, #e1d7c8);
+                box-shadow: 12px 12px 24px 0 rgba(0, 0, 0, 0.2),
+                -12px -12px 24px 0 rgba(255, 255, 255, 0.5);
+            }
+                .nombre-precio{
+                    text-align: left;
+                    margin: 1rem;
+                }
+                .nombre-precio span{
+                    color: #ff702a;
+                }
+                .agregar-carrito{
+                    color: #ff702a;
+                    font-size: 2rem;
+                    margin: 1rem;
+                }
+
+/* @Media Query para pantallas de 767px - 1023px */
+
+@media(min-width:767px){
+    .h-item2-list .text-li{
+        display: block;
+    }
+    .menu-Hamburguesa{
+        display: none;
+    }
+    .h-item2-list{
+        border-radius: 34px;
+    }
+    .h-item2-list{
+        padding: 5px 0px 5px 20px;
+        border-radius: 34px;
+    }
+    .descripcion{
+        display: flex;
+        flex-direction: column;
+    }
+    .descripcion-item1{
+        order: -1;
+        margin: 0.5rem 4rem;
+    }
+    .descripcion-center{
+        margin-top: -2rem;
+    }
+}
+

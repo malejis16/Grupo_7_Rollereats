@@ -14,7 +14,6 @@ header {
   width: 100%;
   z-index: 1;
   margin: 0;
-
   background: rgba(0, 0, 0, 0.22);
   display: flex;
   justify-content: space-around;
@@ -358,6 +357,6 @@ header span {
 
 .img_2 {
   margin-top: 2%;
-  display: flex;
+  display: flex; 
   justify-content: center;
 }
