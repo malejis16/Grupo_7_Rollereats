@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
 
 * {
   font-family: "Poppins", sans-serif;
@@ -6,7 +6,6 @@
 
 body {
   margin: auto;
-  position: absolute;
 }
 
 /* Css Header */
@@ -198,6 +197,9 @@ header span {
   margin: 30px;
   padding: 40px;
 }
+.T3 h3{
+    font-size: 16px;
+}
 
 .container_2 {
   align-self: stretch;
@@ -356,6 +358,10 @@ header span {
 .container_01 .T3 {
   font-size: 8px;
   color: gray;
+}
+.container-02{
+  display: flex;
+  justify-content: center;
 }
 
 .img_2 {
