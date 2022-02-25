@@ -9,26 +9,36 @@
 </head>
 <body>
     <div class="con-login">
-        <h4>Ingreso</h4>
-        <p class="p-1">Bienvendido de vuelta, ingresa a tu cuenta</p>
-        <form action="" class="usuario"> 
-            <input type="text" placeholder="Usuario o correo electronico" id="ingreso">
-        </form>
-        <form action="" class="contraseña">
-            <input type="password" placeholder="Contraseña" id="ingreso">
-        </form>
-        <div class="con-login-ayu">
-            <label for="recuerdame">
-                <input type="checkbox" id="recuerdame">
-                Recuerdame
-            </label>
-            <a href="#">Ayuda</a>
-        </div>
-        <a  href="#" style="text-decoration: none;">¿Has olvidado tu contraseña?</a>
-        <form action="" class="button"> 
-            <input type="submit" value="Ingresar" for="ingreso">
-        </form>
-        <p>No tienes una cuenta <a href="http://localhost:3001/Registro">Registrate</a> </p>
+        <form class ="formulario de Registro" action ="/" method="POST">
+            <div>
+                <h4>Ingreso</h4>
+                <p class="p-1">Bienvendido de vuelta, ingresa a tu cuenta</p>
+            </div>
+            <div>  
+                <label for="ingreso" class="usuario"></label>
+                <input class ="input" type="text" placeholder="Usuario o correo electronico" id="ingreso">
+            </div>
+            <div>
+                <label for="ingreso" class="contraseña"></label>
+                <input class="input" type="password" placeholder="Contraseña" id="ingreso">
+            </div>
+            <div class="con-login-ayu">
+                <label for="recuerdame">
+                    <input type="checkbox" id="recuerdame">
+                    Recuerdame
+                </label>
+                <a href="#">Ayuda</a>
+            </div>
+            <div>
+                <a  href="#" style="text-decoration: none;">¿Has olvidado tu contraseña?</a>
+            </div>
+            <div>
+                <button class="button" type ="submit"> Ingresar </button>
+            </div>
+            <div>
+                <p>No tienes una cuenta <a href="http://localhost:3001/Registro">Registrate</a> </p>
+            </div>
+        </form>        
     </div>
     <script src="https://kit.fontawesome.com/ea2382ba85.js" crossorigin="anonymous"></script>
     <script src="/js/main.js"></script> 
