@@ -1,56 +1,54 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: poppins;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: poppins;
 }
-body{
-    background: #FAEFDE;
+body {
+  background: #faefde;
 }
 
-.con-register{
-    width: max-content;
-    /*margin: 50px 0 0 830px;*/
-    margin: 100px auto;
-    text-align: center;
-    padding: 50px 50px 25px 50px;
-    color: #494442;
-    font-size: 14px;
-    background: #FAEFDE;
-    box-shadow: 12px 12px 24px 0 rgba(0, 0, 0, 0.2),
+.con-register {
+  width: max-content;
+  /*margin: 50px 0 0 830px;*/
+  margin: 100px auto;
+  text-align: center;
+  padding: 50px 50px 25px 50px;
+  color: #494442;
+  font-size: 14px;
+  background: #faefde;
+  box-shadow: 12px 12px 24px 0 rgba(0, 0, 0, 0.2),
     -12px -12px 24px 0 rgba(255, 255, 255, 0.5);
-
 }
-h4{
-    text-align:left;
-    font-size: 22px;
-    font-weight: 600;
+h4 {
+  text-align: left;
+  font-size: 22px;
+  font-weight: 600;
 }
-.p-1{
-
-    text-align: left;
-    margin-bottom: 20px;
+.p-1 {
+  text-align: left;
+  margin-bottom: 20px;
 }
 
-.usuario input{
-    border: none;
-    border-radius: 34px;
-    width: 350px;
-    line-height: 2.5rem;
-    padding-left: 20px;
-    margin-bottom: 12px;
-    outline: none;
-    background: linear-gradient(145deg, #ffffee, #e1d7c8);
-    box-shadow: inset 2px 2px 5px 0 rgba(0, 0, 0, 0.6),
-    inset -0px -0px 0px 0 rgba(255, 255, 255, 0.5);    
+.usuario input {
+  border: none;
+  border-radius: 34px;
+  width: 350px;
+  line-height: 2.5rem;
+  padding-left: 20px;
+  margin-bottom: 12px;
+  outline: none;
+  background: linear-gradient(145deg, #ffffee, #e1d7c8);
+  box-shadow: inset 2px 2px 5px 0 rgba(0, 0, 0, 0.6),
+    inset -0px -0px 0px 0 rgba(255, 255, 255, 0.5);
 }
-.button{
-    margin: 15px 0;
-    border-radius: 36px;
-    padding: 0 25px;
-    line-height: 2.5rem;
-    border: none;
-    background: linear-gradient(145deg, #ffffee, #e1d7c8);
-    box-shadow: 12px 12px 24px 0 rgba(0, 0, 0, 0.2),
+.button {
+  margin: 15px 0;
+  border-radius: 36px;
+  padding: 0 25px;
+  line-height: 2.5rem;
+  border: none;
+  background: linear-gradient(145deg, #ffffee, #e1d7c8);
+  box-shadow: 12px 12px 24px 0 rgba(0, 0, 0, 0.2),
     -12px -12px 24px 0 rgba(255, 255, 255, 0.5);
 }

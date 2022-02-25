@@ -27,3 +27,7 @@ app.get("/productoDetalle", (req, res) => {
 app.post("/", (req, res) => {
   res.sendFile(__dirname + "/views/index.html");
 });
+
+app.post("/register", (req, res) => {
+  res.sendFile(__dirname + "/views/index.html");
+});
