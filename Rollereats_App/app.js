@@ -4,7 +4,7 @@ const app = express();
 
 app.use(express.static("public"));
 
-app.listen(3001, () => {
+app.listen(process.env.PORT ||3001, () => {
   console.log("Server Runing");
 });
 
@@ -21,7 +21,7 @@ app.get("/Carrito", (req, res) => {
   res.sendFile(__dirname + "/views/productCart.html");
 });
 app.get("/productoDetalle", (req, res) => {
-  res.sendFile(__dirname + "/views/productDetail.html");
+  res.sendFile(__dirname + "/views/productDetail.html"); 
 });
 
 app.post("/", (req, res) => {

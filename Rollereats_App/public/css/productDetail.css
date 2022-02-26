@@ -9,6 +9,7 @@
 /*768-1023/
 /*1024 +*/
 
+/* celular 375x537 */
 body{
     margin: 0;
     padding: 0;
@@ -41,7 +42,7 @@ header{
             color: white;
         }
         .ubicacion-horario{
-            font-size: calc(0.7rem + 0.3vw);
+            font-size: calc(0.8rem + 0.19vw);
         }
             #horario{
                 color: #ff702a;
@@ -62,7 +63,7 @@ header{
                 margin: 0 6px;
                 text-decoration: none;
                 color: black;
-                font-size: calc(0.7rem + 0.3vw);
+                font-size: calc(0.8rem + 0.19vw);
             }
                 .h-item2-list .text-li:hover{
                     color: white;
@@ -81,9 +82,101 @@ header{
                 }
             .menu-Hamburguesa{
                 background-color:#ff702a ;
-                border-radius: 5px;
-                font-size: calc(0.7rem + 0.3vw);
+                border-radius: 5px; 
+                font-size: calc(0.8rem + 0.19vw);
             }
+            .menu-Hamburguesa i{
+                color: black;
+            }
+            /* menu desplegable menu-hamburguesa */
+            .modal{
+                display: flex;
+                position: fixed;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                z-index: 2;
+                background-color: rgba(0, 0, 0, 0.411);
+                justify-content:right;
+
+                --opacity: 0;
+                --pointer: none;
+
+                opacity: var(--opacity);
+                pointer-events:var(--pointer);
+                transition: opacity .4s;
+            }
+                .modal:target{
+                    --opacity: 1;
+                    --pointer: unset;
+                }
+            .modal-menu{
+
+                display:flex;
+                flex-direction: column;
+                padding: 2.3vh 4.2vmax;
+                width: 100vw;
+                height: 100vh;
+                max-width: 24rem;
+                background-color: white;
+                
+            }
+                .modal:target .modal-menu{
+                    animation: show  1s .5s backwards;
+                }
+                @keyframes show {
+                    0%{
+                        transform: translateX(150vw);
+                    }
+                    100%{
+                        transform: translateX(0);
+                    }
+                }
+                .modal-menu .cerrar{
+                    align-self: flex-end;
+                    font-size: calc(1rem + 0.19vw);
+                    margin: 0 0 1rem 0;
+                    
+                }
+                .modal-menu .cerrar i{
+                    color:black;
+                }
+                hr{
+                    height: 1px;
+                    color: black;
+                }
+                .modal-menu .text-li{ 
+                    margin: 3rem 6px;
+                    text-decoration: none;
+                    color: black;
+                    font-size: calc(0.9rem + 0.19vw);
+                    background-color: #ff702a;
+                    padding: 3vh 7vmax;
+                    align-self: center;
+                    border-radius: 1rem;
+                    box-shadow: 12px 12px 24px 0 rgba(0, 0, 0, 0.2),
+                    -12px -12px 24px 0 rgba(255, 255, 255, 0.5);
+                }
+                .secciones{
+                    display: flex;
+                    flex-direction: column;
+                }
+                    .secciones a{
+                        text-decoration: none;
+                        padding: 1vh 2rem;
+                        color: #222;
+                        margin: 0.5rem 0.4rem;
+                        font-size: calc(0.9rem + 0.19vw);
+                    }
+                        .secciones a i{
+                            margin-right: 1.2rem;
+                        }
+                        .secciones a:hover{
+                            background-color: #ff702a;
+                            color: white;
+                        }
+
     /* Sección portada */
     
     .imagen-Perfil{
@@ -119,7 +212,7 @@ header{
         }
             .descripcion-left p{
                 max-width: 230px;
-                font-size: calc(0.7rem + 0.3vw);
+                font-size: calc(0.8rem + 0.19vw);
             }
             .descripcion-left h3{
                 font-size: calc(1rem + 0.3vw);
@@ -128,7 +221,7 @@ header{
                 text-align: center;
             }
                 .descripcion-rigth h4 {
-                    font-size: calc(0.7rem + 0.3vw);
+                    font-size: calc(0.8rem + 0.19vw); 
                 }
                 .descripcion-rigth h4 span{
                     color: #ff702a;
@@ -158,7 +251,7 @@ header{
                 align-items: center;
                 color: black;
                 font-weight: 500;
-                font-size: calc(0.7rem + 0.3vw);
+                font-size: calc(0.8rem + 0.19vw);
                 padding: 0 2rem;
             }
             .item-comidas a h4:hover{
@@ -177,7 +270,7 @@ header{
             .item-carrito h4{
                 width: max-content; 
                 font-weight: 500;
-                font-size: calc(0.7rem + 0.3vw);
+                font-size: calc(0.8rem + 0.19vw);
 
             }
 
@@ -188,6 +281,7 @@ header{
         justify-content:center;
         flex-wrap: wrap;
         align-items: center;
+        margin-top: 1rem;
 
     }
         .articulo-unico
@@ -195,9 +289,8 @@ header{
             display: flex;
             flex-direction: column;
             align-items: center;
-            background: #FAEFDE;
-            box-shadow: 12px 12px 24px 0 rgba(0, 0, 0, 0.2),
-            -12px -12px 24px 0 rgba(255, 255, 255, 0.5); 
+            -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+            box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
             margin: 0.5rem;
             border-radius: 10px;
         }
@@ -212,10 +305,9 @@ header{
             .descripcion-articulo{
                 display: flex;
                 align-items: center;
-                background: linear-gradient(145deg, #ffffee, #e1d7c8);
-                box-shadow: 12px 12px 24px 0 rgba(0, 0, 0, 0.2),
-                -12px -12px 24px 0 rgba(255, 255, 255, 0.5);
-                font-size: calc(0.7rem + 0.3vw);
+                background: #ffffff;
+                -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+                box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
             }
                 .nombre-precio{
                     text-align: left;
