@@ -10,9 +10,10 @@
 </head>
 <body>
     <!-- Encabezamiento -->
+    <!-- Encabezamiento -->
     <header>
         <div class="header-item1">
-            <a href="http://localhost:3001">
+            <a href="http://localhost:3001/">
                 <img src="img/Logo-FondoBlackR.png" alt="Logo" id="logo" >
             </a>
             <div class="ubicacion-horario">
@@ -23,10 +24,10 @@
         <div class="header-item2">
             <ul class="h-item2-list">
                 <li>
-                    <a href="http://localhost:3001" class="text-li inicio">Inicio</a>
+                    <a href="http://localhost:3001/" class="text-li inicio">Inicio</a>
                 </li>
                 <li>
-                    <a href="#" class="text-li">Restaurantes</a>
+                    <a href="http://localhost:3001/productoDetalle" class="text-li">Restaurantes</a>
                 </li>
                 <li>
                     <a href="#"class="text-li">Repartidor</a>
@@ -37,12 +38,25 @@
                 <li>
                     <a href="http://localhost:3001/Ingresar" class="text-li text-li-ingreso"> Ingreso</a>
                 </li>
-                <li class="menu-Hamburguesa">
-                    <i class="fa-solid fa-bars"></i>
+                <li class="menu-Hamburguesa" id="menu-Hamburguesa">
+                    <a href="#modal" class="cta"><i class="fa-solid fa-bars"></i></a> 
                 </li>
             </ul>
         </div>
     </header>
+    <section id="modal" class="modal">
+        <div class="modal-menu">
+            <a href="#menu-Hamburguesa" class="cerrar"><i class="fa-solid fa-xmark"></i></a>
+            <hr>
+            <a href="http://localhost:3001/Ingresar" class="text-li text-li-ingreso"> Ingresar</a>
+            <div class="secciones">
+                <a href="#"><i class="fa-solid fa-shop"></i> Registra tu restaurante</a>
+                <a href="#"><i class="fa-solid fa-cart-flatbed-suitcase"></i> Registra tu comercio</a>
+                <a href="#"><i class="fa-solid fa-motorcycle"></i> Quiero ser un repartidor</a>
+                <a href="#"><i class="fa-solid fa-circle-info"></i> Acerca de Rollereats</a>
+            </div>
+        </div>
+    </section>
     <!-- Sección inical - busqueda de restaurantes -->
     <div class="Seccion-inicial">
         <div class="texto-inicial">
@@ -58,7 +72,7 @@
         </form>
     </div>
     <div class="seccion-Especial">
-
+        
     </div>
 </body>
 </html>
