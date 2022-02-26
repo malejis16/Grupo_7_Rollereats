@@ -14,70 +14,90 @@ body{
     padding: 0;
 }
 
-    header{
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: rgba(0, 0, 0, 0.22);
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+    /* Clase usada para el scroll del header */
+    .abajo {
+        background: #222; /*Css para el scroll */
+    }
+    /* Elementos del Header */
+    .header-item1{
         display: flex;
         align-items: center;
-        justify-content: space-around;
-        background: rgba(0, 0, 0, 0.22);
-        position: absolute;
-        width: 100%;
-        z-index: 1;
     }
-
-        .header-item1{
-            display: flex;
-            align-items: center;
+        #logo{
+            padding: 5px 5px 5px 0;
+            width: 40vw;
+            max-width: 100px;
         }
-            #logo{
-                padding: 5px 5px 5px 0;
-            }
-            .header-item1 p{
-                color: white;
-            }
+        .header-item1 p{
+            color: white;
+        }
+        .ubicacion-horario{
+            font-size: calc(0.7rem + 0.3vw);
+        }
             #horario{
                 color: #ff702a;
             }
-        .header-item2{
+    .header-item2{
 
+    }
+        .h-item2-list{
+            display: flex;
+            list-style: none;
+            align-items: center;
+            background-color: #ff702a;
+            padding: 1.8vmax 2.5vmax;
+            border-radius: 7px;
         }
-            .h-item2-list{
-                display: flex;
-                list-style: none;
-                align-items: center;
-                background-color: #ff702a;
-                padding: 12px 15px;
-                border-radius: 7px;
+            .h-item2-list .text-li{
+                display: none; 
+                margin: 0 6px;
+                text-decoration: none;
+                color: black;
+                font-size: calc(0.7rem + 0.3vw);
             }
-                .h-item2-list .text-li{
-                    display: none; 
-                    margin: 0 6px;
-                    text-decoration: none;
-                    color: black;
-                }
-                .h-item2-list .text-li-ingreso{
-                    background-color: black;
+                .h-item2-list .text-li:hover{
                     color: white;
-                    padding: 12px 50px;
-                    border-radius: 36px;
                 }
-                .menu-Hamburguesa{
-                    background-color:#ff702a ;
-                    border-radius: 5px;
+                .h-item2-list .inicio{
+                    border-bottom: white 2px solid;
                 }
+            .h-item2-list .text-li-ingreso{
+                background-color: black;
+                color: white;
+                padding: 12px 50px;
+                border-radius: 36px;
+            }
+                .h-item2-list .text-li-ingreso:hover{
+                    color: #ff702a;
+                }
+            .menu-Hamburguesa{
+                background-color:#ff702a ;
+                border-radius: 5px;
+                font-size: calc(0.7rem + 0.3vw);
+            }
     /* Sección portada */
     
     .imagen-Perfil{
         background-image: url(/img/Img_Perfil.png);
         background-repeat: no-repeat;
-        height: 450px;
+        height: 60vh;
         background-size: cover;
         display: flex;
         justify-content: center;
         align-items:flex-end;
     }
         .imagen-Perfil #Logotipo{
-            margin-bottom: -125px;
-            width: 250px;
+            margin-bottom: -5.5rem;
+            width: 11rem;
         }
 
     /*Sección Descripcion*/
@@ -88,20 +108,28 @@ body{
         .descripcion-center{
             text-align: center;
             font-size: 1.4rem;
-            margin-top: 7.5rem;
+            margin-top: 5rem;
+            font-size: calc(1.1rem + 0.3vw);
         }
         .descripcion-item1{
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin: 1rem 2rem;     
+            margin: 1rem 4vw;     
         }
             .descripcion-left p{
                 max-width: 230px;
+                font-size: calc(0.7rem + 0.3vw);
+            }
+            .descripcion-left h3{
+                font-size: calc(1rem + 0.3vw);
             }
             .descripcion-rigth{
                 text-align: center;
             }
+                .descripcion-rigth h4 {
+                    font-size: calc(0.7rem + 0.3vw);
+                }
                 .descripcion-rigth h4 span{
                     color: #ff702a;
                 }
@@ -111,7 +139,7 @@ body{
     .barra-comidaAndcarrito{
         display: flex;
         align-items: center;
-        margin: 2rem 0;
+        margin: 1rem 0;
     }
         .item-comidas{
             display: flex;
@@ -130,7 +158,7 @@ body{
                 align-items: center;
                 color: black;
                 font-weight: 500;
-
+                font-size: calc(0.7rem + 0.3vw);
                 padding: 0 2rem;
             }
             .item-comidas a h4:hover{
@@ -143,13 +171,14 @@ body{
             color: white; 
             background-color: black;
             padding:  0 2rem;
-
+            line-height: 3em;
             text-align: center;
         }
             .item-carrito h4{
                 width: max-content; 
-                line-height: 3em;
                 font-weight: 500;
+                font-size: calc(0.7rem + 0.3vw);
+
             }
 
     /* Seccion Articulos */
@@ -173,18 +202,20 @@ body{
             border-radius: 10px;
         }
             .imagen-articulo{
-                text-align: center;
-                height: 150px;
-                padding: 0.5rem 0;
-            }   
+                text-align: center; 
+                padding: 1rem 0;
+            }
+            .imagen-articulo img{
+                width: 50vw;
+                max-width: 12.5rem;
+            } 
             .descripcion-articulo{
                 display: flex;
                 align-items: center;
-                justify-content: center;
-                border-top:  1.5px #e1d7c8 solid ;
                 background: linear-gradient(145deg, #ffffee, #e1d7c8);
                 box-shadow: 12px 12px 24px 0 rgba(0, 0, 0, 0.2),
                 -12px -12px 24px 0 rgba(255, 255, 255, 0.5);
+                font-size: calc(0.7rem + 0.3vw);
             }
                 .nombre-precio{
                     text-align: left;
@@ -195,7 +226,7 @@ body{
                 }
                 .agregar-carrito{
                     color: #ff702a;
-                    font-size: 2rem;
+                    font-size: calc(1.5rem + 0.3vw);
                     margin: 1rem;
                 }
 
@@ -225,7 +256,12 @@ body{
         margin: 0.5rem 4rem;
     }
     .descripcion-center{
-        margin-top: -2rem;
+        margin-top: 0.4rem;
+    }
+    .imagen-Perfil #Logotipo{
+        margin-bottom: -8.3rem;
+        width: 16.6rem;
     }
 }
 
+/* width: 15.4rem; para el logotippo  */

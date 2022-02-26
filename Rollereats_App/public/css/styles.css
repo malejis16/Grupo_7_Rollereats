@@ -1,0 +1,189 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+}
+/* Responsive web Design */
+/*320-767*/
+/*768-1023/
+/*1024 +*/
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+    header{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background: rgba(0, 0, 0, 0.22);
+        position: absolute;
+        width: 100%;
+        z-index: 1;
+    }
+        /* Clase usada para el scroll del header */
+        .abajo {
+            background: #222; /*Css para el scroll */
+        }
+        /* Elementos del Header */
+        .header-item1{
+            display: flex;
+            align-items: center;
+        }
+            #logo{
+                padding: 5px 5px 5px 0;
+                width: 40vw;
+                max-width: 100px;
+            }
+            .header-item1 p{
+                color: white;
+            }
+            .ubicacion-horario{
+                font-size: calc(0.7rem + 0.3vw);
+            }
+                #horario{
+                    color: #ff702a;
+                }
+        .header-item2{
+
+        }
+            .h-item2-list{
+                display: flex;
+                list-style: none;
+                align-items: center;
+                background-color: #ff702a;
+                padding: 1.8vmax 2.5vmax;
+                border-radius: 7px;
+            }
+                .h-item2-list .text-li{
+                    display: none; 
+                    margin: 0 6px;
+                    text-decoration: none;
+                    color: black;
+                    font-size: calc(0.7rem + 0.3vw);
+                }
+                    .h-item2-list .text-li:hover{
+                        color: white;
+                    }
+                    .h-item2-list .inicio{
+                        border-bottom: white 2px solid;
+                    }
+                .h-item2-list .text-li-ingreso{
+                    background-color: black;
+                    color: white;
+                    padding: 12px 50px;
+                    border-radius: 36px;
+                }
+                    .h-item2-list .text-li-ingreso:hover{
+                        color: #ff702a;
+                    }
+                .menu-Hamburguesa{
+                    background-color:#ff702a ;
+                    border-radius: 5px;
+                    font-size: calc(0.7rem + 0.3vw);
+                }
+    /* Sección inical - busqueda de restaurantes*/
+    
+    .Seccion-inicial{
+        background-image: url(/img/Fondo_inicio.png);
+        background-repeat: no-repeat;
+        height: 100vh;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }       
+        .texto-inicial{
+            text-align: center;
+        }
+            .texto-inicial h1{
+                color: white;
+                font-size: calc(1.3em + 3vw);
+            }
+                .texto-inicial strong {
+                    color: #ff702a;
+                    font-weight: 900;
+                }
+                    #palabra-vamonos{
+                        text-decoration: underline;
+                        text-decoration-color: white;
+                    }
+            .texto-inicial p {
+                color: white;
+                font-size: calc(0.7rem + 0.3vw);
+            }
+        .formulario-busqueda{
+            margin-top: 1rem;
+        }
+            .barra-busqueda{
+                background-color: white;
+                border-radius: 2rem;
+            }
+                .barra-busqueda #buscar{
+                    border: none;
+                    outline: none;
+                    margin: 0.1rem 0 0.1rem 3.8vmax;
+                    width: 50vw;
+                    font-size: calc(0.7em + 0.3vw);
+                }
+                .barra-busqueda #boton-buscar{
+                    background-color: black;
+                    color: #ff702a;
+                    border-radius: 2rem;
+                    border: none;
+                    padding: 1vmax 4.2vmax;
+                    margin: 0.2rem 0.4rem 0.2rem 0;
+                    font-size: calc(0.7em + 0.3vw);
+                }
+                #icono-ubicacion_actual{
+                    text-decoration: none;
+                    padding-left: 2vw ;
+                    color: white;
+                    font-size: calc(0.7em + 0.3vw);
+                }
+
+
+
+        .burbuja{
+            
+        }
+            .burbuja #img-burbuja{
+                width: 100px;
+                
+            } 
+
+/* @Media Query para pantallas de 767px - 1023px */
+
+@media(min-width:767px){
+    .h-item2-list .text-li{
+        display: block;
+    }
+    .menu-Hamburguesa{
+        display: none;
+    }
+    .h-item2-list{
+
+    }
+    .h-item2-list{
+        padding: 0.4vmax 0.2vmax 0.4vmax 2vmax;
+        border-radius: 34px;
+                border-radius: 34px;
+    }
+    .descripcion{
+        display: flex;
+        flex-direction: column;
+    }
+    .descripcion-item1{
+        order: -1;
+        margin: 0.5rem 4rem;
+    }
+    .descripcion-center{
+        margin-top: -2rem;
+    }
+    .burbuja #img-burbuja{
+        max-width: 300px;
+    }
+}
