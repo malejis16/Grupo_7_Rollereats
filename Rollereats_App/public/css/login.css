@@ -1,65 +1,99 @@
 * {
-  margin: 0;
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
   font-family: poppins;
 }
+
 body {
-  background: #faefde;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.con-login {
-  width: max-content;
-  /*margin: 50px 0 0 830px;*/
-  margin: 100px auto;
-  text-align: center;
-  padding: 50px 50px 25px 50px;
-  color: #494442;
-  font-size: 14px;
-  background: #faefde;
-  box-shadow: 12px 12px 24px 0 rgba(0, 0, 0, 0.2),
-    -12px -12px 24px 0 rgba(255, 255, 255, 0.5);
+header {
+  position: relative;
 }
-h4 {
-  text-align: left;
-  font-size: 22px;
-  font-weight: 600;
+
+.contenedor-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-.p-1 {
-  text-align: left;
-  margin-bottom: 20px;
+
+img {
+  width: 50vw;
 }
-.input {
+.formulario {
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  max-width: 400px;
+}
+.form {
   border: none;
   border-radius: 34px;
-  width: 350px;
-  line-height: 2.5rem;
+  line-height: 2rem;
   padding-left: 20px;
   margin-bottom: 12px;
   outline: none;
-  background: linear-gradient(145deg, #ffffee, #e1d7c8);
+  background: white;
   box-shadow: inset 2px 2px 5px 0 rgba(0, 0, 0, 0.6),
     inset -0px -0px 0px 0 rgba(255, 255, 255, 0.5);
 }
-
-.con-login-ayu {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 10px 15px;
-  outline: none;
+h3 {
+  margin-bottom: 0.8rem;
+  font-size: calc(1rem + 0.3vw);
 }
-
-.button {
-  margin: 15px 0;
+p {
+  font-size: calc(0.8rem + 0.19vw);
+  margin: 0.5rem 0;
+}
+::placeholder {
+  font-size: calc(0.8rem + 0.19vw);
+}
+[type="submit"] {
+  background-color: #46455a;
+  width: 50%;
   border-radius: 36px;
-  padding: 0 25px;
   line-height: 2.5rem;
   border: none;
-  background: linear-gradient(145deg, #ffffee, #e1d7c8);
   box-shadow: 12px 12px 24px 0 rgba(0, 0, 0, 0.2),
     -12px -12px 24px 0 rgba(255, 255, 255, 0.5);
+  align-self: center;
+  color: white;
+  margin: 1rem 0;
 }
-
+.rec-ayuda {
+  font-size: calc(0.8rem + 0.19vw);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+#olvido {
+  font-size: calc(0.8rem + 0.19vw);
+  align-self: center;
+  margin-bottom: 0.8rem;
+}
+.Resgistrate {
+  display: flex;
+  align-items: center;
+}
+#reg {
+  margin-left: 0.4rem;
+  font-size: calc(0.8rem + 0.19vw);
+}
 @media (min-width: 767px) {
+  .contenedor-login {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .formulario {
+    width: 400px;
+    max-width: 700px;
+  }
 }
