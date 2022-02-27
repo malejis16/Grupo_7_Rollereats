@@ -4,11 +4,8 @@ const app = express();
 
 app.use(express.static("public"));
 
-<<<<<<< HEAD
-app.listen(process.env.PORT || 3001, () => {
-=======
+
 app.listen(process.env.PORT ||3001, () => {
->>>>>>> Cristian
   console.log("Server Runing");
 });
 
