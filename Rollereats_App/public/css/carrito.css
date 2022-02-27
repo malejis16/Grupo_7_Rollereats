@@ -113,6 +113,9 @@ header i{
     display: flex;
     justify-content: center;
 }
+.con-pagar a{
+    text-decoration: none;
+}
 .pagar{
     padding: 8px 100px;
     border-radius: 12px;

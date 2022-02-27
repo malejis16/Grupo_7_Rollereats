@@ -1,36 +1,77 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/register.css">
-    <title>Registro | Rollereats</title>
+    <title>Rollereats || Register</title>
 </head>
 <body>
-    <div class="con-register">
-        <form action="/register" method="POST" class="usuario">
-            <div>
-                <h4>Registro</h4>
+        <!-- Encabezamiento -->
+        <header>
+            <div class="header-item1">
+                <a href="http://localhost:3001">
+                    <img src="/img/Logo-FondoBlackR.png" alt="Logo" id="logo" >
+                </a>
+                <div class="ubicacion-horario">
+                    <p><i class="fa-solid fa-location-dot"></i> Bogota D.C</p>
+                    <span id="horario"> 8AM- 12PM </span>
+                </div>
+            </div>
+            <div class="header-item2">
+                <ul class="h-item2-list">
+                    <li>
+                        <a href="http://localhost:3001" class="text-li inicio">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="http://localhost:3001/productoDetalle" class="text-li">Restaurantes</a>
+                    </li>
+                    <li>
+                        <a href="#"class="text-li">Repartidor</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-li">Acerca de</a>
+                    </li>
+                    <li>
+                        <a href="http://localhost:3001/Ingresar" class="text-li text-li-ingreso"> Ingreso</a>
+                    </li>
+                    <li class="menu-Hamburguesa" id="menu-Hamburguesa">
+                        <a href="#modal" class="cta"><i class="fa-solid fa-bars"></i></a> 
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <!-- modal menu de hamburguesa -->
+        <section id="modal" class="modal">
+            <div class="modal-menu">
+                <a href="#menu-Hamburguesa" class="cerrar"><i class="fa-solid fa-xmark"></i></a>
+                <hr>
+                <a href="http://localhost:3001/Ingresar" class="text-li text-li-ingreso"> Ingresar</a>
+                <div class="secciones">
+                    <a href="http://localhost:3001/productoDetalle"><i class="fa-solid fa-shop"></i> Registra tu restaurante</a>
+                    <a href="#"><i class="fa-solid fa-cart-flatbed-suitcase"></i> Registra tu comercio</a>
+                    <a href="#"><i class="fa-solid fa-motorcycle"></i> Quiero ser un repartidor</a>
+                    <a href="#"><i class="fa-solid fa-circle-info"></i> Acerca de Rollereats</a>
+                </div>
+            </div>
+        </section>
+        <!-- Formulario de registro -->
+    <div class="contenedor-principal">
+        <div class="con-register">
+            <img src="/img/undraw_Login_re_4vu22.png" alt="" id="imagen-registro">
+            <form action="/register" method="POST" class="formulario">
+                <h3>Registro</h3>
                 <p class="p-1">Crea una nueva cuenta</p>
-            </div>
-            <div>
-                <input type="email" placeholder="Correo electronico" id="e-mail"><br>
-            </div>
-            <div>
-                <input type="password" placeholder="Contraseña" id="contraseña"><br>
-            </div>
-            <div>
-                <input type="number" placeholder="Numero Telefonico" id="numero"><br>
-            </div>
-            <div>
-                <input type= "text" placeholder="Pais" id="pais"><br>
-            </div>
-            <div>
-                <button class="button">Registrar</button>
-            </div>
-        </form>
-        <p>¿Ya tienes una cuenta? <a href="http://localhost:3001/Ingresar">Inicia Sección</a></p>
+                <input  class="form" type="email" placeholder="Correo electronico" id="e-mail" required>
+                <input  class="form" type="password" placeholder="Contraseña" id="contraseña" required>
+                <input class="form" type="number" placeholder="Numero Telefonico" id="numero" required>
+                <input class="form" type= "text" placeholder="Pais" id="pais" required>
+                <button class="button" value="">Registrar</button>
+                <p id="red-ingreso">¿Ya tienes una cuenta? <a href="http://localhost:3001/Ingresar">Inicia Sesión</a></p>
+            </form>
+        </div>
     </div>
+    <script src="https://kit.fontawesome.com/ea2382ba85.js" crossorigin="anonymous"></script>
 </body>
 </html>

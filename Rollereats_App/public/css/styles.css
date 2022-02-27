@@ -25,7 +25,7 @@ header{
     }
     /* Elementos del Header */
     .header-item1{
-        display: flex;
+        display: flex; 
         align-items: center;
     }
         #logo{
@@ -132,8 +132,10 @@ header{
                     align-self: flex-end;
                     font-size: calc(1rem + 0.19vw);
                     margin: 0 0 1rem 0;
-
                 }
+                    .modal-menu .cerrar i{
+                        color:black;
+                    }
                 hr{
                     height: 1px;
                     color: black;
