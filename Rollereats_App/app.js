@@ -1,34 +1,19 @@
 const express = require("express");
-
 const app = express();
+var path = require("path");
+const rutas = require("./routes/mainRouter");
 
 app.use(express.static("public"));
-
+app.set("engine", "ejs");
+app.set("views", path.join(__dirname, "views"));
 
 app.listen(process.env.PORT || 3001, () => {
   console.log("Server Runing");
 });
 
-app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/views/index.html");
-});
-app.get("/Ingresar", (req, res) => {
-  res.sendFile(__dirname + "/views/login.html");
-});
-app.get("/Registro", (req, res) => {
-  res.sendFile(__dirname + "/views/register.html");
-});
-app.get("/Carrito", (req, res) => {
-  res.sendFile(__dirname + "/views/productCart.html");
-});
-app.get("/productoDetalle", (req, res) => {
-  res.sendFile(__dirname + "/views/productDetail.html");
-});
-
-app.post("/", (req, res) => {
-  res.sendFile(__dirname + "/views/index.html");
-});
-
-app.post("/register", (req, res) => {
-  res.sendFile(__dirname + "/views/index.html");
-});
+//Configuración
+app.use("/", rutas);
+app.use("/Ingresar", rutas);
+app.use("/Registro", rutas);
+app.use("/Carrito", rutas);
+app.use("/productoDetalle", rutas);
