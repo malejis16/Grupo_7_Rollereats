@@ -1,11 +1,11 @@
 {
   
-  "name": "rollereatspersonal",
+  "name": "rollereats_app",
   "version": "1.0.0",
   "main": "app.js",
   "devDependencies": {},
   "scripts": {
-    "dev": "nodemon app.js"
+    "dev": "nodemon ./src/app.js"
   },
   "keywords": [],
   "author": "",
