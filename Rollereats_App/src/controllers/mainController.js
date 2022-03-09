@@ -14,6 +14,9 @@ const mainController = {
   carro: function (req, res) {
     res.render("productos/carro");
   },
+  creacionProducto: function (req, res) {
+    res.render("productos/creacionProducto");
+  },
   restaurante: function (req, res) {
     res.render("restaurantes/restaurante");
   },

@@ -13,6 +13,7 @@ rutas.get("/register", controller.register);
 
 //Rutas Productos
 rutas.get("/carro", controller.carro);
+rutas.get("/creacionProducto", controller.creacionProducto);
 
 //Rutas Restaurantes
 rutas.get("/restaurante", controller.restaurante);

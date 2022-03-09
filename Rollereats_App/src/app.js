@@ -27,6 +27,7 @@ app.use("/registro_Comercio", rutas);
 app.use("/repartidor", rutas);
 app.use("/registro_Repartidor", rutas);
 app.use("/login_Repartidor", rutas);
+app.use("/creacionProducto", rutas);
 
 //Rutas Nosotros
 app.use("/about", rutas);
