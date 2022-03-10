@@ -1,3 +1,9 @@
+#Retroalimentación Sprint 3 entregado el 10/03/22
+
+Una de las fortalezas dentro del equipo, es que la distribucion de tareas se hace y se ejecuta correctamente, y con ello, se logra realizar los entregables acordados; Estos entregables se presentan al equipo en las reuniones programadas durante la semana, y alli realizar la revison de entregables y resolucion de dudas.
+
+Una de las más grandes debilidades es la distribuición de tiempo que cada integrante dedica al proyecto. Debido a esto, decidimos hablarlo internamente, y hemos decidido en este sigueinte sprint asignarnos tareas y reunirnos solo para rertoalimentarnos en tiempos muy cortos y determinados.
+
 #Retroalimentación Sprint 1 entregado el 08/02/22
 
 - Fortalezas:
