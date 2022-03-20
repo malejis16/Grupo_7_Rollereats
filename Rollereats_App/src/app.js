@@ -6,7 +6,7 @@ const routerNosotros = require("./routes/routerNosotros");
 const routerProductos = require("./routes/routerProductos");
 const routerRepartidor = require("./routes/routerRepartidor");
 const routerRestaurantes = require("./routes/routerRestaurantes");
-const routerUsers = require("./routes/routerUsers");
+const routerUsuarios = require("./routes/routerUsuarios");
 const methodOverride = require("method-override"); // Pasar poder usar los métodos PUT y DELETE
 
 //Express()
@@ -16,6 +16,8 @@ const app = express();
 //Middelwares
 app.use(express.static(path.join(__dirname, "../public")));
 app.use(methodOverride("_method")); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 
 //template Engine
 
@@ -31,22 +33,16 @@ app.use("/", mainRouter);
 app.use("/about", routerNosotros);
 
 //*****Rutas Productos**//
-//app.use("/carro", routerProductos);
+app.use("/productos", routerProductos);
 
 //**Rutas Repartidor**//
-//app.use("/repartidor", routerRepartidor);
-//app.use("/registro_Repartidor", routerRepartidor);
-//app.use("/login_Repartidor", routerRepartidor);
-//app.use("/creacionProducto", routerRepartidor);
+app.use("/repartidor", routerRepartidor);
 
 //**Rutas Restaurantes**//
-//app.use("/restaurante", routerRestaurantes);
-//app.use("/registro_Restaurante", routerRestaurantes);
-//app.use("/registro_Comercio", routerRestaurantes);
+app.use("/restaurantes", routerRestaurantes);
 
 //******Rutas Users*****//
-//app.use("/login", routerUsers);
-//app.use("/register", routerUsers);
+app.use("/usuarios", routerUsuarios);
 
 // **** Servidor ***** //
 app.listen(3000, () => {

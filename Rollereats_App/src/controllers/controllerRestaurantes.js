@@ -2,6 +2,9 @@
 const path = require("path");
 
 const mainController = {
+  restaurantes: function (req, res) {
+    res.render("restaurantes/restaurantes");
+  },
   restaurante: function (req, res) {
     res.render("restaurantes/restaurante");
   },

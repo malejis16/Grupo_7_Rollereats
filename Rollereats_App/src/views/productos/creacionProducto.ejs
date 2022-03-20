@@ -11,8 +11,7 @@
 <%- include('../partials/header.ejs') %>
 <body>
     <div class="contenedor-principal">
-        <form action="" method="POST" class="formulario">
-            <input class="form" placeholder="Imagen" type="file">
+        <form action="/productos/creacionProducto" method="POST" class="formulario">
             <input class="form" placeholder="Nombre" type="text">
             <input class="form" placeholder="Precio" type="number">
             <textarea class="form" name="" id="" placeholder="Descripcion" cols="30" rows="3"></textarea>
@@ -24,6 +23,7 @@
                 <option value="">Tacos</option>
                 <option value="">Bebidas</option>
             </select>
+            <input class="form" placeholder="Imagen" type="file">
             <button class="button">Crear</button>
         </form>
     </div>

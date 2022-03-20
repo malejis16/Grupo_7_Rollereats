@@ -1,0 +1,38 @@
+[
+  {
+    "id_Usuario": 1,
+    "correo_Usuario": "malejis16@hotmail.com",
+    "contraseña_Usuario": 12345,
+    "numero_Usuario": 3132715710,
+    "pais_Usuario": "Colombia"
+  },
+  {
+    "id_Usuario": 2,
+    "correo_Usuario": "rock@hotmail.com",
+    "contraseña_Usuario": 12345,
+    "numero_Usuario": 3132775710,
+    "pais_Usuario": "Colombia"
+  },
+  {
+    "id_Usuario": 3,
+    "correo_Usuario": "marco@hotmail.com",
+    "contraseña_Usuario": 67895,
+    "numero_Usuario": 3145798621,
+    "pais_Usuario": "Colombia"
+  },
+  {
+    "id_Usuario": 4,
+    "correo_Usuario": "luis@hotmail.com",
+    "contraseña_Usuario": 852,
+    "numero_Usuario": 3145748621,
+    "pais_Usuario": "Argentina"
+  },
+  {
+    "id_Usuario": 1647813677587,
+    "correo_Usuario": "alejis16@hotmail.com",
+    "contraseña_Usuario": "234324",
+    "numero_Usuario": "54435",
+    "pais_Usuario": "Alemania",
+    "imagen_Usuario": "imagen-1647813677574.jpg"
+  }
+]
