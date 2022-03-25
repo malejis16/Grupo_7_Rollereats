@@ -1,3 +1,11 @@
+#Retroalimentación Sprint 3 entregado el 24/03/22
+
+En este Sprint hemos tomado decisiones importantes como equipo de trabajo, principalmente hablando por los miembros que hemos estado al tanto del proyecto integrador desde el inicio de las entregas, (Cristian y Alejandra); Debido a que hace dos meses se ha propuesto de varias maneras al resto de los integrantes colaborar proactivamente en el proyecto, esperando de su apoyo, ayuda o gestión del trabajo, y al no recibirla, hemos tomado la decisión de separarnos y continuar nuestro proyecto trabajando juntos y comprometidamente como ha sido hasta el dia de hoy.
+
+Es una decisión que ha tomado tiempo ya que se buscaron soluciones y se plantearon propuestas para el manejo del tiempo, pero los compañeros nunca mostraron interes en realizar los sprints ni en colaborar.
+
+Esta desición la hemos tomado el dia 23 de Marzo del 2022, y a partir de este dia dejamos de compartir el proyecto Rollereats ubicado en GitHub/malejis16 con los compañeros que no han aportado mas del 5% de lo realizado.
+
 #Retroalimentación Sprint 3 entregado el 10/03/22
 
 Una de las fortalezas dentro del equipo, es que la distribucion de tareas se hace y se ejecuta correctamente, y con ello, se logra realizar los entregables acordados; Estos entregables se presentan al equipo en las reuniones programadas durante la semana, y alli realizar la revison de entregables y resolucion de dudas.
