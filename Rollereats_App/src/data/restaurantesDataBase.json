@@ -1,29 +1,29 @@
 [
     {
-      "id_Producto": 1,
-      "name_Producto": "Cafetera Moulinex Dolce Gusto Edited",
-      "price_Producto": 100,
-      "discount_Producto": 50,
-      "category_Producto": "visited",
-      "description_Producto": "Cafetera Dolce Gusto Lumio. La cafetera Dolce Gusto Lumio es de variedad automática que ha llegado con un diseño radical al que nos tenía acostumbrados Dolce Gusto.En este post te contamos todo lo que necesitas saber sobre ella, desde sus características técnicas hasta la calid_Productoad de las cápsulas o price_Producto.",
-      "image_Producto": "img-cafetera-moulinex.jpg"
+      "id_Restaurante": 1,
+      "name_Restaurante": "Cafetera Moulinex Dolce Gusto Edited",
+      "price_Restaurante": 100,
+      "discount_Restaurante": 50,
+      "category_Restaurante": "visited",
+      "description_Restaurante": "Cafetera Dolce Gusto Lumio. La cafetera Dolce Gusto Lumio es de variedad automática que ha llegado con un diseño radical al que nos tenía acostumbrados Dolce Gusto.En este post te contamos todo lo que necesitas saber sobre ella, desde sus características técnicas hasta la calid_Restaurantead de las cápsulas o price_Restaurante.",
+      "image_Restaurante": "img-cafetera-moulinex.jpg"
     },
     {
-      "id_Producto": 2,
-      "name_Producto": "Macbook Pro 2022",
-      "price_Producto": 500,
-      "discount_Producto": 3,
-      "category_Producto": "in-sale",
-      "description_Producto": "Macbook Pro 2019 Mpxq2ll/a Intel Core i5 2.3 Ghz 8gb RAM 128gb SSD Pantalla 13.3\" Retina Apple Nueva Original. Importada de USA. Se entrega con la factura de compra para contar con la garantía del fabricante",
-      "image_Producto": "img-macbook-pro-2019.jpg"
+      "id_Restaurante": 2,
+      "name_Restaurante": "Macbook Pro 2022",
+      "price_Restaurante": 500,
+      "discount_Restaurante": 3,
+      "category_Restaurante": "in-sale",
+      "description_Restaurante": "Macbook Pro 2019 Mpxq2ll/a Intel Core i5 2.3 Ghz 8gb RAM 128gb SSD Pantalla 13.3\" Retina Apple Nueva Original. Importada de USA. Se entrega con la factura de compra para contar con la garantía del fabricante",
+      "image_Restaurante": "img-macbook-pro-2019.jpg"
     },
     {
-      "id_Producto": 3,
-      "name_Producto": "Samsung Galaxy S10",
-      "price_Producto": 72999,
-      "discount_Producto": 25,
-      "category_Producto": "in-sale",
-      "description_Producto": "Experiencia visual excepcional. Mirá tus series y películas favoritas con la mejor definición.Tendrás colores brillantes y detalles precisos en todos tus contenid_Productoos.Disfrutá aún más del mejor entretenimiento gracias a su vasta pantalla y ángulos de visión amplios.",
-      "image_Producto": "img-samsung-galaxy-s10.jpg"
+      "id_Restaurante": 3,
+      "name_Restaurante": "Samsung Galaxy S10",
+      "price_Restaurante": 72999,
+      "discount_Restaurante": 25,
+      "category_Restaurante": "in-sale",
+      "description_Restaurante": "Experiencia visual excepcional. Mirá tus series y películas favoritas con la mejor definición.Tendrás colores brillantes y detalles precisos en todos tus contenid_Restauranteos.Disfrutá aún más del mejor entretenimiento gracias a su vasta pantalla y ángulos de visión amplios.",
+      "image_Restaurante": "img-samsung-galaxy-s10.jpg"
     }
   ]

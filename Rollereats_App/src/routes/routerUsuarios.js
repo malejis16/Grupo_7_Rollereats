@@ -8,7 +8,7 @@ const path = require("path");
 
 var storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, "./public/img/usuarios");
+    cb(null, "./public/img");
   },
   filename: function (req, file, cb) {
     console.log(file);
@@ -23,6 +23,7 @@ var upload = multer({ storage: storage });
 
 //Rutas Users
 
+rutas.get("/", controller.users);
 rutas.get("/login", controller.login);
 rutas.get("/register", controller.register);
 rutas.post("/", upload.single("imagen"), controller.store);

@@ -5,7 +5,7 @@ const mainController = {
   index: function (req, res) {
     res.render("index");
   },
-  login: function (req, res) {
+  /* login: function (req, res) {
     res.render("users/login");
   },
   register: function (req, res) {
@@ -37,7 +37,7 @@ const mainController = {
   },
   about: function (req, res) {
     res.render("nosotros/about");
-  },
+  },*/
 };
 
 module.exports = mainController;
