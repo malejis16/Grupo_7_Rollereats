@@ -23,6 +23,7 @@ var upload = multer({ storage: storage });
 
 //Rutas Users
 
+rutas.get("/", controller.users);
 rutas.get("/login", controller.login);
 rutas.get("/register", controller.register);
 rutas.post("/", upload.single("imagen"), controller.store);
