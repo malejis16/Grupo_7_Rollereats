@@ -5,6 +5,6 @@ const rutas = express.Router();
 const controller = require("../controllers/controllerNosotros");
 
 //Rutas Nosotros
-rutas.use("/about", controller.about);
+rutas.get("/about", controller.about);
 
 module.exports = rutas;
