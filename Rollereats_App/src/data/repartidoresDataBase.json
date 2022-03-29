@@ -74,5 +74,13 @@
     "numero_Repartidor": "543535",
     "pais_Repartidor": "Nicaragua",
     "imagen_Repartidor": "imagen-1648170952809.jpg"
+  },
+  {
+    "id_Repartidor": 1648175705817,
+    "correo_Repartidor": "Camilo@hotmail.com",
+    "contraseña_Repartidor": "555555555555",
+    "numero_Repartidor": "55555555555555",
+    "pais_Repartidor": "Nicaragua",
+    "imagen_Repartidor": "imagen-1648175705809.jpg"
   }
 ]

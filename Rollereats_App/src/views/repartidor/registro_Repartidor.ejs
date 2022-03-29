@@ -10,26 +10,83 @@
 </head>
 <body>
     <%- include('../partials/header.ejs') %>
-
-    <div class="contenedor-principal">
-        <div class="con-register">
-            <img src="/img/undraw_Login_re_4vu22.png" alt="" id="imagen-registro">
-            <form action="/repartidor" method="POST" class="formulario" enctype ="multipart/form-data">
-                <h3>Registro</h3>
-                <p class="p-1">Crea una nueva cuenta</p>
-                <input  class="form" type="email" placeholder="Correo electronico" id="mail" name="mail" required>
-                <input  class="form" type="password" placeholder="Contraseña" id="contraseña" name = "contraseña" required>
-                <input class="form" type="number" placeholder="Numero Telefonico" id="numero" name ="numero" required>
-                <input class="form" type= "text" placeholder="Pais" id="pais" name ="pais" required>
-                <input class="form" type= "file" placeholder="imagen" id="imagen" name ="imagen">
-                <button class="button" value="">Registrar</button>
-                <p id="red-ingreso">¿Ya tienes una cuenta? <a href="/repartidor/login">Inicia Sesión</a></p>
-            </form>
-        </div>
+    <div class="contenedor">
+        <form action="">
+            <h3>Registrate como repartidor</h3>
+            <p>!Ven y forma parte de nuestra revolución</p>
+        
+            <label for="">
+                Nombre completo
+                <input type="text" name="" id="">
+            </label>
+            <label for="">
+                Correo electronico
+                <input type="email">
+            </label>
+            <label for="">
+                Celular
+                <input type="number" name="" id="">
+            </label>
+            <p class="termino">Al continuar,acepto que Rollereats entre en contacto conmigo por teléfono, correo o WhatsApp (incluyendo mensajes automáticos con fines comerciales).</p>
+            <input class="boton" type="submit" value="Registrate ahora">
+        </form>
     </div>
-    <script src="https://kit.fontawesome.com/ea2382ba85.js" crossorigin="anonymous"></script>
-
-      <!-- Footer -->
-      <%- include('../partials/footer.ejs') %>
+    <%- include('../partials/footer.ejs') %>
 </body>
+    <!-- Footer -->
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        font-family: poppins;
+    }
+    .contenedor{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    form{
+        margin: 60px 0 0 0;
+        display: flex;
+        max-width: 25rem;
+        flex-direction: column;
+        padding: 1rem;
+        background: #e0e0e0;
+        box-shadow:  20px 20px 60px #bebebe,
+             -20px -20px 60px #ffffff;
+    }
+    h3{
+        margin: 0 0 0.2rem 0;
+        text-align: center;
+    }
+    p{
+        margin: 0 0 1rem 0;
+        text-align: center;
+    }
+    label{
+        display: flex;
+        flex-direction: column;
+    }
+    label input{
+        margin: 0.3rem  0.3rem 0.3rem 0;
+        padding: 0.4rem 0;
+        width: 100%;
+        border: 1px solid rgba(0, 0, 0, 0.349);
+    }
+    .boton{
+        background-color: red;
+        padding: 0.6rem 0;
+        color: white;
+        border: none;
+        margin: 1rem 0;
+    }
+    .termino{
+        text-align: left;
+    }
+</style>
 </html>

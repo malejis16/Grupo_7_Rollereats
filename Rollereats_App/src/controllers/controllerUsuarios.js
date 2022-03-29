@@ -7,6 +7,9 @@ const usuariosFilePath = path.join(__dirname, "../data/usuariosDataBase.json");
 const usuarios = JSON.parse(fs.readFileSync(usuariosFilePath, "utf-8"));
 
 const mainController = {
+  users: function (req, res) {
+    res.render("usuarios/vistaUsuarios");
+  },
   login: function (req, res) {
     res.render("usuarios/login");
   },
@@ -29,7 +32,7 @@ const mainController = {
     //edtar el .json
     fs.writeFileSync(usuariosFilePath, JSON.stringify(usuarios, null, 2));
     // redireccionar
-    res.render("usuarios/login");
+    res.render("usuarios/vistaUsuarios");
   },
 };
 
