@@ -12,17 +12,19 @@
     <!-- Encabezamiento -->
     <%- include('../partials/header.ejs') %>
     <div style="padding: 5rem 0;">
-
-        <% for(let i = 0; i < usuarios.length; i++){ %>
             <section style="margin: 0.5rem 12rem;">
-                <a href="/usuarios/<%=usuarios[i].id_Usuario%>" style="display:flex">
-                    <p><%=usuarios[i].id_Usuario%></p> 
-                    <p><%=usuarios[i].contraseña_Usuario%></p>
-                    <p><%=usuarios[i].numero_Usuario%></p>
-                    <p><%=usuarios[i].pais_Usuario%></p>
+                    <p><%=usuarioBuscado.id_Usuario%></p> 
+                    <p><%=usuarioBuscado.contraseña_Usuario%></p>
+                    <p><%=usuarioBuscado.numero_Usuario%></p>
+                    <p><%=usuarioBuscado.pais_Usuario%></p> 
                 </a>
             </section>
-        <% } %>
+            <a href="/usuarios/<%=usuarioBuscado.id%>" class="action-button edit">EDITAR</a>
+            <div>
+                <form action="/usuarios/delete/<%=productoBuscado.id%>?_method=DELETE" method="POST" style="display: inline-flex">
+                <button type="submit" class="action-button delete">ELIMINAR</button>
+            </div>
+            <% } %>
     </div>
     <%- include('../partials/footer.ejs') %>
     <style>

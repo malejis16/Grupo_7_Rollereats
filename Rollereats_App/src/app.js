@@ -40,9 +40,6 @@ app.use("/repartidor", routerRepartidor);
 
 //**Rutas Restaurantes**//
 app.use("/restaurantes", routerRestaurantes);
-// app.use("restaurantes/registro_Restaurante", routerRestaurantes)
-// app.use("restaurantes/registro_Comercio", routerRestaurantes)
-
 //******Rutas Users*****//
 app.use("/usuarios", routerUsuarios);
 
