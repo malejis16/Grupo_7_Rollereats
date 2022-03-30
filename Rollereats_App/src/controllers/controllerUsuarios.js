@@ -34,6 +34,38 @@ const mainController = {
     // redireccionar
     res.render("usuarios/vistaUsuarios");
   },
+  edit: (req, res) => {
+    let id = req.params.id;
+    res.render("usuarios/editarUsuario", { usuarios: usuarios, id });
+  },
+  update: (req, res) => {
+    const usuarios = JSON.parse(fs.readFileSync(usuariosFilePath, "utf-8"));
+    let id = req.params.id;
+    for (let i = 0; i < usuarios.length; i++) {
+      if (usuarios[i].id == id) {
+        usuarios[i].correo_Usuario = req.body.mail;
+        usuarios[i].numero_Usuario = req.body.contraseña;
+        usuarios[i].pais_Usuario = req.body.numero;
+        usuarios[i].imagen_Usuario = req.body.pais;
+      }
+      fs.writeFileSync(usuariosFilePath, JSON.stringify(usuarios, null, 2));
+    }
+    res.redirect("/usuarios");
+  },
+  destroy: (req, res) => {
+    const usuarios = JSON.parse(fs.readFileSync(usuariosFilePath, "utf-8"));
+    let id = req.params.id;
+    // filtrar todos los usuarios que no tengan ese id
+    let usuariosFiltrados = usuarios.filter((producto) => producto.id != id);
+
+    fs.writeFileSync(
+      usuariosFilePath,
+      JSON.stringify(usuariosFiltrados, null, 2)
+    );
+
+    // redireccionar
+    res.redirect("/usuarios");
+  },
 };
 
 module.exports = mainController;
