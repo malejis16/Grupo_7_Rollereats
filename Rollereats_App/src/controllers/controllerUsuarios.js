@@ -8,7 +8,10 @@ const usuarios = JSON.parse(fs.readFileSync(usuariosFilePath, "utf-8"));
 
 const mainController = {
   users: function (req, res) {
-    res.render("usuarios/vistaUsuarios");
+    const usuarios = JSON.parse(fs.readFileSync(usuariosFilePath, "utf-8"));
+    res.render("usuarios/vistaUsuarios",{
+      usuarios: usuarios
+    });
   },
   login: function (req, res) {
     res.render("usuarios/login");

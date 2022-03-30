@@ -15,7 +15,7 @@
 
         <% for(let i = 0; i < usuarios.length; i++){ %>
             <section style="margin: 0.5rem 12rem;">
-                <a href="/usuarios/usuario/<%=usuarios[i].id_Usuario%>" style="display:flex">
+                <a href="/usuarios/<%=usuarios[i].id_Usuario%>" style="display:flex">
                     <p><%=usuarios[i].id_Usuario%></p> 
                     <p><%=usuarios[i].contraseña_Usuario%></p>
                     <p><%=usuarios[i].numero_Usuario%></p>
@@ -24,8 +24,6 @@
             </section>
         <% } %>
     </div>
-
-    <!-- Footer -->
     <%- include('../partials/footer.ejs') %>
     <style>
         p{

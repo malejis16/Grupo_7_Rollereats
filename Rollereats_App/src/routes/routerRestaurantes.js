@@ -23,7 +23,6 @@ var upload = multer({ storage: storage });
 
 //Rutas Restaurantes
 rutas.get("/", controller.restaurantes);
-rutas.get("/restaurante", controller.restaurante);
 rutas.get("/registro_Restaurante", controller.registro_Restaurante);
 rutas.post("/", upload.single("imagen"), controller.store_Restaurante);
 rutas.get("/registro_Comercio", controller.registro_Comercio);
