@@ -31,10 +31,10 @@ rutas.get("/register", controller.register);
 rutas.post("/", upload.single("imagen"), controller.store);
 
 //detalle
-rutas.get("/:id", controller.detalle);
+rutas.get("/:id", controller.detail);
 
 //editar
-rutas.get("/editarUsuario", controller.edit);
+rutas.get("/editarUsuario/:id", controller.edit);
 rutas.post("/:id", controller.update);
 
 //borrar

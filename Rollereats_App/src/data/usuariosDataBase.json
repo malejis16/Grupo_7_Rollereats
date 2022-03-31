@@ -1,19 +1,5 @@
 [
   {
-    "id_Usuario": 1,
-    "correo_Usuario": "malejis16@hotmail.com",
-    "contraseña_Usuario": 12345,
-    "numero_Usuario": 3132715710,
-    "pais_Usuario": "Colombia"
-  },
-  {
-    "id_Usuario": 2,
-    "correo_Usuario": "rock@hotmail.com",
-    "contraseña_Usuario": 12345,
-    "numero_Usuario": 3132775710,
-    "pais_Usuario": "Colombia"
-  },
-  {
     "id_Usuario": 3,
     "correo_Usuario": "marco@hotmail.com",
     "contraseña_Usuario": 67895,

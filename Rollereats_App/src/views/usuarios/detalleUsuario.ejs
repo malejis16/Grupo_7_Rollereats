@@ -12,19 +12,22 @@
     <!-- Encabezamiento -->
     <%- include('../partials/header.ejs') %>
     <div style="padding: 5rem 0;">
-            <section style="margin: 0.5rem 12rem;">
+            <section style="margin: 0.5rem 12rem; display: flex;">
                     <p><%=usuarioBuscado.id_Usuario%></p> 
                     <p><%=usuarioBuscado.contraseña_Usuario%></p>
                     <p><%=usuarioBuscado.numero_Usuario%></p>
                     <p><%=usuarioBuscado.pais_Usuario%></p> 
                 </a>
             </section>
-            <a href="/usuarios/<%=usuarioBuscado.id%>" class="action-button edit">EDITAR</a>
             <div>
-                <form action="/usuarios/delete/<%=productoBuscado.id%>?_method=DELETE" method="POST" style="display: inline-flex">
-                <button type="submit" class="action-button delete">ELIMINAR</button>
+                <a href="/usuarios/editarUsuario/<%=usuarioBuscado.id_Usuario%>" class="action-button edit" style="color: black; padding: 0.2rem 0.5rem; background-color: aqua;border: 1px solid black;">EDITAR</a>
             </div>
-            <% } %>
+            
+            <div>
+                <form action="/usuarios/delete/<%=usuarioBuscado.id_Usuario%>?_method=DELETE" method="POST" style="display: inline-flex">
+                <button type="submit" class="action-button delete">ELIMINAR</button>
+                </form>
+            </div>
     </div>
     <%- include('../partials/footer.ejs') %>
     <style>

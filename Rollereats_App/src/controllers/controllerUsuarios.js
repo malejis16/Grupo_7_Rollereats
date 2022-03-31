@@ -41,11 +41,11 @@ const mainController = {
     const usuarios = JSON.parse(fs.readFileSync(usuariosFilePath, "utf-8"));
     let id = req.params.id;
 
-    let usuarioBuscado = usuarios.find((product) => product.id == id);
+    let usuarioBuscado = usuarios.find((usuario) => usuario.id_Usuario == id);
     if (!usuarioBuscado) {
       res.redirect("/usuarios");
     }
-    res.render("detalleUsuario", { usuarioBuscado: usuarioBuscado });
+    res.render("usuarios/detalleUsuario", { usuarioBuscado: usuarioBuscado });
   },
   edit: (req, res) => {
     let id = req.params.id;
@@ -69,7 +69,7 @@ const mainController = {
     const usuarios = JSON.parse(fs.readFileSync(usuariosFilePath, "utf-8"));
     let id = req.params.id;
     // filtrar todos los usuarios que no tengan ese id
-    let usuariosFiltrados = usuarios.filter((producto) => producto.id != id);
+    let usuariosFiltrados = usuarios.filter((usuario) => usuario.id_Usuario != id);
 
     fs.writeFileSync(
       usuariosFilePath,
