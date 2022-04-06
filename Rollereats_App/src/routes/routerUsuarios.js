@@ -29,12 +29,8 @@ rutas.get("/login", controller.login);
 // //Crear
 rutas.get("/register", controller.register);
 rutas.post("/", upload.single("imagen"), controller.store);
-<<<<<<< HEAD
-// //detalle
-=======
 
 //detalle
->>>>>>> 3f0089a62bd1e0b390d4a80060ab80eab6a5dc44
 rutas.get("/:id", controller.detail);
 
 //editar
