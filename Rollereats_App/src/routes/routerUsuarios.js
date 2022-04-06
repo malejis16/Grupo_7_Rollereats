@@ -26,19 +26,17 @@ var upload = multer({ storage: storage });
 rutas.get("/", controller.users);
 rutas.get("/login", controller.login);
 
-//Crear
+// //Crear
 rutas.get("/register", controller.register);
 rutas.post("/", upload.single("imagen"), controller.store);
-
-//detalle
-rutas.get("/:id", controller.detalle);
+// //detalle
+rutas.get("/:id", controller.detail);
 
 //editar
 rutas.get("/editarUsuario", controller.edit);
 rutas.post("/:id", controller.update);
 
-//borrar
-
+// //borrar
 rutas.delete("/delete/:id", controller.destroy);
 
 module.exports = rutas;

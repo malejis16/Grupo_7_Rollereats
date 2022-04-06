@@ -9,15 +9,13 @@ const usuarios = JSON.parse(fs.readFileSync(usuariosFilePath, "utf-8"));
 const mainController = {
   users: function (req, res) {
     const usuarios = JSON.parse(fs.readFileSync(usuariosFilePath, "utf-8"));
-    res.render("usuarios/vistaUsuarios",{
-      usuarios: usuarios
-    });
+    res.render("usuarios/vistaUsuarios", { usuarios: usuarios });
   },
   login: function (req, res) {
     res.render("usuarios/login");
   },
   register: function (req, res) {
-    res.render("usuarios/register");
+    res.render("usuarios/register", { usuarios: usuarios });
   },
   store: function (req, res) {
     const usuarios = JSON.parse(fs.readFileSync(usuariosFilePath, "utf-8"));
@@ -30,7 +28,7 @@ const mainController = {
       pais_Usuario: req.body.pais,
       imagen_Usuario: req.file.filename,
     };
-    //agregar nuevo usuario
+    //   //agregar nuevo usuario
     usuarios.push(nuevoUsuario);
     //edtar el .json
     fs.writeFileSync(usuariosFilePath, JSON.stringify(usuarios, null, 2));
@@ -40,12 +38,11 @@ const mainController = {
   detail: (req, res) => {
     const usuarios = JSON.parse(fs.readFileSync(usuariosFilePath, "utf-8"));
     let id = req.params.id;
-
     let usuarioBuscado = usuarios.find((product) => product.id == id);
     if (!usuarioBuscado) {
       res.redirect("/usuarios");
     }
-    res.render("detalleUsuario", { usuarioBuscado: usuarioBuscado });
+    res.render("usuarios/detalleUsuario", { usuarioBuscado: usuarioBuscado });
   },
   edit: (req, res) => {
     let id = req.params.id;
@@ -70,13 +67,11 @@ const mainController = {
     let id = req.params.id;
     // filtrar todos los usuarios que no tengan ese id
     let usuariosFiltrados = usuarios.filter((producto) => producto.id != id);
-
     fs.writeFileSync(
       usuariosFilePath,
       JSON.stringify(usuariosFiltrados, null, 2)
     );
-
-    // redireccionar
+    redireccionar;
     res.redirect("/usuarios");
   },
 };
