@@ -33,7 +33,7 @@ const mainController = {
     //edtar el .json
     fs.writeFileSync(usuariosFilePath, JSON.stringify(usuarios, null, 2));
     // redireccionar
-    res.render("usuarios/vistaUsuarios");
+    res.render("usuarios/vistaUsuarios", { usuarios: usuarios });
   },
   detail: (req, res) => {
     const usuarios = JSON.parse(fs.readFileSync(usuariosFilePath, "utf-8"));

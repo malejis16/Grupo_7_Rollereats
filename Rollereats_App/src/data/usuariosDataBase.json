@@ -58,5 +58,21 @@
     "numero_Usuario": "3145777721",
     "pais_Usuario": "Nicaragua",
     "imagen_Usuario": "imagen-1648062078572.jpg"
+  },
+  {
+    "id_Usuario": 1649274586615,
+    "correo_Usuario": "alejis16@hotmail.com",
+    "contraseña_Usuario": "3434534",
+    "numero_Usuario": "35435",
+    "pais_Usuario": "Alemania",
+    "imagen_Usuario": "imagen-1649274586592.jpg"
+  },
+  {
+    "id_Usuario": 1649274749964,
+    "correo_Usuario": "alejis16@hotmail.com",
+    "contraseña_Usuario": "fdsfdsf5435",
+    "numero_Usuario": "435345",
+    "pais_Usuario": "Nicaragua",
+    "imagen_Usuario": "imagen-1649274749945.jpg"
   }
 ]
