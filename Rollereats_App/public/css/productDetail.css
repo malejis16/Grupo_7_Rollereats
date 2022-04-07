@@ -286,8 +286,100 @@ header{
         flex-wrap: wrap;
         align-items: center;
         margin-top: 1rem;
-
     }
+        .modal_modificar{
+            position: fixed;
+            z-index: 3000;
+            background-color: rgba(0, 0, 0, 0.678);
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+
+            --opacity: 0;
+            --pointer: none;
+
+            opacity: var(--opacity);
+            pointer-events: var(--pointer);
+            transition: opacity 0.4s;
+        }
+        .modal_modificar:target{
+            --opacity:1;
+            --pointer:unset;
+        }
+        .modal_contaiiner{
+            background-color: white;
+            border-radius: 1rem;
+            margin: auto;
+            padding: 2rem;
+            width: 50vw;
+            height: 48vh;
+        }
+        .modal_modificar:target .modal_contaiiner{
+            animation: showw 1s;
+        }
+        @keyframes showw {
+            0%{
+                transform: translateY(-150vh);
+            }
+
+        }
+        .modal_mod form{
+
+            padding: 2rem 0;
+        }
+        .for_cont{
+            display: flex; 
+            justify-content: space-around;
+             align-items: center;
+        }
+        .file{
+            display: none;
+        }
+
+
+
+        .botoness{
+            margin: 2rem 0 0 0;
+            display: flex;
+            align-items: center;
+            justify-content: right;
+        }
+
+            .botoness .m_button{
+                padding: 0.4rem 1rem;
+                border-radius: 0.3rem;
+                outline: none;
+                border: none;
+                background-color: #ff702a;
+                font-size: 14px;
+                cursor: pointer;
+            }
+            .botoness .c_button{
+                padding: 0.3rem 1rem;
+                border-radius: 0.3rem;
+                margin: 0 0 0 1rem;
+                border: 1px solid black;
+                color: black;
+                font-size: 14px;
+            }
+
+            .placeholder{
+                border: none;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.644);
+                outline: none;
+                width: 18vw;
+                margin-bottom: 1rem;
+            }
+            .precio{
+                padding: 0.3rem 0;
+                border: none;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.644);
+                outline: none;
+                width: 7vw;
+            }
+            
         .articulo-unico
         {
             display: flex;
@@ -297,11 +389,69 @@ header{
             box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
             margin: 0.5rem;
             border-radius: 10px;
+            position: relative;
         }
             .imagen-articulo{
                 text-align: center; 
                 padding: 1rem 0;
             }
+            .modal_opt{
+                position: absolute;
+                z-index: 1000;
+                top: 15px;
+                padding: 10px 0;
+                background-color: white;
+                width: 13rem;
+                height: 10rem;
+                text-align: center;
+
+                --opacity: 0;
+                --pointer:none;
+
+                opacity: var(--opacity);
+                pointer-events: var(--pointer);
+                transition: opacity .4s;
+            }
+
+            .modal_opt:target{
+                --opacity: 1;
+                --pointer: unset;
+            }
+
+            .modal_opt:target .modal_Container{
+                animation: shhoww 0.8s;
+                }
+                @keyframes shhoww {
+                    0%{
+                        transform: translateY(-10vh);
+                    }
+        
+                }
+                    .modal_options{
+                        display: grid;
+                        width: 13rem;
+                       
+                    }
+                        .modal_options i{
+                            margin: 0.2rem 0 2rem 0;
+                            padding: 0.4rem 0.6rem;
+                        }
+                            .modal_options i:hover{
+                                border-radius: 40rem;
+                                padding: 0.4rem 0.6rem;
+                                 background-color: #ff702a;
+                            }
+                    
+                        .modal_options ul{
+                            padding: 0.2rem 0;
+                        }
+                        .modal_options ul:hover{
+                            background-color: #ff702a;
+                            font-size:16.5px;
+                        }
+                            .modal_options ul a{
+                                color: black;
+                            }
             .imagen-articulo img{
                 width: 50vw;
                 max-width: 12.5rem;

@@ -7,11 +7,39 @@
     <title>Restaurante || Name</title>
     <link rel="stylesheet" href="/css/productDetail.css">
     <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Encabezamiento -->
     <%- include('../partials/header.ejs') %>
     <!-- Seccion de portada -->
+    <section id="modal_modificar" class="modal_modificar"> 
+        <div class="modal_contaiiner">
+            <figure class="modal_mod">
+                <p><strong>Edita los detalles del producto</strong> </p>
+                <form action="">
+                    <div class="for_cont" style="display: flex;">
+                        <div style="text-align: center;">
+                            <label for="f_subir"><i class="fa-solid fa-image" style="font-size: 7rem;"></i> <p></p> Elige una imagen
+                                <input type="file" name="f_subir" id="f_subir" class="file">
+                            </label>               
+                        </div>
+                        <div style="display:flex; flex-direction: column;">
+                            <label for="n_producto">Nombre del producto
+                            </label> 
+                            <input id="n_producto" type="text"  class="placeholder">
+                            <label for="n_precio">Precio</label> 
+                            <input id="n_precio" type="number"class="precio" >
+                        </div>
+                    </div>
+                    <div class="botoness">
+                        <input type="submit" value="Guardar" class="m_button">
+                        <a href="#cancelar" class="c_button">Cancelar</a>
+                    </div>
+                </form>
+            </figure>
+        </div>
+    </section>
     <div class="imagen-Perfil">
         <img src="/img/Logotipo_Restaurante.png" alt="Imagen del logo" id="Logotipo">
     </div>
@@ -46,9 +74,21 @@
     <!-- Seccion articulos -->
     <div class="articulos">
         <article class="articulo-unico">
-            <div class="imagen-articulo">
-                <img src="/img/Hamburguesa_1.png" alt="imagen del articulo">
-            </div>
+            <div  id="options" class="options">
+                <section id="modal_opt" class="modal_opt">
+                    <div class="modal_Container">
+                        <figure class="modal_options">
+                            <a href="#salir" style="color: black;"><i class="fa-solid fa-xmark"></i></a>
+                            <ul><a href="#">Eliminar producto</a></ul>
+                            <ul ><a href="#modal_modificar">Editar detalles</a></ul>
+                        </figure>
+                    </div>
+                </section>
+                <div class="imagen-articulo" style="display: flex;">
+                    <img src="/img/Hamburguesa_1.png" alt="imagen del articulo">
+                    <a href="#modal_opt" style="color: black;"><i class="fa-solid fa-ellipsis-vertical"></i></a>
+                </div>
+            </div>       
             <div class="descripcion-articulo">
                 <div class="nombre-precio">
                     <h4>Hamburguesa de Pollo</h4>
