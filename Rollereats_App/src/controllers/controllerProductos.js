@@ -2,7 +2,7 @@
 const path = require("path");
 
 const mainController = {
-  carro: function (req, res) {
+  index: function (req, res) {
     res.render("productos/carro");
   },
   creacionProducto: function (req, res) {

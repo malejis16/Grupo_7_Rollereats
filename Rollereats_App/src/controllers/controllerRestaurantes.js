@@ -6,26 +6,52 @@ const restaurantesFilePath = path.join(
   __dirname,
   "../data/restaurantesDataBase.json"
 );
-const comercioFilePath = path.join(__dirname, "../data/comercioDataBase.json");
+
+const productosFilePath = path.join(
+  __dirname,
+  "../data/productosDataBase.json"
+);
 
 //pasamos esta constante al index para que se recargue cada vez que refrescamos las pag
 const restaurantes = JSON.parse(fs.readFileSync(restaurantesFilePath, "utf-8"));
-const comercio = JSON.parse(fs.readFileSync(comercioFilePath, "utf-8"));
+const productos = JSON.parse(fs.readFileSync(productosFilePath, "utf-8"));
 
 const mainController = {
   restaurantes: function (req, res) {
-    res.render("restaurantes/restaurantes");
+    const productos = JSON.parse(fs.readFileSync(productosFilePath, "utf-8"));
+    const restaurantes = JSON.parse(
+      fs.readFileSync(restaurantesFilePath, "utf-8")
+    );
+    res.render("restaurantes/restaurantes", { productos: productos });
   },
-  restaurante: function (req, res) {
+  createProducto: function (req, res) {
     res.render("restaurantes/restaurante");
   },
+  storeProducto: function (req, res) {
+    const productos = JSON.parse(fs.readFileSync(productosFilePath, "utf-8"));
+    const restaurantes = JSON.parse(
+      fs.readFileSync(restaurantesFilePath, "utf-8")
+    );
+    //console.log(req.body);
+    //console.log(req.files);
+    //console.log(req.file);
+
+    const nuevoProducto = {
+      id_Producto: Date.now(),
+      name_Producto: req.body.n_producto,
+      price_Producto: req.body.n_precio,
+      image_Producto: req.file.filename,
+    };
+    //agregar nuevo producto
+    productos.push(nuevoProducto);
+    //edtar el .json
+    fs.writeFileSync(productosFilePath, JSON.stringify(productos, null, 2));
+    // redireccionar
+    res.redirect("/restaurantes");
+  } /*
   registro_Restaurante: function (req, res) {
     res.render("restaurantes/registro_Restaurante");
   },
-  registro_Comercio: function (req, res) {
-    res.render("restaurantes/registro_Comercio");
-  },
-
   store_Restaurante: function (req, res) {
     const restaurantes = JSON.parse(
       fs.readFileSync(restaurantesFilePath, "utf-8")
@@ -48,25 +74,7 @@ const mainController = {
     );
     // redireccionar
     res.render("restaurantes/login");
-  },
-  store_Comercio: function (req, res) {
-    const comercio = JSON.parse(fs.readFileSync(comercioFilePath, "utf-8"));
-    console.log(req.body);
-    const nuevoComercio = {
-      id_Comercio: Date.now(),
-      correo_Comercio: req.body.mail,
-      contraseña_Comercio: req.body.contraseña,
-      numero_Comercio: req.body.numero,
-      pais_Comercio: req.body.pais,
-      imagen_Comercio: req.file.filename,
-    };
-    //agregar nuevo usuario
-    comercio.push(nuevoComercio);
-    //edtar el .json
-    fs.writeFileSync(comercioFilePath, JSON.stringify(comercio, null, 2));
-    // redireccionar
-    res.render("comercio/login");
-  },
+  },*/,
 };
 
 module.exports = mainController;

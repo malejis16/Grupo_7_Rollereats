@@ -34,7 +34,7 @@
                     </div>
                     <div class="botoness">
                         <input type="submit" value="Guardar" class="m_button">
-                        <a href="#cancelar" class="c_button">Cancelar</a>
+                        <a href="/restaurantes" class="c_button">Cancelar</a>
                     </div>
                 </form>
             </figure>
@@ -44,7 +44,7 @@
         <div class="modal_contaiiner">
             <figure class="modal_mod">
                 <p><strong>Agrega un nuevo producto</strong> </p>
-                <form action="">
+                <form action="/restaurantes/createProducto" method="POST" enctype ="multipart/form-data">
                     <div class="for_cont" style="display: flex;">
                         <div style="text-align: center;">
                             <label for="f_subir"><i class="fa-solid fa-image" style="font-size: 7rem;"></i> <p></p> Elige una imagen
@@ -54,14 +54,14 @@
                         <div style="display:flex; flex-direction: column;">
                             <label for="n_producto">Nombre del producto
                             </label> 
-                            <input id="n_producto" type="text"  class="placeholder">
+                            <input id="n_producto" name ="n_producto" type="text"  class="placeholder">
                             <label for="n_precio">Precio</label> 
-                            <input id="n_precio" type="number"class="precio" >
+                            <input id="n_precio" name ="n_precio" type="number"class="precio" >
                         </div>
                     </div>
                     <div class="botoness">
                         <input type="submit" value="Guardar" class="m_button">
-                        <a href="#cancelar" class="c_button">Cancelar</a>
+                        <a href="/restaurantes" class="c_button">Cancelar</a>
                     </div>
                 </form>
             </figure>
@@ -108,9 +108,11 @@
                 <p style="color:black; padding: 1rem 0;" >Agregar producto</p>
             </article> 
         </a>
+
+        <% for( let i=0; i < productos.length; i++){ %>
         <article class="articulo-unico">
             <div  id="options" class="options">
-                <section id="1" class="modal_opt">
+                <section id="<%=productos[i].id_Producto%>" class="modal_opt">
                     <div class="modal_Container">
                         <figure class="modal_options">
                             <a href="#salir" style="color: black;"><i class="fa-solid fa-xmark"></i></a>
@@ -119,125 +121,23 @@
                         </figure>
                     </div>
                 </section>
-                <div class="imagen-articulo" style="display: flex;">
-                    <img src="/img/Hamburguesa_1.png" alt="imagen del articulo">
-                    <a href="#1" style="color: black;"><i class="fa-solid fa-ellipsis-vertical"></i></a>
-                </div>
+                    <div class="imagen-articulo" style="display: flex;">
+                        <img src="/img/<%=productos[i].image_Producto%>" alt="imagen del articulo">
+                        <a href="#<%=productos[i].id_Producto%>" style="color: black;"><i class="fa-solid fa-ellipsis-vertical"></i></a>
+                    </div>
             </div>       
             <div class="descripcion-articulo">
                 <div class="nombre-precio">
-                    <h4>Hamburguesa de Pollo</h4>
-                    <h4><span>$ 8.700</span></h4>
+                    <h4><%=productos[i].name_Producto%></h4>
+                    <h4><span><%=productos[i].price_Producto%></span></h4>
                 </div>
                 <div class="agregar-carrito">
                     <i class="fa-solid fa-circle-plus"></i> 
                 </div>
             </div>
         </article>
-        <article class="articulo-unico">
-            <div  id="options" class="options">
-                <section id="2" class="modal_opt">
-                    <div class="modal_Container">
-                        <figure class="modal_options">
-                            <a href="#salir" style="color: black;"><i class="fa-solid fa-xmark"></i></a>
-                            <ul><a href="#">Eliminar producto</a></ul>
-                            <ul ><a href="#modal_modificar">Editar detalles</a></ul>
-                        </figure>
-                    </div>
-                </section>
-                <div class="imagen-articulo" style="display: flex;">
-                    <img src="img/Hamburguesa_2.png" alt="imagen del articulo">
-                    <a href="#2" style="color: black;"><i class="fa-solid fa-ellipsis-vertical"></i></a>
-                </div>
-            </div>
-            <div class="descripcion-articulo">
-                <div class="nombre-precio">
-                    <h4>Hamburguesa Ranchera</h4>
-                    <h4><span>$ 16.700</span></h4>
-                </div>
-                <div class="agregar-carrito">
-                    <i class="fa-solid fa-circle-plus"></i> 
-                </div>
-            </div>
-        </article>
-        <article class="articulo-unico">
-            <div  id="options" class="options">
-                <section id="3" class="modal_opt">
-                    <div class="modal_Container">
-                        <figure class="modal_options">
-                            <a href="#salir" style="color: black;"><i class="fa-solid fa-xmark"></i></a>
-                            <ul><a href="#">Eliminar producto</a></ul>
-                            <ul ><a href="#modal_modificar">Editar detalles</a></ul>
-                        </figure>
-                    </div>
-                </section>
-                <div class="imagen-articulo" style="display: flex;">
-                    <img src="/img/Hamburguesa_3.png" alt="imagen del articulo">
-                    <a href="#3" style="color: black;"><i class="fa-solid fa-ellipsis-vertical"></i></a>
-                </div>
-            </div>
-            <div class="descripcion-articulo">
-                <div class="nombre-precio">
-                    <h4>Hamburguesa de Queso</h4>
-                    <h4><span>$ 14.600</span></h4>
-                </div>
-                <div class="agregar-carrito">
-                    <i class="fa-solid fa-circle-plus"></i> 
-                </div>
-            </div>
-        </article>
-        <article class="articulo-unico">
-            <div  id="options" class="options">
-                <section id="4" class="modal_opt">
-                    <div class="modal_Container">
-                        <figure class="modal_options">
-                            <a href="#salir" style="color: black;"><i class="fa-solid fa-xmark"></i></a>
-                            <ul><a href="#">Eliminar producto</a></ul>
-                            <ul ><a href="#modal_modificar">Editar detalles</a></ul>
-                        </figure>
-                    </div>
-                </section>
-                <div class="imagen-articulo" style="display: flex;">
-                    <img src="/img/Hamburguesa_1.png" alt="imagen del articulo">
-                    <a href="#4" style="color: black;"><i class="fa-solid fa-ellipsis-vertical"></i></a>
-                </div>
-            </div>       
-            <div class="descripcion-articulo">
-                <div class="nombre-precio">
-                    <h4>Hamburguesa de Pollo</h4>
-                    <h4><span>$ 8.700</span></h4>
-                </div>
-                <div class="agregar-carrito">
-                    <i class="fa-solid fa-circle-plus"></i> 
-                </div>
-            </div>
-        </article>
-        <article class="articulo-unico">
-            <div  id="options" class="options">
-                <section id="5" class="modal_opt">
-                    <div class="modal_Container">
-                        <figure class="modal_options">
-                            <a href="#salir" style="color: black;"><i class="fa-solid fa-xmark"></i></a>
-                            <ul><a href="#">Eliminar producto</a></ul>
-                            <ul ><a href="#modal_modificar">Editar detalles</a></ul>
-                        </figure>
-                    </div>
-                </section>
-                <div class="imagen-articulo" style="display: flex;">
-                    <img src="img/Hamburguesa_2.png" alt="imagen del articulo">
-                    <a href="#5" style="color: black;"><i class="fa-solid fa-ellipsis-vertical"></i></a>
-                </div>
-            </div>
-            <div class="descripcion-articulo">
-                <div class="nombre-precio">
-                    <h4>Hamburguesa Ranchera</h4>
-                    <h4><span>$ 16.700</span></h4>
-                </div>
-                <div class="agregar-carrito">
-                    <i class="fa-solid fa-circle-plus"></i> 
-                </div>
-            </div>
-        </article>
+        <%}%>
+
     </div>
     <script src="https://kit.fontawesome.com/ea2382ba85.js" crossorigin="anonymous"></script>
     <!-- Footer -->

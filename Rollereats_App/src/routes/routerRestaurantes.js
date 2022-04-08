@@ -3,8 +3,8 @@
 const express = require("express");
 const rutas = express.Router();
 const controller = require("../controllers/controllerRestaurantes");
-const multer = require("multer");
 const path = require("path");
+const multer = require("multer");
 
 var storage = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -23,9 +23,15 @@ var upload = multer({ storage: storage });
 
 //Rutas Restaurantes
 rutas.get("/", controller.restaurantes);
-rutas.get("/registro_Restaurante", controller.registro_Restaurante);
-rutas.post("/", upload.single("imagen"), controller.store_Restaurante);
-rutas.get("/registro_Comercio", controller.registro_Comercio);
-rutas.post("/", upload.single("imagen"), controller.store_Comercio);
+rutas.get("/createProducto", controller.createProducto);
+rutas.post(
+  "/createProducto",
+  upload.single("f_subir"),
+  controller.storeProducto
+);
+//rutas.get("/registro_Restaurante", controller.registro_Restaurante);
+//rutas.post("/", upload.single("imagen"), controller.store_Restaurante);
+//rutas.get("/registro_Comercio", controller.registro_Comercio);
+//rutas.post("/", upload.single("imagen"), controller.store_Comercio);
 
 module.exports = rutas;
