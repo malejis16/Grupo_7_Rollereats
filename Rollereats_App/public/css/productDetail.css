@@ -443,26 +443,37 @@ header{
                         width: 13rem;
                        
                     }
-                        .modal_options i{
+                        .modal_options .salir i{
                             margin: 0.2rem 0 2rem 0;
                             padding: 0.4rem 0.6rem;
                         }
-                            .modal_options i:hover{
+                            .modal_options .salir i:hover{
                                 border-radius: 40rem;
                                 padding: 0.4rem 0.6rem;
                                  background-color: #ff702a;
                             }
                     
-                        .modal_options ul{
+                        .modal_options button{
                             padding: 0.2rem 0;
+                            border: none;
+                            font-size:16px ;
+                            background-color: white;
                         }
-                        .modal_options ul:hover{
+                        .modal_options button:hover{
                             background-color: #ff702a;
                             font-size:16.5px;
                         }
-                            .modal_options ul a{
+                            .modal_options button {
                                 color: black;
                             }
+                            .modal_options .editar_producto {
+                                color: black;
+                            }
+                            .modal_options .editar_producto:hover{
+                                background-color: #ff702a;
+                                font-size:16.5px;
+                            }
+
             .imagen-articulo img{
                 width: 50vw;
                 max-width: 12.5rem;

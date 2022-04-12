@@ -133,9 +133,13 @@
         <section id="<%=productos[i].id_Producto%>" class="modal_opt">
           <div class="modal_Container">
             <figure class="modal_options">
-              <a href="#salir" style="color: black;"><i class="fa-solid fa-xmark"></i></a>
-              <ul><a href="restaurantes/eliminar/<%=productos[i].id_Productos%>">Eliminar producto</a></ul>
-              <ul><a href="restaurantes/edit/<%=productos[i].id_Productos%>">Editar detalles</a></ul>
+              <a class="salir" href="#salir" style="color: black;"><i class="fa-solid fa-xmark"></i></a>
+              <form action="_method=DELETE" method="POST">
+                  <button type="submit" class="button-delete">  
+                    Eliminar producto
+                  </button>
+                </form>
+              <a class="editar_producto" href="restaurantes/edit/<%=productos[i].id_Productos%>">Editar detalles</a>
             </figure>
           </div>
         </section>
