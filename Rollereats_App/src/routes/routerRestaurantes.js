@@ -8,30 +8,26 @@ const multer = require("multer");
 
 var storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, "./public/img");
+    cb(null, path.join(__dirname, "../../public/img"));
   },
   filename: function (req, file, cb) {
-    console.log(file);
-    cb(
-      null,
-      file.fieldname + "-" + Date.now() + path.extname(file.originalname)
-    );
+    const newFileName =
+      file.fieldname + "-" + Date.now() + path.extname(file.originalname);
+    cb(null, newFileName);
   },
 });
 
-var upload = multer({ storage: storage });
+var upload = multer({ storage });
 
 //Rutas Restaurantes
 rutas.get("/", controller.restaurantes);
+//Crear Producto
 rutas.get("/createProducto", controller.createProducto);
-rutas.post(
-  "/createProducto",
-  upload.single("f_subir"),
-  controller.storeProducto
-);
-//rutas.get("/registro_Restaurante", controller.registro_Restaurante);
-//rutas.post("/", upload.single("imagen"), controller.store_Restaurante);
-//rutas.get("/registro_Comercio", controller.registro_Comercio);
-//rutas.post("/", upload.single("imagen"), controller.store_Comercio);
+rutas.post("/createProducto", upload.any(), controller.storeProducto);
+//Editar Producto
+rutas.post("edit/:id", controller.update);
+
+//Eliminar
+rutas.delete("eliminar/:id", controller.destroy);
 
 module.exports = rutas;

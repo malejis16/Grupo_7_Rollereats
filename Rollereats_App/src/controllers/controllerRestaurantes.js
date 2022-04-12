@@ -28,53 +28,51 @@ const mainController = {
     res.render("restaurantes/restaurante");
   },
   storeProducto: function (req, res) {
-    const productos = JSON.parse(fs.readFileSync(productosFilePath, "utf-8"));
-    const restaurantes = JSON.parse(
-      fs.readFileSync(restaurantesFilePath, "utf-8")
-    );
-    //console.log(req.body);
-    //console.log(req.files);
-    //console.log(req.file);
+    if (req.files) {
+      let restauranteNuevo = {
+        id_Producto: Date.now(),
+        name_Producto: req.body.n_producto,
+        price_Producto: req.body.n_precio,
+        image_Producto: req.files[0].filename,
+      };
+      productos.push(restauranteNuevo);
+      fs.writeFileSync(productosFilePath, JSON.stringify(productos));
+      res.redirect("/restaurantes");
+    } else {
+      res.send("<h1>Error al subir la imagen</h1>");
+    }
+  },
 
-    const nuevoProducto = {
-      id_Producto: Date.now(),
-      name_Producto: req.body.n_producto,
-      price_Producto: req.body.n_precio,
-      image_Producto: req.file.filename,
-    };
-    //agregar nuevo producto
-    productos.push(nuevoProducto);
-    //edtar el .json
-    fs.writeFileSync(productosFilePath, JSON.stringify(productos, null, 2));
+  // Update - Method to update
+  update: (req, res) => {
+    const productos = JSON.parse(fs.readFileSync(productosFilePath, "utf-8"));
+    let id = req.params.id;
+    for (let i = 0; i < productos.length; i++) {
+      if (productos[i].id == id_Producto) {
+        productos[i].name_Producto = req.body.n_producto;
+        productos[i].price_Producto = req.body.n_precio;
+        productos[i].image_Producto = req.files[0].filename;
+      }
+      fs.writeFileSync(productosFilePath, JSON.stringify(productos, null, 2));
+    }
+    res.redirect("/restaurantes");
+  },
+
+  // Delete - Delete one product from DB
+  destroy: (req, res) => {
+    const productos = JSON.parse(fs.readFileSync(productosFilePath, "utf-8"));
+    let id = req.params.id;
+    // filtrar todos los productos que no tengan ese id
+    let productosFiltrados = productos.filter((producto) => producto.id != id);
+
+    fs.writeFileSync(
+      productosFilePath,
+      JSON.stringify(productosFiltrados, null, 2)
+    );
+
     // redireccionar
     res.redirect("/restaurantes");
-  } /*
-  registro_Restaurante: function (req, res) {
-    res.render("restaurantes/registro_Restaurante");
   },
-  store_Restaurante: function (req, res) {
-    const restaurantes = JSON.parse(
-      fs.readFileSync(restaurantesFilePath, "utf-8")
-    );
-    console.log(req.body);
-    const nuevoRestaurante = {
-      id_Restaurante: Date.now(),
-      correo_Restaurante: req.body.mail,
-      contraseña_Restaurante: req.body.contraseña,
-      numero_Restaurante: req.body.numero,
-      pais_Restaurante: req.body.pais,
-      imagen_Restaurante: req.file.filename,
-    };
-    //agregar nuevo usuario
-    restaurantes.push(nuevoRestaurante);
-    //edtar el .json
-    fs.writeFileSync(
-      restaurantesFilePath,
-      JSON.stringify(restaurantes, null, 2)
-    );
-    // redireccionar
-    res.render("restaurantes/login");
-  },*/,
 };
 
 module.exports = mainController;
