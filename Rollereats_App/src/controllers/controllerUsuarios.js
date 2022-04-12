@@ -53,12 +53,13 @@ const mainController = {
   update: (req, res) => {
     const usuarios = JSON.parse(fs.readFileSync(usuariosFilePath, "utf-8"));
     let id = req.params.id;
+    console.log(req.file);
     for (let i = 0; i < usuarios.length; i++) {
-      if (usuarios[i].id == id) {
+      if (usuarios[i].id_Usuario == id) {
         usuarios[i].correo_Usuario = req.body.mail;
-        usuarios[i].numero_Usuario = req.body.contraseña;
-        usuarios[i].pais_Usuario = req.body.numero;
-        usuarios[i].imagen_Usuario = req.body.pais;
+        usuarios[i].numero_Usuario = req.body.numero;
+        usuarios[i].pais_Usuario = req.body.pais;
+        usuarios[i].imagen_Usuario = req.file.filename;
       }
       fs.writeFileSync(usuariosFilePath, JSON.stringify(usuarios, null, 2));
     }
@@ -77,7 +78,7 @@ const mainController = {
       usuariosFilePath,
       JSON.stringify(usuariosFiltrados, null, 2)
     );
-    redireccionar;
+
     res.redirect("/usuarios");
   },
 };

@@ -17,9 +17,12 @@
             <section style="margin: 0.5rem 12rem;">
                 <a href="/usuarios/<%=usuarios[i].id_Usuario%>" style="display:flex">
                     <p><%=usuarios[i].id_Usuario%></p> 
-                    <p><%=usuarios[i].contraseña_Usuario%></p>
+                    <p><%=usuarios[i].correo_Usuario%></p>
                     <p><%=usuarios[i].numero_Usuario%></p>
                     <p><%=usuarios[i].pais_Usuario%></p>
+                    <p><img src="/img/<%=usuarios[i].imagen_Usuario%>" alt="" id="imagen-registro"></p>
+                    
+
                 </a>
             </section>
         <% } %>
