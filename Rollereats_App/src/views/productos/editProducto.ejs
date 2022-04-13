@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edita Producto </title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/editProducto.css">
+    <script src="https://kit.fontawesome.com/6b289d76ca.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Container form edit product-->
+    <div class="content-form">
+        <!-- Form edit product -->
+        <form class="form-edit" action="" method="POST" enctype="">
+            <h1 class="form-title">Edita tu Producto</h1>
+            <div class="form-div">
+                <input class="form-input" type="text" placeholder=" ">
+                <label class="form-label" for="">Nombre del producto</label>
+            </div>
+
+            <div class="form-div">
+                <textarea class="form-input" name="" id="" cols="30" rows="10"  placeholder=" "></textarea> 
+                <label class="form-label" for="">Descripción</label>
+            </div>
+
+            <div class="form-div">
+                <input class="form-input" type="text" placeholder=" ">
+                <label class="form-label" for="">Precio</label>
+            </div>
+
+            <div class="form-file">
+                <label  class="form-file-label" for="Upload-file"><i class="fa-solid fa-image"></i>
+                   Subir imagen
+                  <input class="form-file-input" type="file" name="img" id="Upload-file" class="file">
+                </label>
+            </div>
+
+            <div class="form-price">
+                <input class="form-save button" type="submit" value="Guardar">
+                <a class="form-cancel" href="">Cancelar</a>       
+            </div>
+        </form>
+    </div>
+</body>
+</html>
