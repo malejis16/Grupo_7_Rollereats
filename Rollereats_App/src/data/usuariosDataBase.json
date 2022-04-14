@@ -1,58 +1,10 @@
 [
   {
-    "id_Usuario": 1649728481135,
-    "contraseña_Usuario": "123456",
-    "imagen_Usuario": "imagen-1649728481122.jpg",
+    "id_Usuario": 1649975676202,
     "correo_Usuario": "alejis16@hotmail.com",
-    "numero_Usuario": "8888888888",
-    "pais_Usuario": "Alemania"
-  },
-  {
-    "id_Usuario": 1649728481135,
-    "contraseña_Usuario": "123456",
-    "imagen_Usuario": "imagen-1649728481122.jpg",
-    "correo_Usuario": "alejis16@hotmail.com",
-    "numero_Usuario": "8888888888",
-    "pais_Usuario": "Alemania"
-  },
-  {
-    "id_Usuario": 1649728481135,
-    "contraseña_Usuario": "123456",
-    "imagen_Usuario": "imagen-1649728481122.jpg",
-    "correo_Usuario": "alejis16@hotmail.com",
-    "numero_Usuario": "8888888888",
-    "pais_Usuario": "Alemania"
-  },
-  {
-    "id_Usuario": 1649728481135,
-    "contraseña_Usuario": "123456",
-    "imagen_Usuario": "imagen-1649728481122.jpg",
-    "correo_Usuario": "alejis16@hotmail.com",
-    "numero_Usuario": "8888888888",
-    "pais_Usuario": "Alemania"
-  },
-  {
-    "id_Usuario": 1649728481135,
-    "contraseña_Usuario": "123456",
-    "imagen_Usuario": "imagen-1649728481122.jpg",
-    "correo_Usuario": "alejis16@hotmail.com",
-    "numero_Usuario": "8888888888",
-    "pais_Usuario": "Alemania"
-  },
-  {
-    "id_Usuario": 1649728481135,
-    "contraseña_Usuario": "123456",
-    "imagen_Usuario": "imagen-1649728481122.jpg",
-    "correo_Usuario": "alejis16@hotmail.com",
-    "numero_Usuario": "8888888888",
-    "pais_Usuario": "Alemania"
-  },
-  {
-    "id_Usuario": 1649728481135,
-    "contraseña_Usuario": "123456",
-    "imagen_Usuario": "imagen-1649728481122.jpg",
-    "correo_Usuario": "alejis16@hotmail.com",
-    "numero_Usuario": "8888888888",
-    "pais_Usuario": "Alemania"
+    "contraseña_Usuario": "123",
+    "numero_Usuario": "123",
+    "pais_Usuario": "Alemania",
+    "imagen_Usuario": "imagen-1649975676178.jpg"
   }
 ]
