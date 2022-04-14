@@ -15,36 +15,7 @@
   <!-- Encabezamiento -->
   <%- include('../partials/header.ejs') %>
   <!-- Seccion de portada -->
-  <section id="modal_modificar" class="modal_modificar">
-    <div class="modal_contaiiner">
-      <figure class="modal_mod">
-        
-        <p><strong>Edita los detalles del producto</strong> </p>
-        <form action="/restaurantes/edit" method="POST" enctype="multipart/form-data">
-          <div class="for_cont" style="display: flex;">
-            <div style="text-align: center;">
-              <label for="img"><i class="fa-solid fa-image" style="font-size: 7rem;"></i>
-                <p> Elige una imagen</p>
-                <input type="file" name="img" id="img" class="file">
-              </label>
-            </div>
-            <div style="display:flex; flex-direction: column;">
-              <label for="n_producto">Nombre del producto
-              </label>
-              <input id="n_producto" type="text" class="placeholder">
-              <label for="n_precio">Precio</label>
-              <input id="n_precio" type="number" class="precio">
-            </div>
-          </div>
-          <div class="botoness">
-            <input type="submit" value="Guardar" class="m_button">
-            <a href="/restaurantes" class="c_button">Cancelar</a>
-          </div>
-        </form>
-      </figure>
-    </div>
-  </section>
-
+  
   <section id="agregar_pro" class="modal_modificar">
     <div class="modal_contaiiner">
       <figure class="modal_mod">
@@ -52,9 +23,9 @@
         <form action="/restaurantes/createProducto" method="POST" enctype="multipart/form-data">
           <div class="for_cont" style="display: flex;">
             <div style="text-align: center;">
-              <label for="img"><i class="fa-solid fa-image" style="font-size: 7rem;"></i>
+              <label for="f_subir"><i class="fa-solid fa-image" style="font-size: 7rem;"></i>
                 <p></p> Elige una imagen
-                <input type="file" name="img" id="img" class="file">
+                <input type="file" name="f_subir" id="f_subir" class="file">
               </label>
             </div>
             <div style="display:flex; flex-direction: column;">
@@ -139,7 +110,7 @@
                     Eliminar producto
                   </button>
                 </form>
-              <a class="editar_producto" href="restaurantes/edit/<%=productos[i].id_Productos%>">Editar detalles</a>
+              <a class="editar_producto" href="restaurantes/edit/<%=productos[i].id_Producto%>">Editar detalles</a>
             </figure>
           </div>
         </section>

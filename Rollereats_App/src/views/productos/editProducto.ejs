@@ -9,15 +9,21 @@
     <link rel="stylesheet" href="/css/editProducto.css">
     <script src="https://kit.fontawesome.com/6b289d76ca.js" crossorigin="anonymous"></script>
 </head>
+
+<% for (let i = 0; i < productos.length; i++) {
+    if (productos[i].id_Producto == id) {
+      var producto = productos[i];
+    }
+  } %>
 <body>
     <!-- Container form edit product-->
     <div class="content-form">
         <!-- Form edit product -->
-        <form class="form-edit" action="" method="POST" enctype="">
+        <form class="form-edit" action="/restaurantes/<%=producto.id_Producto%>?_method=PUT" method="POST" enctype="">
             <h1 class="form-title">Edita tu Producto</h1>
             <div class="form-div">
                 <input class="form-input" type="text" placeholder=" ">
-                <label class="form-label" for="">Nombre del producto</label>
+                <label class="form-label" name = "n_producto" for="">Nombre del producto</label>
             </div>
 
             <div class="form-div">
@@ -27,13 +33,13 @@
 
             <div class="form-div">
                 <input class="form-input" type="text" placeholder=" ">
-                <label class="form-label" for="">Precio</label>
+                <label class="form-label" name = "n_precio" for="">Precio</label>
             </div>
 
             <div class="form-file">
                 <label  class="form-file-label" for="Upload-file"><i class="fa-solid fa-image"></i>
                    Subir imagen
-                  <input class="form-file-input" type="file" name="img" id="Upload-file" class="file">
+                  <input class="form-file-input" type="file" name="f_subir" id="Upload-file" class="file">
                 </label>
             </div>
 
