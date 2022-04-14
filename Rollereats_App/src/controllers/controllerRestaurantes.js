@@ -45,7 +45,7 @@ const mainController = {
 
   edit: (req, res) => {
     let id = req.params.id;
-    res.render("restaurantes/editProducto", { productos: productos, id });
+    res.render("restaurantes/restaurantes", { productos: productos, id });
   },
   // Update - Method to update
   update: (req, res) => {
