@@ -33,7 +33,7 @@ rutas.get("/:id", controller.detail);
 
 //editar
 rutas.get("/editarUsuario/:id", controller.edit);
-rutas.put("/:id", controller.update);
+rutas.put("/:id", upload.single("imagen"), controller.update);
 
 // //borrar
 rutas.delete("/delete/:id", controller.destroy);
