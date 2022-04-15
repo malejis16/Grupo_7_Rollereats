@@ -45,14 +45,16 @@ const mainController = {
 
   edit: (req, res) => {
     let id = req.params.id;
-    res.render("restaurantes/restaurantes", { productos: productos, id });
+    res.render("productos/editProducto", { productos: productos, id });
   },
   // Update - Method to update
   update: (req, res) => {
     const productos = JSON.parse(fs.readFileSync(productosFilePath, "utf-8"));
     let id = req.params.id;
+    console.log(req.body);
+
     for (let i = 0; i < productos.length; i++) {
-      if (productos[i].id_Prodcutos == id) {
+      if (productos[i].id_Producto == id) {
         productos[i].name_Producto = req.body.n_producto;
         productos[i].price_Producto = req.body.n_precio;
         productos[i].image_Producto = req.files[0].filename;

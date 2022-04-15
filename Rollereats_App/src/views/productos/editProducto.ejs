@@ -19,27 +19,21 @@
     <!-- Container form edit product-->
     <div class="content-form">
         <!-- Form edit product -->
-        <form class="form-edit" action="/restaurantes/<%=producto.id_Producto%>?_method=PUT" method="POST" enctype="">
+        <form class="form-edit" action="/restaurantes/edit/<%=producto.id_Producto%>?_method=PUT" method="POST" enctype="multipart/form-data">
             <h1 class="form-title">Edita tu Producto</h1>
             <div class="form-div">
-                <input class="form-input" type="text" placeholder=" ">
-                <label class="form-label" name = "n_producto" for="">Nombre del producto</label>
+                <input class="form-input" type="text" placeholder=" " name = "n_producto" id = "n_producto" >
+                <label class="form-label" for="">Nombre del producto</label>
             </div>
-
             <div class="form-div">
-                <textarea class="form-input" name="" id="" cols="30" rows="10"  placeholder=" "></textarea> 
-                <label class="form-label" for="">Descripción</label>
-            </div>
-
-            <div class="form-div">
-                <input class="form-input" type="text" placeholder=" ">
-                <label class="form-label" name = "n_precio" for="">Precio</label>
+                <input class="form-input" type="text" placeholder=" " name = "n_precio">
+                <label class="form-label" for="">Precio</label>
             </div>
 
             <div class="form-file">
                 <label  class="form-file-label" for="Upload-file"><i class="fa-solid fa-image"></i>
-                   Subir imagen
-                  <input class="form-file-input" type="file" name="f_subir" id="Upload-file" class="file">
+                Subir imagen
+                <input class="form-file-input" type="file" name="f_subir" id="Upload-file" class="file">
                 </label>
             </div>
 

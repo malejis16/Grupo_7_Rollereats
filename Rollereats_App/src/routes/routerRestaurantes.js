@@ -25,8 +25,8 @@ rutas.get("/", controller.restaurantes);
 rutas.get("/createProducto", controller.createProducto);
 rutas.post("/createProducto", upload.any(), controller.storeProducto);
 //Editar Producto
-rutas.get("edit/:id", controller.edit);
-rutas.put("edit/:id", controller.update);
+rutas.get("/edit/:id", controller.edit);
+rutas.put("/edit/:id", upload.any(), controller.update);
 
 //Eliminar
 rutas.delete("eliminar/:id", controller.destroy);
