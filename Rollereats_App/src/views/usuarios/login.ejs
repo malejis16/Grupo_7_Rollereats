@@ -13,11 +13,11 @@
     <div class="contenedor-principal">
         <div class="contenedor-login">
             <img src="/img/undraw_cooking_lyxy.png" alt="Imagen de login">
-        <form action="" class="formulario">
+        <form action="/usuarios/login" method="POST" class="formulario">
             <h3>Ingreso</h3>
             <p>Bienvenido de vuelta, ingresa a tu cuenta</p>
-            <input  class="form" type="text" placeholder="Usuario  o correo electronico" value="" required>
-            <input class="form" type="password" placeholder="Contraseña" value="" required>
+            <input  class="form" type="text" placeholder="Usuario  o correo electronico" value="" required name="email">
+            <input class="form" type="password" placeholder="Contraseña" value=""  name="password">
             <div class="rec-ayuda" >
                 <label for="recuerdame">
                     <input type="checkbox" id="recuerdame">

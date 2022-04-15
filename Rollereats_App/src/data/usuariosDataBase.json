@@ -1,10 +1,18 @@
 [
   {
     "id_Usuario": 1649975676202,
-    "correo_Usuario": "Camilo@hotmail.com",
+    "correo_Usuario": "titi@iglo.com",
     "contraseña_Usuario": "123",
-    "numero_Usuario": "22222222222222222222",
+    "numero_Usuario": "3243243",
     "pais_Usuario": "Ecuador",
-    "imagen_Usuario": "imagen-1649982316480.jpg"
+    "imagen_Usuario": "imagen-1649991726413.jpg"
+  },
+  {
+    "id_Usuario": 1649991544115,
+    "correo_Usuario": "Camilo@hotmail.com",
+    "contraseña_Usuario": "111111111",
+    "numero_Usuario": "333333333",
+    "pais_Usuario": "Nicaragua",
+    "imagen_Usuario": "imagen-1649991560164.jpg"
   }
 ]

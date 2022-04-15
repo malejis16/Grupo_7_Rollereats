@@ -22,20 +22,33 @@ var upload = multer({ storage });
 //Rutas Users
 
 rutas.get("/", controller.users);
-rutas.get("/login", controller.login);
 
 // //Crear
 rutas.get("/register", controller.register);
-rutas.post("/", upload.single("imagen"), controller.store);
+rutas.post("/register", upload.single("imagen"), controller.store);
 
 //detalle
-rutas.get("/:id", controller.detail);
+rutas.get("/detalle/:id", controller.detail);
 
 //editar
 rutas.get("/editarUsuario/:id", controller.edit);
-rutas.put("/:id", upload.single("imagen"), controller.update);
-
-// //borrar
+rutas.put("/editarUsuario/:id", upload.single("imagen"), controller.update);
+//delete
 rutas.delete("/delete/:id", controller.destroy);
+
+//login
+rutas.get("/login", controller.login);
+rutas.post(
+  "/login",
+  [
+    check("email").isEmail(),
+    check("password")
+      .isLength({ min: 2 })
+      .withMessage("La contraseña debe tener al menos 2 caracteres"),
+  ],
+  controller.procesoLogin
+);
+
+//rutas.post("/login", controller.login);
 
 module.exports = rutas;

@@ -20,7 +20,7 @@
     <div class="contenedor-principal">
         <div class="con-register">
             <img src="/img/undraw_Login_re_4vu22.png" alt="" id="imagen-registro">
-            <form action="/usuarios/<%=usuario.id_Usuario%>?_method=PUT" method="POST" class="formulario" enctype="multipart/form-data">
+            <form action="/usuarios/editarUsuario/<%=usuario.id_Usuario%>?_method=PUT" method="POST" class="formulario" enctype="multipart/form-data">
                 <h3>Registro</h3>
                 <input  class="form" type="email" placeholder="Correo electronico" id="mail" name="mail" required>
                 <input  class="form" type="password" placeholder="Contraseña" id="contraseña" name = "contraseña" required>

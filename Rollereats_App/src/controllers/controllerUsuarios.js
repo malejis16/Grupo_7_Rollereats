@@ -14,6 +14,7 @@ const mainController = {
   login: function (req, res) {
     res.render("usuarios/login");
   },
+  procesoLogin: function (req, res) {},
   register: function (req, res) {
     res.render("usuarios/register", { usuarios: usuarios });
   },
