@@ -1,6 +1,8 @@
 //Módulos
 const path = require("path");
 const fs = require("fs");
+const { validationResult } = require("express-validator");
+const bcrypt = require("bcryptjs");
 
 const usuariosFilePath = path.join(__dirname, "../data/usuariosDataBase.json");
 //pasamos esta constante al index para que se recargue cada vez que refrescamos las pag
@@ -14,7 +16,34 @@ const mainController = {
   login: function (req, res) {
     res.render("usuarios/login");
   },
-  procesoLogin: function (req, res) {},
+  procesoLogin: function (req, res) {
+    let errors = validationResult(req);
+    if (errors.isEmpty()) {
+      const usuarios = JSON.parse(fs.readFileSync(usuariosFilePath, "utf-8"));
+      for (i = 0; i < usuarios.length; i++) {
+        if (usuarios[i].correo_Usuario == req.body.email) {
+          if (
+            bcrypt.compareSync(
+              req.body.password,
+              usuarios[i].contraseña_Usuario
+            )
+          )
+            var usuarioALoguearse = usuarios[i];
+          break;
+        }
+      }
+      console.log(usuarioALoguearse);
+      if (usuarioALoguearse == undefined) {
+        return res.render("usuarios/login", {
+          errors: [{ msg: "El usuario o contraseña son invalidos" }],
+        });
+      }
+      req.session.usuarioLogueado = usuarioALoguearse;
+      res.render("usuarios/resultadoLogin");
+    } else {
+      return res.render("usuarios/login", { errors: errors.errors });
+    }
+  },
   register: function (req, res) {
     res.render("usuarios/register", { usuarios: usuarios });
   },
@@ -24,7 +53,7 @@ const mainController = {
     const nuevoUsuario = {
       id_Usuario: Date.now(),
       correo_Usuario: req.body.mail,
-      contraseña_Usuario: req.body.contraseña,
+      contraseña_Usuario: bcrypt.hashSync(req.body.contraseña, 10),
       numero_Usuario: req.body.numero,
       pais_Usuario: req.body.pais,
       imagen_Usuario: req.file.filename,

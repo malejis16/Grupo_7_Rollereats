@@ -14,6 +14,16 @@
         <div class="contenedor-login">
             <img src="/img/undraw_cooking_lyxy.png" alt="Imagen de login">
         <form action="/usuarios/login" method="POST" class="formulario">
+            <% if (typeof errors != 'undefined') { %> 
+                <p style='color:red'>ERROR</p>
+                <ul>
+                    <% for (i=0; i<errors.length; i++ ) { %>
+                        <li>
+                            <%=errors[i].msg%>
+                        </li>
+                    <%}%> 
+                </ul>
+            <%}%> 
             <h3>Ingreso</h3>
             <p>Bienvenido de vuelta, ingresa a tu cuenta</p>
             <input  class="form" type="text" placeholder="Usuario  o correo electronico" value="" required name="email">
