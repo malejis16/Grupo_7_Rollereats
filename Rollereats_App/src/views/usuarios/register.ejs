@@ -15,6 +15,16 @@
         <div class="con-register">
             <img src="/img/undraw_Login_re_4vu22.png" alt="" id="imagen-registro">
             <form action="/usuarios/register" method="POST" class="formulario" enctype ="multipart/form-data">
+                <% if (typeof errors != 'undefined') { %> 
+                    <p style='color:red'>ERROR</p>
+                    <ul>
+                        <% for (i=0; i<errors.length; i++ ) { %>
+                            <li>
+                                <%=errors[i].msg%>
+                            </li>
+                        <%}%> 
+                    </ul>
+                <%}%>
                 <h3>Registro</h3>
                 <p class="p-1">Crea una nueva cuenta</p>
                 <input  class="form" type="email" placeholder="Correo electronico" id="mail" name="mail" required>
