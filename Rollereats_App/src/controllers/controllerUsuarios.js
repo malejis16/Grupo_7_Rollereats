@@ -50,20 +50,25 @@ const mainController = {
   store: function (req, res) {
     const usuarios = JSON.parse(fs.readFileSync(usuariosFilePath, "utf-8"));
     console.log(req.body);
-    const nuevoUsuario = {
-      id_Usuario: Date.now(),
-      correo_Usuario: req.body.mail,
-      contraseña_Usuario: bcrypt.hashSync(req.body.contraseña, 10),
-      numero_Usuario: req.body.numero,
-      pais_Usuario: req.body.pais,
-      imagen_Usuario: req.file.filename,
-    };
-    //   //agregar nuevo usuario
-    usuarios.push(nuevoUsuario);
-    //edtar el .json
-    fs.writeFileSync(usuariosFilePath, JSON.stringify(usuarios, null, 2));
-    // redireccionar
-    res.render("usuarios/vistaUsuarios", { usuarios: usuarios });
+    let errors = validationResult(req);
+    if (errors.isEmpty()) {
+      const nuevoUsuario = {
+        id_Usuario: Date.now(),
+        correo_Usuario: req.body.mail,
+        contraseña_Usuario: bcrypt.hashSync(req.body.contraseña, 10),
+        numero_Usuario: req.body.numero,
+        pais_Usuario: req.body.pais,
+        imagen_Usuario: req.file.filename,
+      };
+      //   //agregar nuevo usuario
+      usuarios.push(nuevoUsuario);
+      //edtar el .json
+      fs.writeFileSync(usuariosFilePath, JSON.stringify(usuarios, null, 2));
+      // redireccionar
+      res.render("usuarios/vistaUsuarios", { usuarios: usuarios });
+    } else {
+      return res.render("usuarios/register", { errors: errors.errors });
+    }
   },
   detail: (req, res) => {
     const usuarios = JSON.parse(fs.readFileSync(usuariosFilePath, "utf-8"));

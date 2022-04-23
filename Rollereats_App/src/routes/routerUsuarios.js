@@ -28,7 +28,18 @@ rutas.get("/", controller.users);
 
 // //Crear
 rutas.get("/register", guestMiddleware, controller.register);
-rutas.post("/register", upload.single("imagen"), controller.store);
+rutas.post(
+  "/register",
+  upload.single("imagen"),
+  [
+    check("mail").isEmail().withMessage("No es un correo permitido").bail(),
+    check("contraseña")
+      .isLength({ min: 8 })
+      .withMessage("La contraseña debe tener al menos 8 caracteres")
+      .bail(),
+  ],
+  controller.store
+);
 
 //detalle
 rutas.get("/detalle/:id", controller.detail);
@@ -44,11 +55,14 @@ rutas.get("/login", controller.login);
 rutas.post(
   "/login",
   [
-    check("email").isEmail().withMessage("No es un email permitido").bail(),
-    check("password")
-      .isLength({ min: 8 })
-      .withMessage("La contraseña debe tener al menos 8 caracteres")
+    check("email")
+      .isEmail()
+      .withMessage("No es un email permitido")
+      .bail()
+      .notEmpty()
+      .withMessage("Ingresa tu email")
       .bail(),
+    check("password").notEmpty().withMessage("Ingresa tu contraseña").bail(),
   ],
   controller.procesoLogin
 );
