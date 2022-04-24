@@ -14,5 +14,45 @@
     "numero_Usuario": "3132715710",
     "pais_Usuario": "Nicaragua",
     "imagen_Usuario": "imagen-1650171351278.jpg"
+  },
+  {
+    "id_Usuario": 1650746334899,
+    "correo_Usuario": "Camilo@hotmail.com",
+    "contraseña_Usuario": "$2a$10$KiIYkYjiF4P9Cih9kv/Q4uK77jIbslBqNyONn6ifvPLxbAdGWKple",
+    "numero_Usuario": "3112715710",
+    "pais_Usuario": "Alemania",
+    "imagen_Usuario": "imagen-1650746334893.jpg"
+  },
+  {
+    "id_Usuario": 1650752982174,
+    "correo_Usuario": "alejis16@hotmail.com",
+    "contraseña_Usuario": "$2a$10$ogzHxqEsQmQYI54v1NtjTu5e2zbxAmDPOawTtPkBIOf7TL52GxH9m",
+    "numero_Usuario": "234234",
+    "pais_Usuario": "Nicaragua",
+    "imagen_Usuario": "imagen-1650752982146.jpg"
+  },
+  {
+    "id_Usuario": 1650753006423,
+    "correo_Usuario": "Camilo@hotmail.com",
+    "contraseña_Usuario": "$2a$10$zZtcHWGkJRzNxOv6IsiVlOT9ZdRxQ8ucRCiHzbQ2RsLgOQDaeGAfO",
+    "numero_Usuario": "213213213",
+    "pais_Usuario": "Alemania",
+    "imagen_Usuario": "imagen-1650753006408.jpg"
+  },
+  {
+    "id_Usuario": 1650753139331,
+    "correo_Usuario": "alejis16@hotmail.com",
+    "contraseña_Usuario": "$2a$10$zrCB6yWFLg2vUG8EKRhlke2vAsKg3dU3y1qqx1yQCBnLTMCIFJQ2u",
+    "numero_Usuario": "543786234",
+    "pais_Usuario": "Ecuador",
+    "imagen_Usuario": "imagen-1650753139322.jpg"
+  },
+  {
+    "id_Usuario": 1650753225084,
+    "correo_Usuario": "Camilouyi@fed.com",
+    "contraseña_Usuario": "$2a$10$Bh.z7LYr8sSDVs/vcWODCeiCmHC2Qtydhb.DpWyJuYgF1TjVbBT92",
+    "numero_Usuario": "654987",
+    "pais_Usuario": "Alemania",
+    "imagen_Usuario": "imagen-1650753225059.jpg"
   }
 ]
