@@ -38,8 +38,11 @@ const mainController = {
           errors: [{ msg: "El usuario o contraseña son invalidos" }],
         });
       }
+      let usuarioBuscado = usuarioALoguearse;
       req.session.usuarioLogueado = usuarioALoguearse;
-      res.render("usuarios/resultadoLogin");
+      res.render("usuarios/detalleUsuario", {
+        usuarioBuscado: usuarioBuscado,
+      });
     } else {
       return res.render("usuarios/login", { errors: errors.errors });
     }

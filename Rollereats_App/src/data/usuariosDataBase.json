@@ -46,5 +46,13 @@
     "numero_Usuario": "34324324",
     "pais_Usuario": "Ecuador",
     "imagen_Usuario": "imagen-1650754875029.jpg"
+  },
+  {
+    "id_Usuario": 1651017085362,
+    "correo_Usuario": "cristian@hotmail.com",
+    "contraseña_Usuario": "$2a$10$9Vd6CRTH8ye31n.93hndYOXT3SWndJTPHKX30o.H7IOhdv55nRPHm",
+    "numero_Usuario": "3108186599",
+    "pais_Usuario": "Alemania",
+    "imagen_Usuario": "imagen-1651017085344.jpg"
   }
 ]
