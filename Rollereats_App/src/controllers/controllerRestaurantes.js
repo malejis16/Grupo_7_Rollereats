@@ -30,8 +30,15 @@ const mainController = {
         id_Producto: Date.now(),
         name_Producto: req.body.n_producto,
         price_Producto: req.body.n_precio,
-        image_Producto: req.files[0].filename,
+        //image_Producto: req.files[0].filename,
       };
+
+      if (req.files[0]) {
+        if (req.files[0].filename) {
+          restauranteNuevo.image_Producto = req.files[0].filename;
+        }
+      }
+
       productos.push(restauranteNuevo);
       fs.writeFileSync(productosFilePath, JSON.stringify(productos));
       res.redirect("/restaurantes");
@@ -56,6 +63,7 @@ const mainController = {
         productos[i].price_Producto = req.body.n_precio;
         productos[i].image_Producto = req.files[0].filename;
       }
+
       fs.writeFileSync(productosFilePath, JSON.stringify(productos, null, 2));
     }
     res.redirect("/restaurantes");

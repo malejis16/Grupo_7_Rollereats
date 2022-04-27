@@ -92,8 +92,16 @@ const mainController = {
   },
   edit: (req, res) => {
     let id = req.params.id;
-    //retornar el usuario encontrado y retonarlo a la vista
-    res.render("usuarios/editarUsuario", { usuarios: usuarios, id });
+    for (let i = 0; i < usuarios.length; i++) {
+      if (usuarios[i].id_Usuario == id) {
+        usuarioEditable = usuarios[i];
+      }
+    }
+    res.render("usuarios/editarUsuario", {
+      usuarios: usuarios,
+      id,
+      usuarioEditable: usuarioEditable,
+    });
   },
   update: (req, res) => {
     const usuarios = JSON.parse(fs.readFileSync(usuariosFilePath, "utf-8"));

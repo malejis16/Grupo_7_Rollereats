@@ -38,5 +38,21 @@
     "numero_Usuario": "654987",
     "pais_Usuario": "Alemania",
     "imagen_Usuario": "imagen-1650753225059.jpg"
+  },
+  {
+    "id_Usuario": 1651023265575,
+    "correo_Usuario": "cristian@hotmail.com",
+    "contraseña_Usuario": "$2a$10$i4G7DqrXdkEPjxnxdumwt.GLdrtG0jATzlRVy2LWTHMG7rSDCG7SO",
+    "numero_Usuario": "3132715710",
+    "pais_Usuario": "Alemania",
+    "imagen_Usuario": "imagen-1651023265558.jpg"
+  },
+  {
+    "id_Usuario": 1651024511897,
+    "correo_Usuario": "majito@hotmail.com",
+    "contraseña_Usuario": "$2a$10$E3hh1k48iCjsE32xk8orpeI5sO769va1xOYn37Pw28ClwPTomwe7i",
+    "numero_Usuario": "123213",
+    "pais_Usuario": "Ecuador",
+    "imagen_Usuario": "imagen-1651024549057.jpg"
   }
 ]
