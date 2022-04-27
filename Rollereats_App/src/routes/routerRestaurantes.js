@@ -21,7 +21,7 @@ var storage = multer.diskStorage({
 var upload = multer({ storage });
 
 //Rutas Restaurantes
-rutas.get("/", logintMiddleware, controller.restaurantes);
+rutas.get("/", controller.restaurantes);
 //Crear Producto
 rutas.get("/createProducto", controller.createProducto);
 rutas.post("/createProducto", upload.any(), controller.storeProducto);
@@ -30,6 +30,6 @@ rutas.get("/edit/:id", controller.edit);
 rutas.put("/edit/:id", upload.any(), controller.update);
 
 //Eliminar
-rutas.delete("eliminar/:id", controller.destroy);
+rutas.delete("/eliminar/:id", controller.destroy);
 
 module.exports = rutas;

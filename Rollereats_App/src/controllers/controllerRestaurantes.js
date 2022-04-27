@@ -13,15 +13,12 @@ const productosFilePath = path.join(
 );
 
 //pasamos esta constante al index para que se recargue cada vez que refrescamos las pag
-const restaurantes = JSON.parse(fs.readFileSync(restaurantesFilePath, "utf-8"));
-const productos = JSON.parse(fs.readFileSync(productosFilePath, "utf-8"));
+let restaurantes = JSON.parse(fs.readFileSync(restaurantesFilePath, "utf-8"));
+let productos = JSON.parse(fs.readFileSync(productosFilePath, "utf-8"));
 
 const mainController = {
   restaurantes: function (req, res) {
-    const productos = JSON.parse(fs.readFileSync(productosFilePath, "utf-8"));
-    const restaurantes = JSON.parse(
-      fs.readFileSync(restaurantesFilePath, "utf-8")
-    );
+    let productos = JSON.parse(fs.readFileSync(productosFilePath, "utf-8"));
     res.render("restaurantes/restaurantes", { productos: productos });
   },
   createProducto: function (req, res) {
@@ -49,7 +46,7 @@ const mainController = {
   },
   // Update - Method to update
   update: (req, res) => {
-    const productos = JSON.parse(fs.readFileSync(productosFilePath, "utf-8"));
+    let productos = JSON.parse(fs.readFileSync(productosFilePath, "utf-8"));
     let id = req.params.id;
     console.log(req.body);
 
@@ -66,10 +63,12 @@ const mainController = {
 
   // Delete - Delete one product from DB
   destroy: (req, res) => {
-    const productos = JSON.parse(fs.readFileSync(productosFilePath, "utf-8"));
+    let productos = JSON.parse(fs.readFileSync(productosFilePath, "utf-8"));
     let id = req.params.id;
     // filtrar todos los productos que no tengan ese id
-    let productosFiltrados = productos.filter((producto) => producto.id != id);
+    let productosFiltrados = productos.filter(
+      (producto) => producto.id_Producto != id
+    );
 
     fs.writeFileSync(
       productosFilePath,

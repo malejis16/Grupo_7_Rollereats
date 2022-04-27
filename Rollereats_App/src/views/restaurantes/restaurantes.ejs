@@ -105,7 +105,7 @@
           <div class="modal_Container">
             <figure class="modal_options">
               <a class="salir" href="#salir" style="color: black;"><i class="fa-solid fa-xmark"></i></a>
-              <form action="_method=DELETE" method="POST">
+              <form action="/restaurantes/eliminar/<%=productos[i].id_Producto%>?_method=DELETE" method="POST">
                   <button type="submit" class="button-delete">  
                     Eliminar producto
                   </button>
