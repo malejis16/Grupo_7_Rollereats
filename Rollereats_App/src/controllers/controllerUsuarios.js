@@ -55,14 +55,20 @@ const mainController = {
     console.log(req.body);
     let errors = validationResult(req);
     if (errors.isEmpty()) {
-      const nuevoUsuario = {
+      let nuevoUsuario = {
         id_Usuario: Date.now(),
         correo_Usuario: req.body.mail,
         contraseña_Usuario: bcrypt.hashSync(req.body.contraseña, 10),
         numero_Usuario: req.body.numero,
         pais_Usuario: req.body.pais,
-        imagen_Usuario: req.file.filename,
       };
+      if (req.file) {
+        if (req.file.filename) {
+          nuevoUsuario.imagen_Usuario = req.file.filename;
+        }
+      }
+
+      //realizar el case
       //   //agregar nuevo usuario
       usuarios.push(nuevoUsuario);
       //edtar el .json
@@ -86,6 +92,7 @@ const mainController = {
   },
   edit: (req, res) => {
     let id = req.params.id;
+    //retornar el usuario encontrado y retonarlo a la vista
     res.render("usuarios/editarUsuario", { usuarios: usuarios, id });
   },
   update: (req, res) => {
