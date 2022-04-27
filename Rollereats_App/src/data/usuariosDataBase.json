@@ -54,5 +54,13 @@
     "numero_Usuario": "3108186599",
     "pais_Usuario": "Alemania",
     "imagen_Usuario": "imagen-1651017085344.jpg"
+  },
+  {
+    "id_Usuario": 1651022715280,
+    "correo_Usuario": "alejis16@hotmail.com",
+    "contraseña_Usuario": "$2a$10$u3mwQeQaeY.nL3eR9srZU.KJ3H7VRcgZP9fqetKKTnlr.WviVNyuq",
+    "numero_Usuario": "123",
+    "pais_Usuario": "Alemania",
+    "imagen_Usuario": "imagen-1651022715239.jpg"
   }
 ]
