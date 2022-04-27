@@ -48,11 +48,26 @@
     "imagen_Usuario": "imagen-1650754875029.jpg"
   },
   {
-    "id_Usuario": 1651017085362,
-    "correo_Usuario": "cristian@hotmail.com",
-    "contraseña_Usuario": "$2a$10$9Vd6CRTH8ye31n.93hndYOXT3SWndJTPHKX30o.H7IOhdv55nRPHm",
-    "numero_Usuario": "3108186599",
+    "id_Usuario": 1651019193667,
+    "correo_Usuario": "camilo123@hotmail.com",
+    "contraseña_Usuario": "$2a$10$ysbTf4H6PKwTN5Cp3mBC0e2RFMOftW05leHYn1JiP0Xgrn3.oOSXG",
+    "numero_Usuario": "3132715710",
     "pais_Usuario": "Alemania",
-    "imagen_Usuario": "imagen-1651017085344.jpg"
+    "imagen_Usuario": "imagen-1651019193632.jpg"
+  },
+  {
+    "id_Usuario": 1651020007120,
+    "correo_Usuario": "alejis16@hotmail.com",
+    "contraseña_Usuario": "$2a$10$iskPO1KLW/2mHhJIcij4HehcK2JHUUcWF.zuHfvUdc5h1uOrOyj9W",
+    "numero_Usuario": "324234",
+    "pais_Usuario": "Alemania"
+  },
+  {
+    "id_Usuario": 1651020131821,
+    "correo_Usuario": "cristian@hotmail.com",
+    "contraseña_Usuario": "$2a$10$tTIOKsGrBHHhCK3tywGX.ON8N.aTWPgbTUeKpCQHtIGso.P1d8uUW",
+    "numero_Usuario": "121212",
+    "pais_Usuario": "Ecuador",
+    "imagen_Usuario": "imagen-1651020131804.jpg"
   }
 ]
