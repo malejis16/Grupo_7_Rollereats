@@ -5,36 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurante || Name</title>
+
     <link rel="stylesheet" href="/css/productDetail.css">
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/usuarios.css">
 </head>
 <body>
     <!-- Encabezamiento -->
     <%- include('../partials/header.ejs') %>
-    <div style="padding: 5rem 0;">
-
-        <% for(let i = 0; i < usuarios.length; i++){ %>
-            <section style="margin: 0.5rem 12rem;">
-                <a href="/usuarios/detalle/<%=usuarios[i].id_Usuario%>" style="display:flex">
-                    <p><%=usuarios[i].id_Usuario%></p> 
-                    <p><%=usuarios[i].correo_Usuario%></p>
-                    <p><%=usuarios[i].numero_Usuario%></p>
-                    <p><%=usuarios[i].pais_Usuario%></p>
-                    <p><img src="/img/<%=usuarios[i].imagen_Usuario%>" alt="" id="imagen-registro"></p>
-                    
-
-                </a>
-            </section>
-        <% } %>
+    <div class="crud-container">
+        <div class="crud-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Avatar</th>
+                        <th>Id</th>
+                        <th>Correo</th>
+                        <th>Telefono</th>
+                        <th>Pais</th>
+                    </tr>
+                </thead>
+                <% for(let i = 0; i < usuarios.length; i++){ %>
+                <!-- <a href="/usuarios/detalle/<%=usuarios[i].id_Usuario%>"> -->
+                <tr onclick="document.location = '/usuarios/detalle/<%=usuarios[i].id_Usuario%>';">
+                    <td ><img src="/img/<%=usuarios[i].imagen_Usuario%>" alt="" id="imagen-registro"></td>
+                    <td ><%=usuarios[i].id_Usuario%></td>
+                    <td ><%=usuarios[i].correo_Usuario%></td>
+                    <td ><%=usuarios[i].numero_Usuario%></td>
+                    <td ><%=usuarios[i].pais_Usuario%></td> 
+                </tr>
+                <!-- </a> -->
+                <% } %>
+            </table>
+        </div>
     </div>
-
     <!-- Footer -->
     <%- include('../partials/footer.ejs') %>
-    <style>
-        p{
-            color:black;
-            padding: 0 0 0 7rem;
-        }
-    </style>
 </body>
+<script src="https://kit.fontawesome.com/6b289d76ca.js" crossorigin="anonymous"></script>
 </html> 
+
+

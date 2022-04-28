@@ -1,0 +1,50 @@
+ 
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.crud-container{
+    padding-top: 100px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.crud-table{
+    height: 600px;
+    overflow: auto;
+}
+.crud-table  thead th{
+    position: sticky; 
+    top: 0;
+    background-color: #ff702a;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 15px 20px;
+}
+tr:nth-child(even){
+    background-color: #dddddd;
+}
+tr:nth-child(odd){
+    background-color: #edeef1
+}
+tr:hover td{
+    cursor: pointer;
+    background-color: white;  
+}
+table{
+    border-collapse: collapse;
+}
+th,td{
+    border: 1px solid white;
+    padding: 0 20px;
+    font-size: 14px;
+}
+
+td img{
+    height: 50px;
+    width: 50px;
+    border: 2px solid white;
+    border-radius: 100%;
+}
+
+::-webkit-scrollbar{
+    width: 6px;
+}

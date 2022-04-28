@@ -54,5 +54,29 @@
     "numero_Usuario": "123213",
     "pais_Usuario": "Ecuador",
     "imagen_Usuario": "imagen-1651024549057.jpg"
+  },
+  {
+    "id_Usuario": 1651119349156,
+    "correo_Usuario": "naitsircareivr@gmail.com",
+    "contraseña_Usuario": "$2a$10$cBnTdKwhAZfw3ejKIRtfkur9QfYk5FAafnGsmdRLNKOQ/TcygZ2Hq",
+    "numero_Usuario": "31111111111",
+    "pais_Usuario": "Colombia",
+    "imagen_Usuario": "imagen-1651119349103.webp"
+  },
+  {
+    "id_Usuario": 1651122334941,
+    "correo_Usuario": "pepito@gmail.com",
+    "contraseña_Usuario": "$2a$10$rGf7mTwawCLjZZlNfePjYeKL7Gq1YzmXKtSGaIqRIc2GfMH18twHS",
+    "numero_Usuario": "212122121",
+    "pais_Usuario": "Colombia",
+    "imagen_Usuario": "imagen-1651122334753.webp"
+  },
+  {
+    "id_Usuario": 1651132890740,
+    "correo_Usuario": "naitsircareivr@gmail.com",
+    "contraseña_Usuario": "$2a$10$6Zo4ren6rvVzdbTp2FbA9.bXVUAn.meqD63rzitM8R5tiQFhZ/Uh6",
+    "numero_Usuario": "111121212111",
+    "pais_Usuario": "Colombia",
+    "imagen_Usuario": "imagen-1651132890657.webp"
   }
 ]
