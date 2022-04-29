@@ -30,37 +30,5 @@
     "numero_Usuario": "543786234",
     "pais_Usuario": "Ecuador",
     "imagen_Usuario": "imagen-1650753139322.jpg"
-  },
-  {
-    "id_Usuario": 1650753225084,
-    "correo_Usuario": "Camilouyi@fed.com",
-    "contraseña_Usuario": "$2a$10$Bh.z7LYr8sSDVs/vcWODCeiCmHC2Qtydhb.DpWyJuYgF1TjVbBT92",
-    "numero_Usuario": "654987",
-    "pais_Usuario": "Alemania",
-    "imagen_Usuario": "imagen-1650753225059.jpg"
-  },
-  {
-    "id_Usuario": 1651023265575,
-    "correo_Usuario": "cristian@hotmail.com",
-    "contraseña_Usuario": "$2a$10$i4G7DqrXdkEPjxnxdumwt.GLdrtG0jATzlRVy2LWTHMG7rSDCG7SO",
-    "numero_Usuario": "3132715710",
-    "pais_Usuario": "Alemania",
-    "imagen_Usuario": "imagen-1651023265558.jpg"
-  },
-  {
-    "id_Usuario": 1651024511897,
-    "correo_Usuario": "majito@hotmail.com",
-    "contraseña_Usuario": "$2a$10$E3hh1k48iCjsE32xk8orpeI5sO769va1xOYn37Pw28ClwPTomwe7i",
-    "numero_Usuario": "123213",
-    "pais_Usuario": "Ecuador",
-    "imagen_Usuario": "imagen-1651024549057.jpg"
-  },
-  {
-    "id_Usuario": 1651119349156,
-    "correo_Usuario": "naitsircareivr@gmail.com",
-    "contraseña_Usuario": "$2a$10$cBnTdKwhAZfw3ejKIRtfkur9QfYk5FAafnGsmdRLNKOQ/TcygZ2Hq",
-    "numero_Usuario": "31111111111",
-    "pais_Usuario": "Colombia",
-    "imagen_Usuario": "imagen-1651119349103.webp"
   }
 ]
