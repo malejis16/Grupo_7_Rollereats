@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurante || Name</title>
     <link rel="stylesheet" href="/css/productDetail.css">
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/styles.css"> 
+    <link rel="stylesheet" href="/css/usuarios.css">
 </head>
 <body>
     <!-- Encabezamiento -->
     <%- include('../partials/header.ejs') %>
-    <div style="padding: 5rem 0;">
+    <!-- <div style="padding: 5rem 0;">
             <section style="margin: 0.5rem 12rem; display: flex;">
                     <p><%=usuarioBuscado.id_Usuario%></p> 
                     <p><%=usuarioBuscado.correo_Usuario%></p>
@@ -29,13 +30,37 @@
                 <button type="submit" class="action-button delete">ELIMINAR</button>
                 </form>
             </div>
+    </div> -->
+    <div class="crud-container">
+        <div class="crud-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Avatar</th>
+                        <th>Id</th>
+                        <th>Correo</th>
+                        <th>Telefono</th>
+                        <th>Pais</th>
+                        <th colspan="2">Actions</th>
+                    </tr>
+                </thead>
+                <tr class="users">
+                    <td ><img src="/img/<%=usuarioBuscado.imagen_Usuario%>" alt="" id="imagen-registro"></td>
+                    <td ><%=usuarioBuscado.id_Usuario%></td>
+                    <td ><%=usuarioBuscado.correo_Usuario%></td>
+                    <td ><%=usuarioBuscado.numero_Usuario%></td>
+                    <td ><%=usuarioBuscado.pais_Usuario%></td> 
+                    <td class="user-edit" onclick="document.location ='/usuarios/editarUsuario/<%=usuarioBuscado.id_Usuario%>'; "><i class="fa-solid fa-user-pen"></i></td>
+                    <td>
+                        <form action="/usuarios/delete/<%=usuarioBuscado.id_Usuario%>?_method=DELETE" method="POST">
+                            <button type="submit" class="user-delete"><i class="fa-solid fa-trash-can"></i></button>
+                        </form>
+                    </td>
+                </tr>
+            </table>
+        </div>
     </div>
     <%- include('../partials/footer.ejs') %>
-    <style>
-        p{
-            color:black;
-            padding: 0 0 0 7rem;
-        }
-    </style>
 </body>
+<script src="https://kit.fontawesome.com/6b289d76ca.js" crossorigin="anonymous"></script>
 </html> 

@@ -48,3 +48,17 @@ td img{
 ::-webkit-scrollbar{
     width: 6px;
 }
+.users:hover td{
+    cursor: default; 
+    background-color:#edeef1;
+}
+.user-edit i{
+    cursor: pointer;
+}
+.user-delete{
+    border: none;
+    cursor: pointer;
+}
+.user-delete i{
+    color: red;
+}
