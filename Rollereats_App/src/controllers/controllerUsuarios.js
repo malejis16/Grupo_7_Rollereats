@@ -112,8 +112,13 @@ const mainController = {
         usuarios[i].correo_Usuario = req.body.mail;
         usuarios[i].numero_Usuario = req.body.numero;
         usuarios[i].pais_Usuario = req.body.pais;
-        usuarios[i].imagen_Usuario = req.file.filename;
       }
+      if (req.file) {
+        if (req.file.filename) {
+          usuarios[i].imagen_Usuario = req.file.filename;
+        }
+      }
+
       fs.writeFileSync(usuariosFilePath, JSON.stringify(usuarios, null, 2));
     }
     res.redirect("/usuarios");
