@@ -1,34 +1,27 @@
 [
   {
-    "id_Usuario": 1650171317973,
-    "correo_Usuario": "malejis16@hotmail.com",
-    "contraseña_Usuario": "$2a$10$MP0NGOqQRd8t/G1SRmB1NePTenhDbHGMosqe0N3/e.42V6DLCV9za",
-    "numero_Usuario": "3132715710",
+    "id_Usuario": 1651404552156,
+    "correo_Usuario": "alejis16@hotmail.com",
+    "contraseña_Usuario": "$2a$10$kTu5I5vyCNCFZCmhHeFXt.OxQkLeSv9/mYDij5gjNBg.NJ8inlAqC",
+    "numero_Usuario": "12345",
     "pais_Usuario": "Alemania",
-    "imagen_Usuario": "imagen-1650171317960.jpg"
+    "imagen_Usuario": "imagen-1651404552101.jpg"
   },
   {
-    "id_Usuario": 1650746334899,
+    "id_Usuario": 1651404569349,
     "correo_Usuario": "Camilo@hotmail.com",
-    "contraseña_Usuario": "$2a$10$KiIYkYjiF4P9Cih9kv/Q4uK77jIbslBqNyONn6ifvPLxbAdGWKple",
-    "numero_Usuario": "3112715710",
-    "pais_Usuario": "Alemania",
-    "imagen_Usuario": "imagen-1650746334893.jpg"
-  },
-  {
-    "id_Usuario": 1650752982174,
-    "correo_Usuario": "alejis16@hotmail.com",
-    "contraseña_Usuario": "$2a$10$ogzHxqEsQmQYI54v1NtjTu5e2zbxAmDPOawTtPkBIOf7TL52GxH9m",
-    "numero_Usuario": "234234",
+    "contraseña_Usuario": "$2a$10$BtI52LP22s.MuXQS2W0ZU.ChSEGahqhUMr1gFjkyDD/GhjbWcr3.K",
+    "numero_Usuario": "1234567",
     "pais_Usuario": "Nicaragua",
-    "imagen_Usuario": "imagen-1650752982146.jpg"
+    "imagen_Usuario": "imagen-1651404569287.jpg"
   },
   {
-    "id_Usuario": 1650753139331,
-    "correo_Usuario": "alejis16@hotmail.com",
-    "contraseña_Usuario": "$2a$10$zrCB6yWFLg2vUG8EKRhlke2vAsKg3dU3y1qqx1yQCBnLTMCIFJQ2u",
-    "numero_Usuario": "543786234",
+    "id_Usuario": 1651404588733,
+    "correo_Usuario": "cristian@hotmail.com",
+    "contraseña_Usuario": "$2a$10$PlmaTPxo2pvrJNoNev9akOsSRlhyszsI.9zBmCpjprPzdVhonIxwi",
+    "numero_Usuario": "1124356",
     "pais_Usuario": "Ecuador",
+<<<<<<< HEAD
     "imagen_Usuario": "imagen-1650753139322.jpg"
   },
   {
@@ -46,5 +39,16 @@
     "numero_Usuario": "4436543534",
     "pais_Usuario": "Nicaragua",
     "imagen_Usuario": "imagen-1651403860311.jpg"
+=======
+    "imagen_Usuario": "imagen-1651404588647.jpg"
+  },
+  {
+    "id_Usuario": 1651404623970,
+    "correo_Usuario": "malejis16@hotmail.com",
+    "contraseña_Usuario": "$2a$10$HlO4RPWwocXJCavdgXyiHOnCb8Bl9lyq4B/8x2u4N.aDpPhP7QgyO",
+    "numero_Usuario": "123456",
+    "pais_Usuario": "Colombia",
+    "imagen_Usuario": "imagen-1651404623919.png"
+>>>>>>> Test
   }
 ]
