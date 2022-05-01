@@ -30,5 +30,21 @@
     "numero_Usuario": "543786234",
     "pais_Usuario": "Ecuador",
     "imagen_Usuario": "imagen-1650753139322.jpg"
+  },
+  {
+    "id_Usuario": 1651403571356,
+    "correo_Usuario": "titi@iglo.com",
+    "contraseña_Usuario": "$2a$10$vBuGtWltLIQdvI4wPC6O.eAMrwW/oXubfFhKkEPo2XRKjOHJ6LqMu",
+    "numero_Usuario": "3132715711111",
+    "pais_Usuario": "Alemania",
+    "imagen_Usuario": "imagen-1651403830093.jpg"
+  },
+  {
+    "id_Usuario": 1651403860330,
+    "correo_Usuario": "alejis16@hotmail.com",
+    "contraseña_Usuario": "$2a$10$hcOHJoR8a2/xfUR.UTu.qODsBin4rg.wcng6bDmEF6b.kw/b2SejS",
+    "numero_Usuario": "4436543534",
+    "pais_Usuario": "Nicaragua",
+    "imagen_Usuario": "imagen-1651403860311.jpg"
   }
 ]
