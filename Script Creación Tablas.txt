@@ -1,0 +1,40 @@
+DROP DATABASE IF EXISTS rollereats;
+CREATE DATABASE rollereats;
+USE rollereats;
+
+DROP TABLE IF EXISTS rolles;
+CREATE TABLE rolles (
+  id_roll INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  roll VARCHAR(50) NOT null
+ );
+
+DROP TABLE IF EXISTS Usuarios;
+CREATE TABLE Usuarios (
+  id_Usuario INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  correo_Usuario VARCHAR(50) NOT NULL,
+  contrasena_Usuario VARCHAR(50) NOT null,
+  numero_Usuario VARCHAR(50) NOT NULL,
+  pais_Usuario VARCHAR(50) NOT null,
+  imagen_Usuario VARCHAR(50),
+  id_roll INT NOT null,
+   FOREIGN KEY (id_roll) REFERENCES rolles(id_roll)
+ );
+
+DROP TABLE IF EXISTS Carrito_Compras;
+CREATE TABLE Carrito_Compras(
+	id_carrito_compras INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+	id_usuario INT NOT NULL,
+    id_producto INT NOT NULL,
+    FOREIGN KEY (id_usuario) REFERENCES Usuarios(id_Usuario),
+    FOREIGN KEY (id_producto) REFERENCES Productos(id_Producto)
+);
+ 
+DROP TABLE IF EXISTS Productos;
+CREATE TABLE Productos (
+	id_Producto INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+	name_Producto VARCHAR(100) NOT NULL, 
+	price_Producto VARCHAR(50) NOT NULL, 
+	image_Producto VARCHAR(100)
+);
+  
+

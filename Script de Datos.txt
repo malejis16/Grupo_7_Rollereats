@@ -1,0 +1,36 @@
+
+/////////////////////////////////////////SCRIPT DE DATOS////////////////////////////////////////////////  */
+
+INSERT INTO Rolles (id_roll, roll) VALUES 
+(1, 'Administrador'),
+(2, 'Usuario');
+
+INSERT INTO Usuarios VALUES
+(1, 'malejis16@hotmail.com', 'malejis16', '3132715710', 'Colombia', 'imagen-1648177069320.jpg',1),
+(2, 'alejandra@hotmail.com', 'alejandra', '3132715711', 'Ecuador','imagen-1648177069320.jpg',1),
+(3, 'rodrigo@hotmail.com', 'rodrigo', '3132715712', 'Argentina', 'imagen-1648177069320.jpg',2),
+(4, 'leonardo@hotmail.com', 'leonardo', '3132715713', 'Colombia', 'imagen-1648177069320.jpg',2),
+(5, 'cristian@hotmail.com', 'cristian', '3132715714', 'Colombia', 'imagen-1648177069320.jpg',1);
+
+
+INSERT INTO Carrito_Compras VALUES
+(1, 1, 5),
+(2, 1, 4),
+(3, 2, 3),
+(4, 4, 2),
+(5, 1, 1),
+(6, 5, 5),
+(7, 3, 4),
+(8, 3, 3),
+(9, 5, 2);
+
+INSERT INTO Productos VALUES
+(1, 'Hamburguesa de Carnes', 11800, 'Hamburguesa_1.png'),
+(2,  'Hamburguesa de Pollo', 12700, 'Hamburguesa_2.png'),
+(3, 'Hamburguesa de doble Queso', 18800, 'Hamburguesa_3.png'),
+(4, 'Hamburguesa Mexicana', 21900, 'Hamburguesa_4.png'),
+(5,  'Hamburguesa de Carnitas', 31200, 'Hamburguesa_5.png'),
+(6, 'Hamburguesa BBQ', 15400, 'Hamburguesa_6.png'),
+(7,  'Hamburguesa Ranchera', 17500, 'Hamburguesa_1.png'),
+(8, 'Hamburguesa Triple Carne', 19100, 'Hamburguesa_2.png'),
+(9, 'Hamburguesa de la casa', 12300, 'Hamburguesa_6.png');
