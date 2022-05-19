@@ -16,13 +16,13 @@ module.exports = function (sequelize, dataTypes){
             type: dataTypes.STRING,
         },
         businessPhone1: {
-            type: dataTypes.INTEGER,
+            type: dataTypes.BIGINT,
         },
         businessPhone2: {
-            type: dataTypes.INTEGER,
+            type: dataTypes.BIGINT,
         },
-        businessTime: {
-            type: dataTypes.INTEGER,
+        businessDeliveryFee: {
+            type: dataTypes.BIGINT,
         },
         businessDescription: {
             type: dataTypes.STRING,
@@ -46,7 +46,10 @@ module.exports = function (sequelize, dataTypes){
         Business.belongsTo(models.User, {
             as: "users",
             foreignKey: "idUser",
-            /*Me falta la relacion de products - Bussineses*/
+        });
+        Business.hasMany(models.Product, {
+            as: "products",
+            foreignKey: "idBusiness",
         });
     }
     return Business;

@@ -10,7 +10,7 @@ module.exports = function (sequelize, dataTypes){
             type: dataTypes.STRING, 
         },
         productPrice: {
-            type: dataTypes.INTEGER,
+            type: dataTypes.BIGINT,
         },
         productDescription: {
             type: dataTypes.STRING,
@@ -45,7 +45,7 @@ module.exports = function (sequelize, dataTypes){
             foreignKey: "codeSale",
             otherKey: "idProduct",
             timestamps: false,
-        }); /*Revision de este ultimo item con la opcion de eliminar el modelo cartDetails*/
+        });
     }
     return Product;
 }
