@@ -39,13 +39,17 @@ module.exports = function (sequelize, dataTypes){
             as: "categories",
             foreignKey: "idCategory",
         });
-        Product.belongsToMany(models.Carts, {
-            as: "carts",
-            through: "cartdetail",
-            foreignKey: "codeSale",
-            otherKey: "idProduct",
-            timestamps: false,
+        Product.hasMany(models.CartDetail, {
+            as: "cartdetail",
+            foreignKey: "idProduct",
         });
+        // Product.belongsToMany(models.Carts, {
+        //     as: "carts",
+        //     through: "cartdetail",
+        //     foreignKey: "codeSale",
+        //     otherKey: "idProduct",
+        //     timestamps: false,
+        // });
     }
     return Product;
 }
