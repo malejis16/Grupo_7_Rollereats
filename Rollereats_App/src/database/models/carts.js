@@ -6,11 +6,8 @@ module.exports = function (sequelize, dataTypes){
             primaryKey: true,
             autoIncrement: true
         },
-        saleAmount: {
-            type: dataTypes.INTEGER, 
-        },
         saleDate: {
-            type: dataTypes.INTEGER, /* type Datetime*/
+            type: dataTypes.DATETIME, /* type Datetime*/
         },
         idUser: {
             type: dataTypes.INTEGER,
@@ -29,14 +26,13 @@ module.exports = function (sequelize, dataTypes){
             as: "users",
             foreignKey: "idUser",
         });
-        /*faltaria definir la relacion con la tabla detalle del carrito*/
         Carts.belongsToMany(models.Product, {
             as: "products",
             through: "cartdetail",
             foreignKey: "codeSale",
             otherKey: "idProduct",
             timestamps: false,
-        }); /*Revision de este ultimo item con la opcion de eliminar el modelo cartDetails*/
+        });
     }
     return Carts;
 }

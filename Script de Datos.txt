@@ -1,36 +1,55 @@
+USE dbDigitalHouse;
+    
+INSERT INTO roles 
+VALUES 	(1, 'restaurantOwner'),
+    	(2, 'user');
 
-/////////////////////////////////////////SCRIPT DE DATOS////////////////////////////////////////////////  */
+INSERT INTO users (idUser,email,phone,password,country,avatar,idRole) 
+VALUES 	(1, 'malejis16@hotmail.com', 3132715710 , 'malejis16', 'Colombia', 'image-1648177069320.jpg',1),
+	(2, 'alejandra@hotmail.com', 3132715711 , 'alejandra', 'Ecuador','image-1648177069320.jpg',1),
+	(3, 'rodrigo@hotmail.com', 3132715712 , 'rodrigo', 'Argentina', 'image-1648177069320.jpg',2),
+	(4, 'leonardo@hotmail.com', 3132715715 , 'leonardo', 'Colombia', 'image-1648177069320.jpg',2),
+	(5, 'cristian@hotmail.com', 3132715714 , 'cristian', 'Colombia', 'image-1648177069320.jpg',1),
+        (6, 'gerado@hotmail.com', 3132715714 , 'gerardopass', 'Ecuador', 'image-1648177062548.jpg',2);
 
-INSERT INTO Rolles (id_roll, roll) VALUES 
-(1, 'Administrador'),
-(2, 'Usuario');
+INSERT INTO businesses (idBusiness,businessName,businessEmail1,businessPhone1,businessDeliveryFee,businessDescription,idUser) 
+VALUES 	(1, 'KFC','kfc@gmail.com',3132715712,3000,'American fast food restaurant chain specializing in fried chicken.',1),
+	(2, 'Dominos Pizza', 'dominospizza@gmail.com' , 3124585474,5000,'American fast food restaurant chain specializing in fried chicken.',2),
+	(3, 'Quartos Pizza', 'QuartosPi@gmail.com' , 3132715714,4000,'Deep pan and thin crust pizzas, pasta, sandwiches and salads',5);
 
-INSERT INTO Usuarios VALUES
-(1, 'malejis16@hotmail.com', 'malejis16', '3132715710', 'Colombia', 'imagen-1648177069320.jpg',1),
-(2, 'alejandra@hotmail.com', 'alejandra', '3132715711', 'Ecuador','imagen-1648177069320.jpg',1),
-(3, 'rodrigo@hotmail.com', 'rodrigo', '3132715712', 'Argentina', 'imagen-1648177069320.jpg',2),
-(4, 'leonardo@hotmail.com', 'leonardo', '3132715713', 'Colombia', 'imagen-1648177069320.jpg',2),
-(5, 'cristian@hotmail.com', 'cristian', '3132715714', 'Colombia', 'imagen-1648177069320.jpg',1);
+INSERT INTO categories 
+VALUES	(1, 'Hamburgers'),
+	(2, 'Hot dogs'),
+        (3, 'Pizzas'),
+        (4, 'House specials'),
+        (5, 'Salads'),
+        (6, 'Soups'),
+        (7, 'Ice creams'),
+        (8, 'Coffee'),
+        (9, 'Drinks');
+	
+INSERT INTO products 
+VALUES	(1, 'Hamburguesa Campesina', 17000 , 'Sándwich hecho a base de carne molida o de origen vegetal, aglutinada en forma de filete cocinado a la parrilla o a la plancha',1,1),
+	(2, 'Hamburguesa Tradicinal', 13000 , 'Sándwich hecho a base de carne molida o de origen vegetal, aglutinada en forma de filete cocinado a la parrilla o a la plancha',2,1),
+	(3, 'Pizza Hawaiana', 4500 , 'Sándwich hecho a base de carne molida o de origen vegetal, aglutinada en forma de filete cocinado a la parrilla o a la plancha',3,3),
+	(4, 'Hot Dog Sencillo ', 8000 , 'Combinación de una salchicha del tipo salchicha de frankfurt ( frankfurter) o vienesa ( wiener) hervida o frita, servida en un pan con forma alargada',2,2),
+	(5, 'Bull Dog', 14000 , 'combinación de una salchicha del tipo salchicha de frankfurt ( frankfurter) o vienesa ( wiener) hervida o frita, servida en un pan con forma alargada',3,2),
+        (6, 'Pizza Mexicana', 4500, 'Sándwich hecho a base de carne molida o de origen vegetal, aglutinada en forma de filete cocinado a la parrilla o a la plancha',1,3),
+	(7, 'Limonada Cerezada', 6000 , 'Receta fresca y frutal para hacer con ingredientes sencillos',1,7),
+	(8, 'Capuchino', 8000 , 'Preparada con café expreso y leche montada con vapor para darle cremosidad.',1,8),
+	(9, 'Granizado de Café', 7000 , 'Receta fresca y frutal para hacer con ingredientes sencillos',3,7),
+	(10, 'Mazorcada', 17000 , 'mazorca desgranada con pollo sofrito',2,4);
+        
+INSERT INTO carts 
+VALUES 	(1,'2022-05-19 20:30:20',3),
+	(2,'2022-05-19 16:30:20',4),
+	(3,'2022-05-18 11:30:20',6);
+  
+INSERT INTO cartDetail 
+VALUES 	(1, 28000, 32000,1, 5, 2),
+	(2, 17000, 20000,2, 1, 1),
+	(3, 21000, 25000,3, 9, 3);
+  
 
+  
 
-INSERT INTO Carrito_Compras VALUES
-(1, 1, 5),
-(2, 1, 4),
-(3, 2, 3),
-(4, 4, 2),
-(5, 1, 1),
-(6, 5, 5),
-(7, 3, 4),
-(8, 3, 3),
-(9, 5, 2);
-
-INSERT INTO Productos VALUES
-(1, 'Hamburguesa de Carnes', 11800, 'Hamburguesa_1.png'),
-(2,  'Hamburguesa de Pollo', 12700, 'Hamburguesa_2.png'),
-(3, 'Hamburguesa de doble Queso', 18800, 'Hamburguesa_3.png'),
-(4, 'Hamburguesa Mexicana', 21900, 'Hamburguesa_4.png'),
-(5,  'Hamburguesa de Carnitas', 31200, 'Hamburguesa_5.png'),
-(6, 'Hamburguesa BBQ', 15400, 'Hamburguesa_6.png'),
-(7,  'Hamburguesa Ranchera', 17500, 'Hamburguesa_1.png'),
-(8, 'Hamburguesa Triple Carne', 19100, 'Hamburguesa_2.png'),
-(9, 'Hamburguesa de la casa', 12300, 'Hamburguesa_6.png');

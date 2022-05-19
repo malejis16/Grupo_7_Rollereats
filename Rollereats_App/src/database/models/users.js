@@ -19,7 +19,7 @@ module.exports = function (sequelize, dataTypes){
             type: dataTypes.STRING,
         },
         phone: {
-            type: dataTypes.INTEGER,
+            type: dataTypes.BEGINT,
         },
         password: {
             type: dataTypes.STRING,
@@ -49,6 +49,10 @@ module.exports = function (sequelize, dataTypes){
         });
         User.hasMany(models.Carts, {
             as: "carts",
+            foreignKey: "idUser",
+        });
+        User.hasMany(models.Business, {
+            as: "businesses",
             foreignKey: "idUser",
         });
     }
