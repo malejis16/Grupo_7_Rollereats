@@ -1,6 +1,6 @@
 //Módulos
-/*Trabajando con la base de datos*//*----------------------------*/
-let dbDigitalHouse = require('../database/models');/*-----------------*/
+/*Trabajando con la base de datos*/ /*----------------------------*/
+let db = require("../database/models"); /*-----------------*/
 
 /*generar las validaciones*/
 const { validationResult } = require("express-validator");
@@ -16,10 +16,6 @@ const usuarios = JSON.parse(fs.readFileSync(usuariosFilePath, "utf-8"));
 
 /******************* */
 const usersController = {
-  
-}
-
-const mainController = {
   users: function (req, res) {
     const usuarios = JSON.parse(fs.readFileSync(usuariosFilePath, "utf-8"));
     res.render("usuarios/vistaUsuarios", { usuarios: usuarios });
@@ -59,7 +55,11 @@ const mainController = {
     }
   },
   register: function (req, res) {
-    res.render("usuarios/register", { usuarios: usuarios });
+    db.User.findAll().then(function (users) {
+      return res.render("usuarios/register", { users: users });
+    });
+
+    //res.render("usuarios/register", { usuarios: usuarios });
   },
   store: function (req, res) {
     const usuarios = JSON.parse(fs.readFileSync(usuariosFilePath, "utf-8"));
@@ -152,4 +152,4 @@ const mainController = {
   },
 };
 
-module.exports = mainController;
+module.exports = usersController;
