@@ -1,12 +1,23 @@
 //Módulos
+/*Trabajando con la base de datos*//*----------------------------*/
+let dbDigitalHouse = require('../database/models');/*-----------------*/
+
+/*generar las validaciones*/
+const { validationResult } = require("express-validator");
+/*Encriptacion de la contraseña*/
+const bcrypt = require("bcryptjs");
+
 const path = require("path");
 const fs = require("fs");
-const { validationResult } = require("express-validator");
-const bcrypt = require("bcryptjs");
 
 const usuariosFilePath = path.join(__dirname, "../data/usuariosDataBase.json");
 //pasamos esta constante al index para que se recargue cada vez que refrescamos las pag
 const usuarios = JSON.parse(fs.readFileSync(usuariosFilePath, "utf-8"));
+
+/******************* */
+const usersController = {
+  
+}
 
 const mainController = {
   users: function (req, res) {

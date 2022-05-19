@@ -1,3 +1,8 @@
+const sequelize = require('../config/config');
+var Sequelize = require('sequelize');
+const User = require('../models/users');
+const Product = require('../models/products')
+
 module.exports = function (sequelize, dataTypes){
     let alias = 'Business';
     let cols = {
@@ -28,7 +33,7 @@ module.exports = function (sequelize, dataTypes){
             type: dataTypes.STRING,
         },
         businessProfile: {
-            type: dataTypes.STRING, /*Imagen*/
+            type: dataTypes.BLOB,
         },
         idUser: {
             type: dataTypes.INTEGER,

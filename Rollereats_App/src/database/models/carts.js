@@ -7,7 +7,7 @@ module.exports = function (sequelize, dataTypes){
             autoIncrement: true
         },
         saleDate: {
-            type: dataTypes.DATETIME, /* type Datetime*/
+            type: dataTypes.DATE, /* type Datetime*/
         },
         idUser: {
             type: dataTypes.INTEGER,

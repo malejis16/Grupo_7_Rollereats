@@ -19,7 +19,7 @@ module.exports = function (sequelize, dataTypes){
             type: dataTypes.STRING,
         },
         phone: {
-            type: dataTypes.BEGINT,
+            type: dataTypes.BIGINT,
         },
         password: {
             type: dataTypes.STRING,
@@ -28,7 +28,7 @@ module.exports = function (sequelize, dataTypes){
             type: dataTypes.STRING,
         },
         avatar: {
-            type: dataTypes.STRING, /*Type:BLOB*/
+            type: dataTypes.BLOB,
         },
         idRole: {
             type:dataTypes.INTEGER,
@@ -43,7 +43,7 @@ module.exports = function (sequelize, dataTypes){
     let User = sequelize.define(alias, cols, config);
 
     User.associate = function (models){
-        User.belongsTo(models.Role, {
+        User.belongsTo(models.Roles, {
             as: "roles",
             foreignKey: "idRole",
         });

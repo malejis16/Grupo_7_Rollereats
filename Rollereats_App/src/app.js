@@ -9,9 +9,10 @@ const routerRestaurantes = require("./routes/routerRestaurantes");
 const routerUsuarios = require("./routes/routerUsuarios");
 const methodOverride = require("method-override"); // Pasar poder usar los métodos PUT y DELETE
 const session = require("express-session");
+const dbDigitalHouse = require('./database/models') /***************/
+const PORT =  process.env.PORT || 3000; /************************** */
 
 //Express()
-
 const app = express();
 
 //Middelwares
@@ -21,7 +22,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(session({ secret: "informacion secreta" }));
 
-//template Engine
+//template Engine - Motor de plantilla
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views")); // Define la ubicación de la carpeta de las Vistas
@@ -46,6 +47,12 @@ app.use("/restaurantes", routerRestaurantes);
 app.use("/usuarios", routerUsuarios);
 
 // **** Servidor ***** //
-app.listen(3000, () => {
-  console.log("Servidor arriba en el puerto 3000 🤓👌");
-});
+// app.listen(3000, () => {
+//   console.log("Servidor arriba en el puerto 3000 🤓👌");
+// });
+
+dbDigitalHouse.sequelize.sync().then(() => {
+  app.listen(PORT, ()=>{
+    console.log(`Listen on: http://localhost:${PORT}`);
+  }) 
+}); 
