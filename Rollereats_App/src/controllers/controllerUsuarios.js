@@ -62,11 +62,11 @@ const usersController = {
     //res.render("usuarios/register", { usuarios: usuarios });
   },
   store: function (req, res) {
-    const usuarios = JSON.parse(fs.readFileSync(usuariosFilePath, "utf-8"));
+    //const usuarios = JSON.parse(fs.readFileSync(usuariosFilePath, "utf-8"));
     console.log(req.body);
     let errors = validationResult(req);
     if (errors.isEmpty()) {
-      let nuevoUsuario = {
+      db.User.create = {
         id_Usuario: Date.now(),
         correo_Usuario: req.body.mail,
         contraseña_Usuario: bcrypt.hashSync(req.body.contraseña, 10),
@@ -75,17 +75,18 @@ const usersController = {
       };
       if (req.file) {
         if (req.file.filename) {
-          nuevoUsuario.imagen_Usuario = req.file.filename;
+          //nuevoUsuario.imagen_Usuario = req.file.filename;
+          db.User.create = { imagen_Usuario: req.file.filename };
         }
       }
 
       //realizar el case
       //   //agregar nuevo usuario
-      usuarios.push(nuevoUsuario);
+      //usuarios.push(nuevoUsuario);
       //edtar el .json
-      fs.writeFileSync(usuariosFilePath, JSON.stringify(usuarios, null, 2));
+      //fs.writeFileSync(usuariosFilePath, JSON.stringify(usuarios, null, 2));
       // redireccionar
-      res.render("usuarios/vistaUsuarios", { usuarios: usuarios });
+      res.redirect("/restaurante");
     } else {
       return res.render("usuarios/register", { errors: errors.errors });
     }
