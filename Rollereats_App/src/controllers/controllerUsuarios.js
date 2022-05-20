@@ -100,16 +100,14 @@ const usersController = {
     });
   },
   edit: (req, res) => {
-    let pedidoUsuario = db.User.findByPk(req.params.id);
-    Promise.all(pedidoUsuario).then(function (usuarioEditable) {
+    db.User.findByPk(req.params.id).then(function (usuarioEditable) {
       res.render("usuarios/editarUsuario", {
         usuarioEditable: usuarioEditable,
       });
     });
   },
   update: (req, res) => {
-    let user = {};
-    user = {
+    let user = {
       email: req.body.mail,
       password: bcrypt.hashSync(req.body.contrasena, 10),
       phone: req.body.numero,
@@ -122,22 +120,31 @@ const usersController = {
       }
     }
 
-    db.User.update =
-      (user,
-      {
-        where: {
-          idUser: req.params.id,
-        },
+    db.User.update = (user,
+    {
+      where: {
+        idUser: req.params.id,
+      },
+    })
+      .then(function () {
+        res.redirect("/usuarios/detalle/" + req.params.id);
+      })
+      .catch(function (error) {
+        console.log(error);
       });
-
-    res.redirect("/usuarios/detalle/" + req.params.id);
   },
   destroy: (req, res) => {
     db.User.destroy({
       where: {
         idUser: req.params.id,
       },
-    });
+    })
+      .then(function () {
+        res.redirect("/usuarios/detalle/" + req.params.id);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
   },
 };
 
