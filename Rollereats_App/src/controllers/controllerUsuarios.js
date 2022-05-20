@@ -26,34 +26,25 @@ const usersController = {
   procesoLogin: function (req, res) {
     let errors = validationResult(req);
     if (errors.isEmpty()) {
-
-
-      db.User.findByPk(req.params.id, {}).then(function (usuarioBuscado) {
-        if (usuarioBuscado.email == req.body.email) {
-          if (
-            bcrypt.compareSync(
-              req.body.password,
-              usuarioBuscado.password
-            )
-          )
+      db.User.findByPk(req.params.id).then(function (userBuscado) {
+        if (userBuscado.email == req.body.email) {
+          if (bcrypt.compareSync(req.body.password, usuarioBuscado.password)) {
             var usuarioALoguearse = usuarioBuscado;
-
-          break;
-
+          }
         }
         console.log(usuarioALoguearse);
-      if (usuarioALoguearse == undefined) {
-        return res.render("usuarios/login", {
-          errors: [{ msg: "El usuario o contraseña son invalidos" }],
-        });
-      }
-      });
 
-      
-      let usuarioBuscado = usuarioALoguearse;
-      req.session.usuarioLogueado = usuarioALoguearse;
-      res.render("usuarios/detalleUsuario", {
-        usuarioBuscado: usuarioBuscado,
+        if (usuarioALoguearse == undefined) {
+          return res.render("usuarios/login", {
+            errors: [{ msg: "El usuario o contraseña son invalidos" }],
+          });
+        }
+
+        let usuarioBuscado = usuarioALoguearse;
+        req.session.usuarioLogueado = usuarioALoguearse;
+        res.render("usuarios/detalleUsuario", {
+          usuarioBuscado: usuarioBuscado,
+        });
       });
     } else {
       return res.render("usuarios/login", { errors: errors.errors });
@@ -104,7 +95,7 @@ const usersController = {
     }
   },
   detail: (req, res) => {
-    db.User.findByPk(req.params.id, {}).then(function (usuarioBuscado) {
+    db.User.findByPk(req.params.id).then(function (usuarioBuscado) {
       res.render("usuarios/detalleUsuario", { usuarioBuscado: usuarioBuscado });
     });
   },
