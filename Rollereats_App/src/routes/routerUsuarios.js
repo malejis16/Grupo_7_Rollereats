@@ -33,7 +33,7 @@ rutas.post(
   upload.single("imagen"),
   [
     check("mail").isEmail().withMessage("No es un correo permitido").bail(),
-    check("contraseña")
+    check("contrasena")
       .isLength({ min: 8 })
       .withMessage("La contraseña debe tener al menos 8 caracteres")
       .bail(),

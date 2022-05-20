@@ -18,11 +18,11 @@ module.exports = function (sequelize, dataTypes){
 
     let Roles = sequelize.define(alias, cols, config);
 
-    Roles.associate = function (models){
-        Roles.hasMany(models.User, {
-            as: "users",
-            foreignKey: "idRole",
-        });
-    }
+    // Roles.associate = function (models){
+    //     Roles.hasMany(models.User, {
+    //         as: "users",
+    //         foreignKey: "idRole",
+    //     });
+    // }
     return Roles;
 }

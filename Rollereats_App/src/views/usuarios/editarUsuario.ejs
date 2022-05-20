@@ -23,7 +23,7 @@
             <form action="/usuarios/editarUsuario/<%=usuario.id_Usuario%>?_method=PUT" method="POST" class="formulario" enctype="multipart/form-data">
                 <h3>Registro</h3>
                 <input  class="form" type="email" placeholder="Correo electronico" id="mail" name="mail" value ="<%=usuarioEditable.correo_Usuario%>" required>
-                <input  class="form" type="password" placeholder="Contraseña" id="contraseña" name = "contraseña" value ="<%=usuarioEditable.contraseña_Usuario%>" required>
+                <input  class="form" type="password" placeholder="Contraseña" id="contrasena" name = "contrasena" value ="<%=usuarioEditable.contrasena_Usuario%>" required>
                 <input class="form" type="number" placeholder="Numero Telefonico" id="numero" name ="numero" value ="<%=usuarioEditable.numero_Usuario%>"  required>
                 <input class="form" type= "text" placeholder="Pais" id="pais" name ="pais" value ="<%=usuarioEditable.pais_Usuario%>"  required>
                 <input class="form" type= "file" placeholder="imagen" id="imagen" name ="imagen">

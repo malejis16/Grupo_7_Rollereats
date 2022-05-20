@@ -11,6 +11,7 @@ module.exports = function (sequelize, dataTypes){
         },
         idUser: {
             type: dataTypes.INTEGER,
+            
         },
     };
 
