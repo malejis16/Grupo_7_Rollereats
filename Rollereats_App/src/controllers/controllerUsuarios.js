@@ -26,25 +26,30 @@ const usersController = {
   procesoLogin: function (req, res) {
     let errors = validationResult(req);
     if (errors.isEmpty()) {
-      const usuarios = JSON.parse(fs.readFileSync(usuariosFilePath, "utf-8"));
-      for (i = 0; i < usuarios.length; i++) {
-        if (usuarios[i].correo_Usuario == req.body.email) {
+
+
+      db.User.findByPk(req.params.id, {}).then(function (usuarioBuscado) {
+        if (usuarioBuscado.email == req.body.email) {
           if (
             bcrypt.compareSync(
               req.body.password,
-              usuarios[i].contraseña_Usuario
+              usuarioBuscado.password
             )
           )
-            var usuarioALoguearse = usuarios[i];
+            var usuarioALoguearse = usuarioBuscado;
+
           break;
+
         }
-      }
-      console.log(usuarioALoguearse);
+        console.log(usuarioALoguearse);
       if (usuarioALoguearse == undefined) {
         return res.render("usuarios/login", {
           errors: [{ msg: "El usuario o contraseña son invalidos" }],
         });
       }
+      });
+
+      
       let usuarioBuscado = usuarioALoguearse;
       req.session.usuarioLogueado = usuarioALoguearse;
       res.render("usuarios/detalleUsuario", {
