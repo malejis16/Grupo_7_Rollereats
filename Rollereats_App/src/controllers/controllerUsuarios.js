@@ -68,24 +68,24 @@ const usersController = {
     let user = {};
     if (errors.isEmpty()) {
       user = {
-        email : req.body.mail,
-        password : bcrypt.hashSync(req.body.contrasena, 10),
-        phone : req.body.numero,
+        email: req.body.mail,
+        password: bcrypt.hashSync(req.body.contrasena, 10),
+        phone: req.body.numero,
         country: req.body.pais,
-      }
+      };
       if (req.file) {
         if (req.file.filename) {
           //nuevoUsuario.imagen_Usuario = req.file.filename;
-          user.avatar = req.file.filename
+          user.avatar = req.file.filename;
         }
       }
       db.User.create(user)
-        .then(function(data){
-            console.log(data);
+        .then(function (data) {
+          console.log(data);
         })
-        .catch(function(error){
+        .catch(function (error) {
           console.log(error);
-      })
+        });
 
       //realizar el case
       //   //agregar nuevo usuario
@@ -99,64 +99,49 @@ const usersController = {
     }
   },
   detail: (req, res) => {
-    const usuarios = JSON.parse(fs.readFileSync(usuariosFilePath, "utf-8"));
-    let id = req.params.id;
-
-    let usuarioBuscado = usuarios.find((usuario) => usuario.id_Usuario == id);
-
-    if (!usuarioBuscado) {
-      res.redirect("/usuarios");
-    }
-    res.render("usuarios/detalleUsuario", { usuarioBuscado: usuarioBuscado });
+    db.User.findByPk(req.params.id, {}).then(function (usuarioBuscado) {
+      res.render("usuarios/detalleUsuario", { usuarioBuscado: usuarioBuscado });
+    });
   },
   edit: (req, res) => {
-    let id = req.params.id;
-    for (let i = 0; i < usuarios.length; i++) {
-      if (usuarios[i].id_Usuario == id) {
-        usuarioEditable = usuarios[i];
-      }
-    }
-    res.render("usuarios/editarUsuario", {
-      usuarios: usuarios,
-      id,
-      usuarioEditable: usuarioEditable,
+    let pedidoUsuario = db.User.findByPk(req.params.id);
+    Promise.all(pedidoUsuario).then(function (usuarioEditable) {
+      res.render("usuarios/editarUsuario", {
+        usuarioEditable: usuarioEditable,
+      });
     });
   },
   update: (req, res) => {
-    const usuarios = JSON.parse(fs.readFileSync(usuariosFilePath, "utf-8"));
-    let id = req.params.id;
-    console.log(req.file);
-    for (let i = 0; i < usuarios.length; i++) {
-      if (usuarios[i].id_Usuario == id) {
-        usuarios[i].correo_Usuario = req.body.mail;
-        usuarios[i].numero_Usuario = req.body.numero;
-        usuarios[i].pais_Usuario = req.body.pais;
+    let user = {};
+    user = {
+      email: req.body.mail,
+      password: bcrypt.hashSync(req.body.contrasena, 10),
+      phone: req.body.numero,
+      country: req.body.pais,
+    };
+    if (req.file) {
+      if (req.file.filename) {
+        //nuevoUsuario.imagen_Usuario = req.file.filename;
+        user.avatar = req.file.filename;
       }
-      if (req.file) {
-        if (req.file.filename) {
-          usuarios[i].imagen_Usuario = req.file.filename;
-        }
-      }
-
-      fs.writeFileSync(usuariosFilePath, JSON.stringify(usuarios, null, 2));
     }
-    res.redirect("/usuarios");
+
+    db.User.update =
+      (user,
+      {
+        where: {
+          idUser: req.params.id,
+        },
+      });
+
+    res.redirect("/usuarios/detalle/" + req.params.id);
   },
   destroy: (req, res) => {
-    const usuarios = JSON.parse(fs.readFileSync(usuariosFilePath, "utf-8"));
-    let id = req.params.id;
-    // filtrar todos los usuarios que no tengan ese id
-
-    let usuariosFiltrados = usuarios.filter(
-      (usuario) => usuario.id_Usuario != id
-    );
-
-    fs.writeFileSync(
-      usuariosFilePath,
-      JSON.stringify(usuariosFiltrados, null, 2)
-    );
-
-    res.redirect("/usuarios");
+    db.User.destroy({
+      where: {
+        idUser: req.params.id,
+      },
+    });
   },
 };
 
