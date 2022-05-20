@@ -17,8 +17,9 @@ const usuarios = JSON.parse(fs.readFileSync(usuariosFilePath, "utf-8"));
 /******************* */
 const usersController = {
   users: function (req, res) {
-    const usuarios = JSON.parse(fs.readFileSync(usuariosFilePath, "utf-8"));
-    res.render("usuarios/vistaUsuarios", { usuarios: usuarios });
+    db.User.findAll().then(function (usuarios) {
+      return res.render("usuarios/vistaUsuarios", { usuarios: usuarios });
+    });
   },
   login: function (req, res) {
     res.render("usuarios/login");
@@ -26,15 +27,19 @@ const usersController = {
   procesoLogin: function (req, res) {
     let errors = validationResult(req);
     if (errors.isEmpty()) {
-      db.User.findByPk(req.params.id).then(function (userBuscado) {
-        if (userBuscado.email == req.body.email) {
-          if (bcrypt.compareSync(req.body.password, usuarioBuscado.password)) {
-            var usuarioALoguearse = usuarioBuscado;
-          }
+      db.User.findOne({ where: { email: req.body.email } }).then(function (
+        userBuscado
+      ) {
+        console.log("userBuscado");
+        console.log(userBuscado);
+        if (bcrypt.compareSync(req.body.password, userBuscado.password)) {
+          var usuarioALoguearse = userBuscado;
+          console.log("Usuario a loguarse");
+          console.log(usuarioALoguearse);
         }
-        console.log(usuarioALoguearse);
 
         if (usuarioALoguearse == undefined) {
+          console.log("no debe pasar por aqui con credenciales correctas");
           return res.render("usuarios/login", {
             errors: [{ msg: "El usuario o contraseña son invalidos" }],
           });
@@ -64,10 +69,10 @@ const usersController = {
     let user = {};
     if (errors.isEmpty()) {
       user = {
-        email: req.body.mail,
-        password: bcrypt.hashSync(req.body.contrasena, 10),
-        phone: req.body.numero,
-        country: req.body.pais,
+        email: req.body.email,
+        password: bcrypt.hashSync(req.body.password, 10),
+        phone: req.body.phone,
+        country: req.body.country,
       };
       if (req.file) {
         if (req.file.filename) {
@@ -107,32 +112,48 @@ const usersController = {
     });
   },
   update: (req, res) => {
-    let user = {
-      email: req.body.mail,
-      password: bcrypt.hashSync(req.body.contrasena, 10),
-      phone: req.body.numero,
-      country: req.body.pais,
-    };
     if (req.file) {
-      if (req.file.filename) {
-        //nuevoUsuario.imagen_Usuario = req.file.filename;
-        user.avatar = req.file.filename;
-      }
-    }
+      var filename = req.file.filename;
 
-    db.User.update = (user,
-    {
-      where: {
-        idUser: req.params.id,
-      },
-    })
-      .then(function () {
-        res.redirect("/usuarios/detalle/" + req.params.id);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
+      db.User.update(
+        {
+          email: req.body.email,
+          password: bcrypt.hashSync(req.body.password, 10),
+          phone: req.body.phone,
+          country: req.body.country,
+          avatar: filename,
+        },
+        {
+          where: {
+            idUser: req.params.id,
+          },
+        }
+      )
+        .then(res.redirect("/usuarios/detalle/" + req.params.id))
+        .catch(function (errors) {
+          console.log(errors);
+        });
+    } else {
+      db.User.update(
+        {
+          email: req.body.email,
+          password: bcrypt.hashSync(req.body.password, 10),
+          phone: req.body.phone,
+          country: req.body.country,
+        },
+        {
+          where: {
+            idUser: req.params.id,
+          },
+        }
+      )
+        .then(res.redirect("/usuarios/detalle/" + req.params.id))
+        .catch(function (errors) {
+          console.log(errors);
+        });
+    }
   },
+
   destroy: (req, res) => {
     db.User.destroy({
       where: {
@@ -140,7 +161,7 @@ const usersController = {
       },
     })
       .then(function () {
-        res.redirect("/usuarios/detalle/" + req.params.id);
+        res.redirect("/usuarios");
       })
       .catch(function (error) {
         console.log(error);

@@ -26,14 +26,14 @@
                     </tr>
                 </thead>
                 <tr class="users">
-                    <td ><img src="/img/<%=usuarioBuscado.imagen_Usuario%>" alt="" id="imagen-registro"></td>
-                    <td ><%=usuarioBuscado.id_Usuario%></td>
-                    <td ><%=usuarioBuscado.correo_Usuario%></td>
-                    <td ><%=usuarioBuscado.numero_Usuario%></td>
-                    <td ><%=usuarioBuscado.pais_Usuario%></td> 
-                    <td class="user-edit" onclick="document.location ='/usuarios/editarUsuario/<%=usuarioBuscado.id_Usuario%>'; "><i class="fa-solid fa-user-pen"></i></td>
+                    <td ><img src="/img/<%=usuarioBuscado.avatar%>" alt="" id="imagen-registro"></td>
+                    <td ><%=usuarioBuscado.idUser%></td>
+                    <td ><%=usuarioBuscado.email%></td>
+                    <td ><%=usuarioBuscado.phone%></td>
+                    <td ><%=usuarioBuscado.country%></td> 
+                    <td class="user-edit" onclick="document.location ='/usuarios/editarUsuario/<%=usuarioBuscado.idUser%>'; "><i class="fa-solid fa-user-pen"></i></td>
                     <td>
-                        <form action="/usuarios/delete/<%=usuarioBuscado.id_Usuario%>?_method=DELETE" method="POST">
+                        <form action="/usuarios/delete/<%=usuarioBuscado.idUser%>?_method=DELETE" method="POST">
                             <button type="submit" class="user-delete"><i class="fa-solid fa-trash-can"></i></button>
                         </form>
                     </td>

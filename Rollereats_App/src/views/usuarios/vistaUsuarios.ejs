@@ -27,12 +27,12 @@
                 </thead>
                 <% for(let i = 0; i < usuarios.length; i++){ %>
                 <!-- <a href="/usuarios/detalle/<%=usuarios[i].id_Usuario%>"> -->
-                <tr onclick="document.location = '/usuarios/detalle/<%=usuarios[i].id_Usuario%>';">
-                    <td ><img src="/img/<%=usuarios[i].imagen_Usuario%>" alt="" id="imagen-registro"></td>
-                    <td ><%=usuarios[i].id_Usuario%></td>
-                    <td ><%=usuarios[i].correo_Usuario%></td>
-                    <td ><%=usuarios[i].numero_Usuario%></td>
-                    <td ><%=usuarios[i].pais_Usuario%></td> 
+                <tr onclick="document.location = '/usuarios/detalle/<%=usuarios[i].idUser%>';">
+                    <td ><img src="/img/<%=usuarios[i].avatar%>" alt="" id="imagen-registro"></td>
+                    <td ><%=usuarios[i].idUser%></td>
+                    <td ><%=usuarios[i].email%></td>
+                    <td ><%=usuarios[i].phone%></td>
+                    <td ><%=usuarios[i].country%></td> 
                 </tr>
                 <!-- </a> -->
                 <% } %>

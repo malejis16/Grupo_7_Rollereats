@@ -30,10 +30,10 @@ rutas.get("/", controller.users);
 rutas.get("/register", guestMiddleware, controller.register);
 rutas.post(
   "/register",
-  upload.single("imagen"),
+  upload.single("avatar"),
   [
-    check("mail").isEmail().withMessage("No es un correo permitido").bail(),
-    check("contrasena")
+    check("email").isEmail().withMessage("No es un correo permitido").bail(),
+    check("password")
       .isLength({ min: 8 })
       .withMessage("La contraseña debe tener al menos 8 caracteres")
       .bail(),
@@ -46,7 +46,7 @@ rutas.get("/detalle/:id", controller.detail);
 
 //editar
 rutas.get("/editarUsuario/:id", controller.edit);
-rutas.put("/editarUsuario/:id", upload.single("imagen"), controller.update);
+rutas.put("/editarUsuario/:id", upload.single("avatar"), controller.update);
 //delete
 rutas.delete("/delete/:id", controller.destroy);
 
