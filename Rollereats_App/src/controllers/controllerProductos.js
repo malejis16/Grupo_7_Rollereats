@@ -1,21 +1,22 @@
-const { validationResult } = require('express-validator');
+const { validationResult } = require("express-validator");
 let db = require("../database/models");
 
-const productController = { 
+const productController = {
   //TODOS los productos VISTA
   allProducts: (req, res) => {
-    db.Product.findAll().then(([products]) => {
-        res.render("restaurante/business", { products: products });
-      });
-  }, 
+    db.Product.findAll().then((products) => {
+      console.log(products);
+      res.render("restaurante/business", { products: products });
+    });
+  },
   //VISTA para EDITAR producto
   editProduct: (req, res) => {
     db.Product.findByPk(req.params.id).then(([product]) => {
-        res.render("productos/editProducto", { product: product, id });
-      })
+      res.render("productos/editProducto", { product: product, id });
+    });
   },
 
-  //ACTUALIZAR  producto 
+  //ACTUALIZAR  producto
   updateProduct: (req, res) => {
     db.Product.update(
       {
@@ -27,8 +28,8 @@ const productController = {
       },
       {
         where: {
-          idProduct: req.params.id
-        }
+          idProduct: req.params.id,
+        },
       }
     );
     res.redirect("restaurante/business");
@@ -36,35 +37,34 @@ const productController = {
 
   //CREAR nuevo producto VISTA
   createProduct: (req, res) => {
-    db.Product.findAll().then(([product ]) => {
-      res.render("restaurante/business", { product: product});
-      })
+    db.Product.findAll().then(([product]) => {
+      res.render("restaurante/business", { product: product });
+    });
   },
 
   //Guardar producto CREADO
   saveProduct: (req, res) => {
-    db.Product.create(
-      {
-        productName: req.body.name,
-        productPrice: req.body.price,
-        productDescription: req.body.description,
-        productImg: req.body.image,
-        idCategory: req.body.category,
-      });
-      res.redirect("restaurante/business");
+    db.Product.create({
+      productName: req.body.name,
+      productPrice: req.body.price,
+      productDescription: req.body.description,
+      productImg: req.body.image,
+      idCategory: req.body.category,
+    });
+    console.log(db.Product);
+    res.redirect("/business");
   },
 
   //Eliminar Producto
   deleteProduct: (req, res) => {
-    db.Product.destroy(
-      {
-        where: {
-          idProduct: req.params.id
-        }
-      })
-      .then(()=>{res.redirect("restaurante/business")})
+    db.Product.destroy({
+      where: {
+        idProduct: req.params.id,
+      },
+    }).then(() => {
+      res.redirect("restaurante/business");
+    });
   },
-
 };
 
 module.exports = productController;
