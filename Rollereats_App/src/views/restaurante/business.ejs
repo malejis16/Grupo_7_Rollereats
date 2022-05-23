@@ -109,18 +109,18 @@
           <div class="modal_Container">
             <figure class="modal_options">
               <a class="salir" href="#salir" style="color: black;"><i class="fa-solid fa-xmark"></i></a>
-              <form action="/business/delete/<%=products.idProduct%>?_method=DELETE" method="POST">
+              <form action="/business/delete/<%=products[i].idProduct%>?_method=DELETE" method="POST">
                   <button type="submit" class="button-delete">  
                     Eliminar producto
                   </button>
                 </form>
-              <a class="editar_producto" href="/business/edit/<%=products.idProduct%>">Editar detalles</a>
+              <a class="editar_producto" href="/business/edit/<%=products[i].idProduct%>">Editar detalles</a>
             </figure>
           </div>
         </section>
         <div class="imagen-articulo" style="display: flex;">
-          <img src="/img/<%=products.productImg%>" alt="imagen del articulo">
-          <a href="#<%=products.idProduct%>" style="color: black;"><i class="fa-solid fa-ellipsis-vertical"></i></a>
+          <img src="/img/<%=products[i].productImg%>" alt="imagen del articulo">
+          <a href="#<%=products[i].idProduct%>" style="color: black;"><i class="fa-solid fa-ellipsis-vertical"></i></a>
         </div>
       </div>
       <div class="descripcion-articulo">

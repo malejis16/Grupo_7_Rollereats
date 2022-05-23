@@ -10,16 +10,11 @@
     <script src="https://kit.fontawesome.com/6b289d76ca.js" crossorigin="anonymous"></script>
 </head>
 
-<% for (let i = 0; i < productos.length; i++) {
-    if (productos[i].id_Producto == id) {
-      var producto = productos[i];
-    }
-  } %>
 <body>
     <!-- Container form edit product-->
     <div class="content-form">
         <!-- Form edit product -->
-        <form class="form-edit" action="/restaurantes/edit/<%=producto.id_Producto%>?_method=PUT" method="POST" enctype="multipart/form-data">
+        <form class="form-edit" action="/business/edit/<%=product.idProduct%>?_method=PUT" method="POST" enctype="multipart/form-data">
             <h1 class="form-title">Edita tu Producto</h1>
             <div class="form-div">
                 <input class="form-input" type="text" placeholder=" " name = "n_producto" id = "n_producto" >

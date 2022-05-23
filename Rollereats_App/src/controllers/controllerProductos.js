@@ -11,8 +11,8 @@ const productController = {
   },
   //VISTA para EDITAR producto
   editProduct: (req, res) => {
-    db.Product.findByPk(req.params.id).then(([product]) => {
-      res.render("productos/editProducto", { product: product, id });
+    db.Product.findByPk(req.params.id).then((product) => {
+      res.render("productos/editProducto", { product: product });
     });
   },
 
@@ -32,7 +32,7 @@ const productController = {
         },
       }
     );
-    res.redirect("restaurante/business");
+    res.redirect("/business");
   },
 
   //CREAR nuevo producto VISTA
@@ -62,7 +62,7 @@ const productController = {
         idProduct: req.params.id,
       },
     }).then(() => {
-      res.redirect("restaurante/business");
+      res.redirect("/business");
     });
   },
 };
