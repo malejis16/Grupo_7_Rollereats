@@ -16,6 +16,7 @@
   <%- include('../partials/header.ejs') %>
   <!-- Seccion de portada -->
   
+  <!-- Modal de agregar producto -->
   <section id="agregar_pro" class="modal_modificar">
     <div class="modal_contaiiner">
       <figure class="modal_mod">
@@ -44,6 +45,7 @@
       </figure>
     </div>
   </section>
+
   <div class="imagen-Perfil">
     <img src="/img/Logotipo_Restaurante.png" alt="Imagen del logo" id="Logotipo">
   </div>
@@ -88,7 +90,8 @@
     </div>
   </div>
   <!-- Seccion articulos -->
-  <div class="articulos">
+  <!-- Agregar producto -->
+  <div class="articulos"> 
     <a href="#agregar_pro">
       <article class="agregar-producto">
         <div class="imagen-articulo">
@@ -97,32 +100,33 @@
         <p style="color:black; padding: 1rem 0;">Agregar producto</p>
       </article>
     </a>
-
-    <% for( let i=0; i < productos.length; i++){ %>
+    
+<!-- Articulos -->
+    <% for( let i=0; i < products.length; i++){ %> 
     <article class="articulo-unico">
       <div id="options" class="options">
-        <section id="<%=productos[i].id_Producto%>" class="modal_opt">
+        <section id="<%=products[i].idProduct%>" class="modal_opt">
           <div class="modal_Container">
             <figure class="modal_options">
               <a class="salir" href="#salir" style="color: black;"><i class="fa-solid fa-xmark"></i></a>
-              <form action="/restaurantes/eliminar/<%=productos[i].id_Producto%>?_method=DELETE" method="POST">
+              <form action="/business/delete/<%=products.idProduct%>?_method=DELETE" method="POST">
                   <button type="submit" class="button-delete">  
                     Eliminar producto
                   </button>
                 </form>
-              <a class="editar_producto" href="/restaurantes/edit/<%=productos[i].id_Producto%>">Editar detalles</a>
+              <a class="editar_producto" href="/business/edit/<%=products.idProduct%>">Editar detalles</a>
             </figure>
           </div>
         </section>
         <div class="imagen-articulo" style="display: flex;">
-          <img src="/img/<%=productos[i].image_Producto%>" alt="imagen del articulo">
-          <a href="#<%=productos[i].id_Producto%>" style="color: black;"><i class="fa-solid fa-ellipsis-vertical"></i></a>
+          <img src="/img/<%=products.productImg%>" alt="imagen del articulo">
+          <a href="#<%=products.idProduct%>" style="color: black;"><i class="fa-solid fa-ellipsis-vertical"></i></a>
         </div>
       </div>
       <div class="descripcion-articulo">
         <div class="nombre-precio">
-          <h4><%=productos[i].name_Producto%></h4>
-          <h4><span><%=productos[i].price_Producto%></span></h4>
+          <h4><%=products[i].productName%></h4>
+          <h4><span><%=products[i].productPrice%></span></h4>
         </div>
         <div class="agregar-carrito">
           <i class="fa-solid fa-circle-plus"></i>
@@ -136,5 +140,5 @@
     <!-- Footer -->
     <%- include('../partials/footer.ejs') %>
 </body>
-
+ 
 </html>

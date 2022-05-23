@@ -62,7 +62,7 @@ const usersController = {
 
     //res.render("usuarios/register", { usuarios: usuarios });
   },
-  store: function (req, res) {
+  /**proceso registro */store: function (req, res) { 
     //const usuarios = JSON.parse(fs.readFileSync(usuariosFilePath, "utf-8"));
     console.log(req.body);
     let errors = validationResult(req);
@@ -78,6 +78,7 @@ const usersController = {
         if (req.file.filename) {
           //nuevoUsuario.imagen_Usuario = req.file.filename;
           user.avatar = req.file.filename;
+          console.log(res.file.filename)
         }
       }
       db.User.create(user)
@@ -111,7 +112,7 @@ const usersController = {
       });
     });
   },
-  update: (req, res) => {
+  /*proceso de editar*/update: (req, res) => { 
     if (req.file) {
       var filename = req.file.filename;
 

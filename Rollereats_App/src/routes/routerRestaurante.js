@@ -2,12 +2,12 @@
 
 const express = require("express");
 const rutas = express.Router();
-const controller = require("../controllers/controllerRestaurantes");
+const controller = require("../controllers/controllerRestaurante");
 const path = require("path");
 const multer = require("multer");
 let logintMiddleware = require("../middlewares/loginMiddleware");
 
-var storage = multer.diskStorage({
+var storage = multer.diskStorage({ 
   destination: function (req, file, cb) {
     cb(null, path.join(__dirname, "../../public/img"));
   },
@@ -20,16 +20,9 @@ var storage = multer.diskStorage({
 
 var upload = multer({ storage });
 
-//Rutas Restaurantes
-rutas.get("/", logintMiddleware, controller.restaurantes);
-//Crear Producto
-rutas.get("/createProducto", controller.createProducto);
-rutas.post("/createProducto", upload.any(), controller.storeProducto);
-//Editar Producto
-rutas.get("/edit/:id", controller.edit);
-rutas.put("/edit/:id", upload.any(), controller.update);
 
-//Eliminar
-rutas.delete("/eliminar/:id", controller.destroy);
+//Rutas Restaurantes
+
+rutas.get("/", logintMiddleware, controller.allRestaurantes);
 
 module.exports = rutas;

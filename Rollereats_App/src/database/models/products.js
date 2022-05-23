@@ -1,7 +1,7 @@
 module.exports = function (sequelize, dataTypes){
     let alias = 'Product';
     let cols = {
-        idProduct: {
+        idProduct: { 
             type: dataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
@@ -14,6 +14,9 @@ module.exports = function (sequelize, dataTypes){
         },
         productDescription: {
             type: dataTypes.STRING,
+        },
+        productImg:{
+            type: dataTypes.BLOB,
         },
         idBusiness: {
             type: dataTypes.INTEGER,
@@ -40,7 +43,7 @@ module.exports = function (sequelize, dataTypes){
             foreignKey: "idCategory",
         });
         Product.hasMany(models.CartDetail, {
-            as: "cartdetail",
+            as: "cartdetail", 
             foreignKey: "idProduct",
         });
         // Product.belongsToMany(models.Carts, {
