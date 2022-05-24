@@ -1,0 +1,86 @@
+[
+  {
+    "id_Repartidor": 1,
+    "correo_Repartidor": "malejis16@hotmail.com",
+    "contraseña_Repartidor": 12345,
+    "numero_Repartidor": 3132715710,
+    "pais_Repartidor": "Colombia"
+  },
+  {
+    "id_Repartidor": 2,
+    "correo_Repartidor": "rock@hotmail.com",
+    "contraseña_Repartidor": 12345,
+    "numero_Repartidor": 3132775710,
+    "pais_Repartidor": "Colombia"
+  },
+  {
+    "id_Repartidor": 3,
+    "correo_Repartidor": "marco@hotmail.com",
+    "contraseña_Repartidor": 67895,
+    "numero_Repartidor": 3145798621,
+    "pais_Repartidor": "Colombia"
+  },
+  {
+    "id_Repartidor": 4,
+    "correo_Repartidor": "luis@hotmail.com",
+    "contraseña_Repartidor": 852,
+    "numero_Repartidor": 3145748621,
+    "pais_Repartidor": "Argentina"
+  },
+  {
+    "id_Repartidor": 1647813677587,
+    "correo_Repartidor": "alejis16@hotmail.com",
+    "contraseña_Repartidor": "234324",
+    "numero_Repartidor": "54435",
+    "pais_Repartidor": "Alemania",
+    "imagen_Repartidor": "imagen-1647813677574.jpg"
+  },
+  {
+    "id_Repartidor": 1648062003279,
+    "correo_Repartidor": "alejis16@hotmail.com",
+    "contraseña_Repartidor": "43564",
+    "numero_Repartidor": "324563",
+    "pais_Repartidor": "Alemania",
+    "imagen_Repartidor": "imagen-1648062003254.jpg"
+  },
+  {
+    "id_Repartidor": 1648062044207,
+    "correo_Repartidor": "alejis16@hotmail.com",
+    "contraseña_Repartidor": "43564",
+    "numero_Repartidor": "324563",
+    "pais_Repartidor": "Alemania",
+    "imagen_Repartidor": "imagen-1648062044195.jpg"
+  },
+  {
+    "id_Repartidor": 1648062078599,
+    "correo_Repartidor": "Camilo@hotmail.com",
+    "contraseña_Repartidor": "1234",
+    "numero_Repartidor": "432453563",
+    "pais_Repartidor": "Nicaragua",
+    "imagen_Repartidor": "imagen-1648062078572.jpg"
+  },
+  {
+    "id_Repartidor": 1648170832929,
+    "correo_Repartidor": "alejis16@hotmail.com",
+    "contraseña_Repartidor": "11111111111",
+    "numero_Repartidor": "1111111111111",
+    "pais_Repartidor": "Alemania",
+    "imagen_Repartidor": "imagen-1648170832901.jpg"
+  },
+  {
+    "id_Repartidor": 1648170952821,
+    "correo_Repartidor": "Camilo@hotmail.com",
+    "contraseña_Repartidor": "343432432",
+    "numero_Repartidor": "543535",
+    "pais_Repartidor": "Nicaragua",
+    "imagen_Repartidor": "imagen-1648170952809.jpg"
+  },
+  {
+    "id_Repartidor": 1648175705817,
+    "correo_Repartidor": "Camilo@hotmail.com",
+    "contraseña_Repartidor": "555555555555",
+    "numero_Repartidor": "55555555555555",
+    "pais_Repartidor": "Nicaragua",
+    "imagen_Repartidor": "imagen-1648175705809.jpg"
+  }
+]

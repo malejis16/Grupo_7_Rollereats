@@ -1,0 +1,128 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+
+}
+
+body{
+    background-color: aliceblue;
+}
+
+.cont-0{
+    padding: 20px;
+    background-color: aliceblue;
+    border: 1px solid black;
+    width: max-content;
+    margin: 50px auto;
+    background: #FAEFDE;
+    box-shadow: 12px 12px 24px 0 rgba(0, 0, 0, 0.2),
+    -12px -12px 24px 0 rgba(255, 255, 255, 0.5);;
+    border: none;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 15px 0;
+}
+header h4{
+    font-weight: 700;
+    font-size: 20px;
+}
+
+header i{
+    padding-left: 220px;
+    border-bottom: 3px solid black;
+}
+
+.display-flex{
+    display: flex;
+    margin-top: 5px;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.item1-1{
+    margin-right: 30px;
+}
+.item1-2 p{
+    margin-bottom: 10px;
+}
+.item1-2 label{
+    text-decoration: underline;
+}
+
+.cont-3{
+    align-items: center;
+}
+.cont3-1{
+    text-align: right;
+    margin: 0 30px;
+}
+.cont3-1-2{
+    display: flex; 
+    justify-content:space-around
+}
+.cont3-1-2 input{
+    padding: 6px 12px;
+}
+.negativo{
+    border-bottom-left-radius:10px;
+    border-top-left-radius: 10px;
+    border: none;
+    border-right: 1px solid white;
+    background-color: #ff702a;
+}
+.positivo{
+    border-bottom-right-radius:10px;
+    border-top-right-radius: 10px;
+    border: none;
+    border-left: 1px solid white;
+    background-color: #ff702a;
+}
+
+[value=" x "]{
+    border-radius: 20px;
+    padding: 6px 10px;
+    border: none;
+    background-color: #ff702a;
+}
+.area-texto{
+    padding: 15px 50px 0 40px ;
+    text-align: right;
+    
+}
+.area-texto textarea{
+    background: #FAEFDE;
+}
+.area-texto label{
+    border: none;
+    background-color: none;
+    font-size: 16px;
+    margin-left: 15px;
+}
+.cuenta{
+    margin: 30px 50px 10px 50px;
+    text-align: center;
+}
+.dflex{
+    display: flex;
+    justify-content: space-between;
+}
+.con-pagar{
+    display: flex;
+    justify-content: center;
+}
+.con-pagar a{
+    text-decoration: none;
+}
+.pagar{
+    padding: 8px 100px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    background-color: #ff702a;
+    border: none;
+    font-size: 16px;
+    margin: 15px 0;
+}

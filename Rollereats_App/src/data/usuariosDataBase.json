@@ -1,0 +1,34 @@
+[
+  {
+    "id_Usuario": 1651404552156,
+    "correo_Usuario": "alejis16@hotmail.com",
+    "contraseña_Usuario": "$2a$10$kTu5I5vyCNCFZCmhHeFXt.OxQkLeSv9/mYDij5gjNBg.NJ8inlAqC",
+    "numero_Usuario": "12345",
+    "pais_Usuario": "Alemania",
+    "imagen_Usuario": "imagen-1651404552101.jpg"
+  },
+  {
+    "id_Usuario": 1651404569349,
+    "correo_Usuario": "Camilo@hotmail.com",
+    "contraseña_Usuario": "$2a$10$BtI52LP22s.MuXQS2W0ZU.ChSEGahqhUMr1gFjkyDD/GhjbWcr3.K",
+    "numero_Usuario": "1234567",
+    "pais_Usuario": "Nicaragua",
+    "imagen_Usuario": "imagen-1651404569287.jpg"
+  },
+  {
+    "id_Usuario": 1651404588733,
+    "correo_Usuario": "cristian@hotmail.com",
+    "contraseña_Usuario": "$2a$10$PlmaTPxo2pvrJNoNev9akOsSRlhyszsI.9zBmCpjprPzdVhonIxwi",
+    "numero_Usuario": "1124356",
+    "pais_Usuario": "Ecuador",
+    "imagen_Usuario": "imagen-1651404588647.jpg"
+  },
+  {
+    "id_Usuario": 1651404623970,
+    "correo_Usuario": "malejis16@hotmail.com",
+    "contraseña_Usuario": "$2a$10$HlO4RPWwocXJCavdgXyiHOnCb8Bl9lyq4B/8x2u4N.aDpPhP7QgyO",
+    "numero_Usuario": "123456",
+    "pais_Usuario": "Colombia",
+    "imagen_Usuario": "imagen-1651404623919.png"
+  }
+]

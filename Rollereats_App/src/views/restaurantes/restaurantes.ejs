@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurante || Name</title>
+  <link rel="stylesheet" href="/css/productDetail.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Encabezamiento -->
+  <%- include('../partials/header.ejs') %>
+  <!-- Seccion de portada -->
+  
+  <section id="agregar_pro" class="modal_modificar">
+    <div class="modal_contaiiner">
+      <figure class="modal_mod">
+        <p><strong>Agrega un nuevo producto</strong> </p>
+        <form action="/restaurantes/createProducto" method="POST" enctype="multipart/form-data">
+          <div class="for_cont" style="display: flex;">
+            <div style="text-align: center;">
+              <label for="f_subir"><i class="fa-solid fa-image" style="font-size: 7rem;"></i>
+                <p></p> Elige una imagen
+                <input type="file" name="f_subir" id="f_subir" class="file">
+              </label>
+            </div>
+            <div style="display:flex; flex-direction: column;">
+              <label for="n_producto">Nombre del producto
+              </label>
+              <input id="n_producto" name="n_producto" type="text" class="placeholder">
+              <label for="n_precio">Precio</label>
+              <input id="n_precio" name="n_precio" type="number" class="precio">
+            </div>
+          </div>
+          <div class="botoness">
+            <input type="submit" value="Guardar" class="m_button">
+            <a href="/restaurantes" class="c_button">Cancelar</a>
+          </div>
+        </form>
+      </figure>
+    </div>
+  </section>
+  <div class="imagen-Perfil">
+    <img src="/img/Logotipo_Restaurante.png" alt="Imagen del logo" id="Logotipo">
+  </div>
+  <!-- Seccion de la descripcion -->
+  <div class="descripcion">
+    <div class="descripcion-center">
+      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+    </div>
+    <div class="descripcion-item1">
+      <div class="descripcion-left">
+        <h3>Esquina 22<br> Restaurante</h3>
+        <p>Lorem ipsum dolor adipisicing elit cumque quae officia</p>
+      </div>
+      <div class="descripcion-rigth">
+        <h4><span>Abierto</span> <br>Cierra a las 22:00 Hrs</h4>
+      </div>
+    </div>
+  </div>
+  <!-- Seccion de barra de comidas y carrito -->
+  <div class="barra-comidaAndcarrito">
+    <div class="item-comidas">
+      <a href="#">
+        <h4>Hamburguesas</h4>
+      </a>
+      <a href="#">
+        <h4>Especiales</h4>
+      </a>
+      <a href="#">
+        <h4>Pizzas</h4>
+      </a>
+      <a href="#">
+        <h4>Tacos</h4>
+      </a>
+      <a href="#">
+        <h4>Bebidas</h4>
+      </a>
+    </div>
+    <div class="item-carrito">
+      <a href="/Carrito">
+        <h4><i class="fa-solid fa-cart-arrow-down"></i> $ 00,00</h4>
+      </a>
+    </div>
+  </div>
+  <!-- Seccion articulos -->
+  <div class="articulos">
+    <a href="#agregar_pro">
+      <article class="agregar-producto">
+        <div class="imagen-articulo">
+          <img src="/img/producto.png" alt="imagen del articulo">
+        </div>
+        <p style="color:black; padding: 1rem 0;">Agregar producto</p>
+      </article>
+    </a>
+
+    <% for( let i=0; i < productos.length; i++){ %>
+    <article class="articulo-unico">
+      <div id="options" class="options">
+        <section id="<%=productos[i].id_Producto%>" class="modal_opt">
+          <div class="modal_Container">
+            <figure class="modal_options">
+              <a class="salir" href="#salir" style="color: black;"><i class="fa-solid fa-xmark"></i></a>
+              <form action="/restaurantes/eliminar/<%=productos[i].id_Producto%>?_method=DELETE" method="POST">
+                  <button type="submit" class="button-delete">  
+                    Eliminar producto
+                  </button>
+                </form>
+              <a class="editar_producto" href="/restaurantes/edit/<%=productos[i].id_Producto%>">Editar detalles</a>
+            </figure>
+          </div>
+        </section>
+        <div class="imagen-articulo" style="display: flex;">
+          <img src="/img/<%=productos[i].image_Producto%>" alt="imagen del articulo">
+          <a href="#<%=productos[i].id_Producto%>" style="color: black;"><i class="fa-solid fa-ellipsis-vertical"></i></a>
+        </div>
+      </div>
+      <div class="descripcion-articulo">
+        <div class="nombre-precio">
+          <h4><%=productos[i].name_Producto%></h4>
+          <h4><span><%=productos[i].price_Producto%></span></h4>
+        </div>
+        <div class="agregar-carrito">
+          <i class="fa-solid fa-circle-plus"></i>
+        </div>
+      </div>
+    </article>
+    <%}%>
+
+    </div>
+    <script src="https://kit.fontawesome.com/ea2382ba85.js" crossorigin="anonymous"></script>
+    <!-- Footer -->
+    <%- include('../partials/footer.ejs') %>
+</body>
+
+</html>
