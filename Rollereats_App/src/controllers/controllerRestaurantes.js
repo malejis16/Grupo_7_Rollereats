@@ -17,34 +17,28 @@ let restaurantes = JSON.parse(fs.readFileSync(restaurantesFilePath, "utf-8"));
 let productos = JSON.parse(fs.readFileSync(productosFilePath, "utf-8"));
 
 const mainController = {
-  restaurantes: function (req, res) {
-    let productos = JSON.parse(fs.readFileSync(productosFilePath, "utf-8"));
-    res.render("restaurantes/restaurantes", { productos: productos });
+  //TODOS los productos VISTA
+  restaurantes:(req, res) => {
+    db.Product.findAll().then((productos) => {
+      res.render("restaurantes/restaurantes", { productos: productos });
+    });
   },
-  createProducto: function (req, res) {
-    res.render("restaurantes/restaurante");
+
+  //CREAR nuevo producto VISTA
+  createProducto: (req, res) => {
+    db.Product.findAll().then(([producto]) => {
+      res.render("restaurantes/restaurante", { producto:producto });
+    });
   },
-  storeProducto: function (req, res) {
-    if (req.files) {
-      let restauranteNuevo = {
-        id_Producto: Date.now(),
-        name_Producto: req.body.n_producto,
-        price_Producto: req.body.n_precio,
-        //image_Producto: req.files[0].filename,
-      };
 
-      if (req.files[0]) {
-        if (req.files[0].filename) {
-          restauranteNuevo.image_Producto = req.files[0].filename;
-        }
-      }
-
-      productos.push(restauranteNuevo);
-      fs.writeFileSync(productosFilePath, JSON.stringify(productos));
-      res.redirect("/restaurantes");
-    } else {
-      res.send("<h1>Error al subir la imagen</h1>");
-    }
+  //Guardar producto CREADO
+  storeProducto: (req, res) => {
+    db.Product.create({
+      productName: req.body.name,
+      productPrice: req.body.price,
+      productImg: req.body.image,
+    });
+    res.redirect("/restaurantes");
   },
 
   edit: (req, res) => {
