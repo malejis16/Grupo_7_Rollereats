@@ -23,11 +23,15 @@ var upload = multer({ storage });
 //Rutas Restaurantes
 rutas.get("/", logintMiddleware, controller.restaurantes);
 //Crear Producto
-rutas.get("/createProducto", controller.createProducto);
-rutas.post("/createProducto", upload.any(), controller.storeProducto);
+//rutas.get("/createProducto", controller.createProducto);
+rutas.post(
+  "/createProducto",
+  upload.single("productImg"),
+  controller.storeProducto
+);
 //Editar Producto
 rutas.get("/edit/:id", controller.edit);
-rutas.put("/edit/:id", upload.any(), controller.update);
+rutas.put("/edit/:id", upload.single("productImg"), controller.update);
 
 //Eliminar
 rutas.delete("/eliminar/:id", controller.destroy);

@@ -1,84 +1,103 @@
 //Módulos
-const path = require("path");
-const fs = require("fs");
-
-const restaurantesFilePath = path.join(
-  __dirname,
-  "../data/restaurantesDataBase.json"
-);
-
-const productosFilePath = path.join(
-  __dirname,
-  "../data/productosDataBase.json"
-);
-
-//pasamos esta constante al index para que se recargue cada vez que refrescamos las pag
-let restaurantes = JSON.parse(fs.readFileSync(restaurantesFilePath, "utf-8"));
-let productos = JSON.parse(fs.readFileSync(productosFilePath, "utf-8"));
+const { validationResult } = require("express-validator");
+let db = require("../database/models");
 
 const mainController = {
   //TODOS los productos VISTA
-  restaurantes:(req, res) => {
+  restaurantes: (req, res) => {
     db.Product.findAll().then((productos) => {
       res.render("restaurantes/restaurantes", { productos: productos });
     });
   },
 
-  //CREAR nuevo producto VISTA
+  /*CREAR nuevo producto VISTA
   createProducto: (req, res) => {
-    db.Product.findAll().then(([producto]) => {
-      res.render("restaurantes/restaurante", { producto:producto });
+    db.Product.findAll().then(([productos]) => {
+      res.render("restaurantes/restaurantes", { productos: productos });
     });
-  },
+  },*/
 
   //Guardar producto CREADO
   storeProducto: (req, res) => {
-    db.Product.create({
+    let productoNuevo = {
       productName: req.body.name,
       productPrice: req.body.price,
-      productImg: req.body.image,
-    });
+    };
+    if (req.file) {
+      if (req.file.filename) {
+        //nuevoUsuario.imagen_Usuario = req.file.filename;
+        productoNuevo.productImg = req.file.filename;
+        console.log(req.file.filename);
+      }
+    }
+    db.Product.create(productoNuevo)
+      .then(function (data) {
+        console.log(data);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
     res.redirect("/restaurantes");
   },
 
   edit: (req, res) => {
-    let id = req.params.id;
-    res.render("productos/editProducto", { productos: productos, id });
+    db.Product.findByPk(req.params.id).then(function (producto) {
+      res.render("productos/editProducto", {
+        producto: producto,
+      });
+    });
   },
   // Update - Method to update
   update: (req, res) => {
-    let productos = JSON.parse(fs.readFileSync(productosFilePath, "utf-8"));
-    let id = req.params.id;
-    console.log(req.body);
-
-    for (let i = 0; i < productos.length; i++) {
-      if (productos[i].id_Producto == id) {
-        productos[i].name_Producto = req.body.n_producto;
-        productos[i].price_Producto = req.body.n_precio;
-        productos[i].image_Producto = req.files[0].filename;
-      }
-
-      fs.writeFileSync(productosFilePath, JSON.stringify(productos, null, 2));
+    if (req.file) {
+      db.Product.update(
+        {
+          productName: req.body.name,
+          productPrice: req.body.price,
+          productImg: req.file.filename,
+        },
+        {
+          where: {
+            idProduct: req.params.id,
+          },
+        }
+      )
+        .then(res.redirect("/restaurantes"))
+        .catch(function (errors) {
+          console.log(errors);
+        });
+    } else {
+      db.Product.update(
+        {
+          productName: req.body.name,
+          productPrice: req.body.price,
+        },
+        {
+          where: {
+            idProduct: req.params.id,
+          },
+        }
+      )
+        .then(res.redirect("/restaurantes"))
+        .catch(function (errors) {
+          console.log(errors);
+        });
     }
-    res.redirect("/restaurantes");
   },
 
   // Delete - Delete one product from DB
   destroy: (req, res) => {
-    let productos = JSON.parse(fs.readFileSync(productosFilePath, "utf-8"));
-    let id = req.params.id;
-    // filtrar todos los productos que no tengan ese id
-    let productosFiltrados = productos.filter(
-      (producto) => producto.id_Producto != id
-    );
-
-    fs.writeFileSync(
-      productosFilePath,
-      JSON.stringify(productosFiltrados, null, 2)
-    );
-
-    // redireccionar
-    res.redirect("/restaurantes");
+    db.Product.destroy({
+      where: {
+        idProduct: req.params.id,
+      },
+    })
+      .then(function () {
+        res.redirect("/restaurantes");
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
   },
 };
 
