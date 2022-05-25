@@ -18,11 +18,11 @@
         <form class="form-edit" action="/restaurantes/edit/<%=producto.idProduct%>?_method=PUT" method="POST" enctype="multipart/form-data">
             <h1 class="form-title">Edita tu Producto</h1>
             <div class="form-div">
-                <input class="form-input" type="text" placeholder=" " name = "name" id = "n_producto" >
+                <input class="form-input" type="text" value="<%=producto.productName%>" name = "name" id = "n_producto" >
                 <label class="form-label" for="">Nombre del producto</label>
             </div>
             <div class="form-div">
-                <input class="form-input" type="text" placeholder=" " name = "price">
+                <input class="form-input" type="text" value="<%=producto.productPrice%>" name = "price">
                 <label class="form-label" for="">Precio</label>
             </div>
 
