@@ -51,6 +51,7 @@ CREATE TABLE products (
 	productDescription VARCHAR(200) NOT NULL,
 	idBusiness INT NOT NULL,
 	idCategory INT NOT NULL,
+	productImg BLOB NULL,
 	PRIMARY KEY (idProduct),
 	FOREIGN KEY (idBusiness) REFERENCES dbDigitalHouse.businesses(idBusiness),
 	FOREIGN KEY (idCategory) REFERENCES dbDigitalHouse.categories(idCategory)
