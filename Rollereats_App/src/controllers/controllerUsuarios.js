@@ -32,10 +32,12 @@ const usersController = {
       ) {
         console.log("userBuscado");
         console.log(userBuscado);
-        if (bcrypt.compareSync(req.body.password, userBuscado.password)) {
-          var usuarioALoguearse = userBuscado;
-          console.log("Usuario a loguarse");
-          console.log(usuarioALoguearse);
+        if (userBuscado != null) {
+          if (bcrypt.compareSync(req.body.password, userBuscado.password)) {
+            var usuarioALoguearse = userBuscado;
+            console.log("Usuario a loguarse");
+            console.log(usuarioALoguearse);
+          }
         }
 
         if (usuarioALoguearse == undefined) {

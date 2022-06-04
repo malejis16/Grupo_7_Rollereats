@@ -27,6 +27,11 @@ header {
   display: flex;
   align-items: center;
 }
+
+.errores{
+  color: red;
+}
+
 #logo {
   padding: 5px 5px 5px 0;
   width: 40vw;
