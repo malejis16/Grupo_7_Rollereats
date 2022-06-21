@@ -1,3 +1,7 @@
+#Retroalimentación Sprint 7 entregado el 07/06/22
+
+Al dia de hoy ha costado un poco llevar adecuadamente la organizacion respecto a las reuniones en equipo, debido a que los horarios no concuerdan, y por situaciones personales de los integrantes del equipo. Aun así se espera para el final del proyecto a presentar, poder hacer entrega del trabajo integrador con los requisitos propuestos en cada Sprint de manera adecuada y con un mejor acabado del parte del Front-End tomando enfoque principalmente en los temas tratados en el Sprint # 5.
+
 #Retroalimentación Sprint 6 entregado el 17/02/22
 
 Para la entrega oportuna de este sprint, fue necesario afianzar nuevamente los conocimientos adquiridos semanas anteriores en las clases y en la plataforma virtual del playground, ya que al pasar el tiempo muchos de los conceptos ya se habian perdido, por esa razón fue necesario repetir las clases y ejercitar un poco más los proyectos vistos en clase.
@@ -12,7 +16,7 @@ Anteriormente se venian realizando reuniones por lo menos una vez a la semana pa
 
 El proyecto Rollereats inicialmente y hasta el dia de hoy a tenido cierta complejidad correspondiente al desarrollo, debido a la extensa estructuracion diseñada para la aplicacion web, en tal sentido y gracias al aporte de los profesores encargados de la evualuación del proyecto integrador, se tomo la decision de elegir el crud de restaurantes y no el de la totalidad del proyecto, para poder así, dar cumplimientos con los sprint futuros a presentar.Cabe aclarar que estas decisiones tomaran rigor el dia 28 de Abril, dia en cual se hara la entrega de este documento junto a lo que corresponde del sprint #5.
 
-#Retroalimentación Sprint 3 entregado el 24/03/22
+#Retroalimentación Sprint 4 entregado el 24/03/22
 
 En este Sprint hemos tomado decisiones importantes como equipo de trabajo, principalmente hablando por los miembros que hemos estado al tanto del proyecto integrador desde el inicio de las entregas, (Cristian y Alejandra); Debido a que hace dos meses se ha propuesto de varias maneras al resto de los integrantes colaborar proactivamente en el proyecto, esperando de su apoyo, ayuda o gestión del trabajo, y al no recibirla, hemos tomado la decisión de separarnos y continuar nuestro proyecto trabajando juntos y comprometidamente como ha sido hasta el dia de hoy.
 
