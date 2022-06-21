@@ -169,6 +169,31 @@ const usersController = {
         console.log(error);
       });
   },
+  list: (req, res) => {
+    db.User.findAll().then((Users) => {
+      return res.status(200).json({
+        total: Users.length,
+        data: Users,
+        status: 200,
+      });
+    });
+  },
+  show: (req, res) => {
+    db.User.findByPk(req.params.id).then((User) => {
+      return res.status(200).json({
+        data: User,
+        status: 200,
+      });
+    });
+  },
+  store2: (req, res) => {
+    db.User.create(req.body).then((User) => {
+      return res.status(200).json({
+        data: User,
+        status: 200,
+      });
+    });
+  },
 };
 
 module.exports = usersController;

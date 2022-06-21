@@ -7,10 +7,12 @@ const routerProductos = require("./routes/routerProductos");
 const routerRepartidor = require("./routes/routerRepartidor");
 const routerRestaurantes = require("./routes/routerRestaurantes");
 const routerUsuarios = require("./routes/routerUsuarios");
+const routerEndpoints = require("./routes/routerEndpoints");
+
 const methodOverride = require("method-override"); // Pasar poder usar los métodos PUT y DELETE
 const session = require("express-session");
-const dbDigitalHouse = require('./database/models') /***************/
-const PORT =  process.env.PORT || 3000; /************************** */
+const dbDigitalHouse = require("./database/models"); /***************/
+const PORT = process.env.PORT || 3000; /************************** */
 
 //Express()
 const app = express();
@@ -45,6 +47,8 @@ app.use("/repartidor", routerRepartidor);
 app.use("/restaurantes", routerRestaurantes);
 //******Rutas Users*****//
 app.use("/usuarios", routerUsuarios);
+//******Rutas Endpoints*****//
+app.use("/endpoints", routerEndpoints);
 
 // **** Servidor ***** //
 // app.listen(3000, () => {
@@ -52,7 +56,7 @@ app.use("/usuarios", routerUsuarios);
 // });
 
 dbDigitalHouse.sequelize.sync().then(() => {
-  app.listen(PORT, ()=>{
+  app.listen(PORT, () => {
     console.log(`Listen on: http://localhost:${PORT}`);
-  }) 
-}); 
+  });
+});

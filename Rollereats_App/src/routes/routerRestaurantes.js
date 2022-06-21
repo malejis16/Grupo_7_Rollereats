@@ -29,6 +29,8 @@ rutas.post(
   upload.single("productImg"),
   controller.storeProducto
 );
+rutas.get("/listas", controller.list);
+rutas.get("/listas/:id", controller.show);
 //Editar Producto
 rutas.get("/edit/:id", controller.edit);
 rutas.put("/edit/:id", upload.single("productImg"), controller.update);

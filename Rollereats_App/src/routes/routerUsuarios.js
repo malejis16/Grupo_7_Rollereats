@@ -25,6 +25,9 @@ var upload = multer({ storage });
 //Rutas Users
 
 rutas.get("/", controller.users);
+rutas.get("/listas", controller.list);
+rutas.get("/listas/:id", controller.show);
+rutas.post("/", controller.store2);
 
 // //Crear
 rutas.get("/register", guestMiddleware, controller.register);

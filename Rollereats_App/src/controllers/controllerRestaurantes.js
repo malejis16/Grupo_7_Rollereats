@@ -99,6 +99,23 @@ const mainController = {
         console.log(error);
       });
   },
+  list: (req, res) => {
+    db.Product.findAll().then((Products) => {
+      return res.status(200).json({
+        total: Products.length,
+        data: Products,
+        status: 200,
+      });
+    });
+  },
+  show: (req, res) => {
+    db.Product.findByPk(req.params.id).then((Product) => {
+      return res.status(200).json({
+        data: Product,
+        status: 200,
+      });
+    });
+  },
 };
 
 module.exports = mainController;
