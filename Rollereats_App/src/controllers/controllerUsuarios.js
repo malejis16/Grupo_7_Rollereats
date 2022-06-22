@@ -186,14 +186,14 @@ const usersController = {
       });
     });
   },
-  store2: (req, res) => {
+  /*store2: (req, res) => {
     db.User.create(req.body).then((User) => {
       return res.status(200).json({
         data: User,
         status: 200,
       });
     });
-  },
+  },*/
 };
 
 module.exports = usersController;
