@@ -174,6 +174,7 @@ const usersController = {
       return res.status(200).json({
         total: Users.length,
         data: Users,
+        lastUser: Users.pop(),
         status: 200,
       });
     });

@@ -104,6 +104,7 @@ const mainController = {
       return res.status(200).json({
         total: Products.length,
         data: Products,
+        lastProduct: Products.pop(),
         status: 200,
       });
     });
