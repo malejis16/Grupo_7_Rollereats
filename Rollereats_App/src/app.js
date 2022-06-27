@@ -2,6 +2,7 @@
 const express = require("express");
 var path = require("path");
 const mainRouter = require("./routes/mainRouter");
+const cors = require("cors");
 const routerNosotros = require("./routes/routerNosotros");
 const routerProductos = require("./routes/routerProductos");
 const routerRepartidor = require("./routes/routerRepartidor");
@@ -14,6 +15,10 @@ const session = require("express-session");
 const dbDigitalHouse = require("./database/models"); /***************/
 const PORT = process.env.PORT || 3000; /************************** */
 
+
+//cors
+
+
 //Express()
 const app = express();
 
@@ -23,6 +28,7 @@ app.use(methodOverride("_method")); // Pasar poder pisar el method="POST" en el 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(session({ secret: "informacion secreta" }));
+app.use(cors());
 
 //template Engine - Motor de plantilla
 
@@ -60,3 +66,5 @@ dbDigitalHouse.sequelize.sync().then(() => {
     console.log(`Listen on: http://localhost:${PORT}`);
   });
 });
+
+
