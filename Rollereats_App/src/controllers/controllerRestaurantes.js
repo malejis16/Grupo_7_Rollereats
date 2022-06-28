@@ -117,8 +117,7 @@ const mainController = {
           idProduct: Product.idProduct,
           productName: Product.productName,
           productPrice: Product.productPrice,
-          productImg:
-            "http://localhost:3001/images/avatars/" + Product.productImg,
+          productImg: "http://localhost:3001/img/" + Product.productImg,
           status: 200,
         });
       })
