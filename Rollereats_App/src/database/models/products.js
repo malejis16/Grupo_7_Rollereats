@@ -22,7 +22,7 @@ module.exports = function (sequelize, dataTypes) {
       type: dataTypes.INTEGER,
     },
     productImg: {
-      type: dataTypes.BLOB,
+      type: dataTypes.STRING,
     },
   };
 

@@ -170,31 +170,32 @@ const usersController = {
       });
   },
   list: (req, res) => {
-    db.User.findAll().then((Users) => {
-      return res.status(200).json({
-        total: Users.length,
-        data: Users,
-        lastUser: Users.pop(),
-        status: 200,
-      });
-    });
+    db.User.findAll()
+      .then((Users) => {
+        return res.status(200).json({
+          total: Users.length,
+          data: Users,
+          lastUser: Users[Users.length - 1],
+          status: 200,
+        });
+      })
+      .catch((error) => res.json(error));
   },
   show: (req, res) => {
-    db.User.findByPk(req.params.id).then((User) => {
-      return res.status(200).json({
-        data: User,
-        status: 200,
-      });
-    });
+    db.User.findByPk(req.params.id)
+      .then((User) => {
+        return res.status(200).json({
+          idUser: User.idUser,
+          email: User.email,
+          idUser: User.idUser,
+          phone: User.phone,
+          country: User.country,
+          avatar: "http://localhost:3001/images/avatars/" + User.avatar,
+          status: 200,
+        });
+      })
+      .catch((error) => res.json(error));
   },
-  /*store2: (req, res) => {
-    db.User.create(req.body).then((User) => {
-      return res.status(200).json({
-        data: User,
-        status: 200,
-      });
-    });
-  },*/
 };
 
 module.exports = usersController;

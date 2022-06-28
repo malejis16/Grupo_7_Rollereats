@@ -3,7 +3,6 @@ const { validationResult } = require("express-validator");
 let db = require("../database/models");
 
 const mainController = {
-  //TODOS los productos VISTA
   restaurantes: (req, res) => {
     db.Product.findAll().then((productos) => {
       res.render("restaurantes/restaurantes", { productos: productos });
@@ -100,22 +99,30 @@ const mainController = {
       });
   },
   list: (req, res) => {
-    db.Product.findAll().then((Products) => {
-      return res.status(200).json({
-        total: Products.length,
-        data: Products,
-        lastProduct: Products.pop(),
-        status: 200,
-      });
-    });
+    db.Product.findAll()
+      .then((Products) => {
+        return res.status(200).json({
+          total: Products.length,
+          data: Products,
+          lastProduct: Products[Products.length - 1],
+          status: 200,
+        });
+      })
+      .catch((error) => res.json(error));
   },
   show: (req, res) => {
-    db.Product.findByPk(req.params.id).then((Product) => {
-      return res.status(200).json({
-        data: Product,
-        status: 200,
-      });
-    });
+    db.Product.findByPk(req.params.id)
+      .then((Product) => {
+        return res.status(200).json({
+          idProduct: Product.idProduct,
+          productName: Product.productName,
+          productPrice: Product.productPrice,
+          productImg:
+            "http://localhost:3001/images/avatars/" + Product.productImg,
+          status: 200,
+        });
+      })
+      .catch((error) => res.json(error));
   },
 };
 
