@@ -1,0 +1,18 @@
+<!-- header profile -->
+<header class="header-profile">
+    <div class="header-left">
+        <div class="update-img">
+            <label for="profile-img" class="label-img">
+                <img src="/img/<%=usuarioBuscado.avatar%>" alt="Aqui esta la imangen" class="img-profile">
+                <input type="file" id="profile-img" class="input-img" form="update-profile">
+                <i class="fa-solid fa-camera"></i>
+            </label>   
+            <div class="header-greetings">
+                <h1>Hi there, <%=usuarioBuscado.email%></h1>
+                <p>Thanks for using Rollereats!</p>
+            </div> 
+        </div>
+    </div>
+    <button class="exit">Sign Out <i class='bx bx-exit'></i></button>      
+</header>
+<!-- End header profile -->

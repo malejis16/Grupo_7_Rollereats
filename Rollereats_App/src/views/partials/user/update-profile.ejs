@@ -1,0 +1,27 @@
+<!-- Update profile -->
+<div class="update-data">
+    <form id="update-profile" action="/usuarios/editarUsuario/<%=usuarioBuscado.idUser%>?_method=PUT" method="POST" class="update-profile" enctype="multipart/form-data" >
+        <div class="update-title">
+            <h3>Your information</h3>
+            <p>Update your information!</p> 
+        </div>
+        <div class="update-email">
+            <label for="email">E-mail address</label>
+            <input type="email" type="number" id="email" placeholder="E-mail address" value ="<%=usuarioBuscado.email%>" name="email"><!--TODO:-->
+        </div>
+        <div class="update-phone">
+            <label for="phone">Phone number</label>
+            <input type="number" type="number" id="phone" placeholder="Phone number" value ="<%=usuarioBuscado.phone%>" name ="phone"><!--TODO:-->
+        </div>
+        <div class="update-password">
+            <label for="Password">Password</label>
+            <input type="password" type="number" id="Password" placeholder="Password" name = "password" value="***"><!--TODO:-->
+        </div>
+        <div class="update-name">
+            <label for="country">Country</label> 
+            <input type="text" id="country" placeholder="Country" value ="<%=usuarioBuscado.country%>">
+        </div>
+        <input class="update-button" type="submit" value="Update">
+    </form>
+</div>
+<!-- End Update profile -->

@@ -9,6 +9,10 @@ const routerRepartidor = require("./routes/routerRepartidor");
 const routerRestaurantes = require("./routes/routerRestaurantes");
 const routerUsuarios = require("./routes/routerUsuarios");
 const routerEndpoints = require("./routes/routerEndpoints");
+const restaurants = require("./routes/restaurants");
+
+
+//restaurants
 
 const methodOverride = require("method-override"); // Pasar poder usar los métodos PUT y DELETE
 const session = require("express-session");
@@ -40,6 +44,9 @@ app.set("views", path.join(__dirname, "views")); // Define la ubicación de la c
 //******Rutas Inicio*****//
 app.use("/", mainRouter);
 
+// Rutas restaurants
+app.use("/", restaurants);
+
 //**Rutas Nosotros**//
 app.use("/about", routerNosotros);
 
@@ -54,6 +61,7 @@ app.use("/restaurantes", routerRestaurantes);
 //******Rutas Users*****//
 app.use("/usuarios", routerUsuarios);
 //******Rutas Endpoints*****//
+
 app.use("/endpoints", routerEndpoints);
 
 // **** Servidor ***** //

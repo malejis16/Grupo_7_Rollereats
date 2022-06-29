@@ -1,0 +1,45 @@
+<!-- modal edit business -->
+<div class="modal-business" id="modal-editBusiness">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button class="close-createBusiness" data-close="">&times</button>
+            <h2 class="modal-title">Edit business</h2>
+            <div class="update-img">
+                <label for="product-img" class="label-img">
+                    <img src="https://th.bing.com/th/id/R.e894cb17096dbeee04b521a4443491b9?rik=EDcL60gxXzsFiw&pid=ImgRaw&r=0" alt="imgBusiness" class="img-business">
+                    <input type="file" id="product-img" class="input-immg" form="update-product">
+                    <!-- <i class="fa-solid fa-camera"></i> -->
+                </label>   
+            </div>
+        </div>
+        <div class="modal-body">
+            <form action="" class="create-business" id="create-business">
+                <div class="form-group">
+                    <input type="text" class="name-business" id="name-business" placeholder="Enter name" value="">
+                </div>
+                <div class="form-group">
+                    <textarea name="description-business" id="description-business" placeholder="Enter descriptions or slogan" maxlength="70"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="delivery-cost">
+                        $
+                        <input type="number" class="delivery-fee" id="delivery-cost" placeholder="0.00">
+                        delivery Fee
+                    </label>
+                </div>
+                <div class="form-time">
+                    <label for="delivery-time" class="delivery-time">
+                        <input type="number" class="time" id="Delivery-time" placeholder="00">
+                        <span>-</span>
+                        <input type="number" class="time" id="Delivery-time" placeholder="00">
+                        min <span>delivery time</span>
+                    </label>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <input type="submit" class="btn btn-primary" value="Save" form="create-business">
+        </div>
+    </div>
+</div>
+<!-- End modal edit business -->

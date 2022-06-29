@@ -1,0 +1,38 @@
+<!-- modal edit product  -->
+<div class="modal-business modal-product" id="modal-editproduct">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button class="close-createBusiness" data-close="">&times</button>
+            <h2 class="modal-title">Edit product</h2>
+            <div class="update-img">
+                <label for="product-img" class="label-img">
+                    <img src="https://th.bing.com/th/id/R.e894cb17096dbeee04b521a4443491b9?rik=EDcL60gxXzsFiw&pid=ImgRaw&r=0" alt="imgBusiness" class="img-business">
+                    <input type="file" id="product-img" class="input-immg" form="update-product">
+                    <!-- <i class="fa-solid fa-camera"></i> -->
+                </label>   
+            </div>
+        </div>
+        <div class="modal-body">
+            <form id="update-product" action="">
+                <div class="detail-product" id="detail-product"> 
+                    <div class="form-group">
+                        <input data-edit type="text" class="name-business" id="name-business" placeholder="Enter name" value="Name product"  >
+                    </div>
+                    <div class="form-group">
+                        <textarea data-edit class="description-product" name="description-business" id="description-business" placeholder="Enter descriptions" maxlength="200" >Description product</textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="delivery-cost" class="product-cost">
+                            $
+                            <input data-edit type="number" class="delivery-fee product-fee" id="delivery-cost" placeholder="0.00" value="0.000">
+                        </label>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <input type="submit" class="btn btn-primary" value="Save" form="create-business">
+        </div>
+    </div>
+</div>
+<!-- End modal edit product -->  

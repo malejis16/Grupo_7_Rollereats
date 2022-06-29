@@ -1,0 +1,35 @@
+<!-- Aside-Restaurants -->
+<aside class="aside-restaurants" id="aside-container">
+    <div class="tools-manager">
+        <!--TODO:--><p>Below you will be able to create the restaurant's website</p>
+        <button class="open-createBusiness" id="createBusiness" data-open="modal-createBusiness" >Create</button>
+    </div>
+    <hr>
+    <div class="search-restaurant">
+        <label for="search-restaurant">
+            <input type="search" placeholder="Search" id="search-restaurant" name="search-restaurant">
+            <i class='bx bx-search'></i>
+        </label>
+    </div>
+    <h1 class="title"># stores</h1>
+    <h3 class="subtitle" >Sort</h3>
+    <div class="sort-radio">
+        <label for="picked">
+            <input type="radio" id="picked" name="sort" value="sort-picked" onchange="myFunction(value)" defa>
+            <span>Picked for you</span>
+        </label>
+        <label for="popular">
+            <input type="radio" id="popular" name="sort" value="sort-popular" onchange="myFunction(value)">
+            <span>Most Popular</span>
+        </label>
+        <label for="rating">
+            <input type="radio" id="rating" name="sort" value="sort-rating" onchange="myFunction(value)">
+            <span>Rating</span>
+        </label>
+        <label for="time">
+            <input type="radio" id="time" name="sort" value="sort-time" onchange="myFunction(value)">
+            <span>Delivery time</span>
+        </label>
+    </div>   
+</aside>
+<!-- End Aside-Restaurants -->

@@ -1,55 +1,90 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/register.css">
-    <title>Rollereats || Login</title>
-</head>
-<body>
-    <%- include('../partials/header.ejs') %>
-
-    <div class="contenedor-principal">
-        <div class="con-register">
-            <img src="/img/undraw_Login_re_4vu22.png" alt="" id="imagen-registro">
-            <form action="/usuarios/register" method="POST" class="formulario" enctype ="multipart/form-data">
-                <% if (typeof errors != 'undefined') { %> 
-                    <p style='color:red'>ERROR</p>
-                    <ul>
-                        <% for (i=0; i<errors.length; i++ ) { %>
-                            <li>
-                                <%=errors[i].msg%>
-                            </li>
-                        <%}%> 
-                    </ul>
-                <%}%>
-                
-                <div class = 'errores'>
-                    <ul>
-    
-                    </ul>
+<%- include('../partials/mainTag.ejs') %>
+    <%- include('../partials/navbar.ejs') %>
+    <%- include('../partials/aside.ejs') %>
+    <!-- Sign-up -->
+    <div class="login">
+        <div class="login-contain">
+            <div class="contain-left">
+                <div class="text-start">
+                    <h1>Sign up for free</h1>
+                    <p>It's quick and easy</p>
                 </div>
-
-
-                <h3>Registro</h3>
-                <p class="p-1">Crea una nueva cuenta</p>
-                <input  class="form email" type="email" placeholder="Correo electronico" id="email" name="email" >
-                <input  class="form password" type="password" placeholder="Contraseña" id="password" name = "password" >
-                <input class="form numero" type="number" placeholder="Numero Telefonico" id="phone" name ="phone" >
-                <input class="form pais" type= "text" placeholder="Pais" id="country" name ="country" >
-                <input class="form avatar" type= "file" placeholder="imagen" id="avatar" name ="avatar">
-                <!--<button class="button" value="">Registrar</button>-->
-                <input class="registrar" type="submit" value="registrar">
-                <p id="red-ingreso">¿Ya tienes una cuenta? <a href="/usuarios/login">Inicia Sesión</a></p>
-            </form>
+                <div class="text-end">
+                    <p>Already have an account? <a href="/usuarios/login">Log in</a></p>
+                </div>
+            </div>
+            <div class="contain-right">
+                <form action="/usuarios/register" method="POST" class="logIn" enctype ="multipart/form-data">
+                    <% if (typeof errors != 'undefined') { %> 
+                        <p style='color:red'>ERROR</p>
+                        <ul>
+                            <% for (i=0; i<errors.length; i++ ) { %>
+                                <li>
+                                    <%=errors[i].msg%>
+                                </li>
+                            <%}%> 
+                        </ul>
+                    <%}%>
+                    <div class = 'errores'>
+                        <ul>
+        
+                        </ul>
+                    </div>
+                    <div class="login-title"> 
+                        <h2>Sign up for free</h2>
+                        <p>Already have an account? <a href="/usuarios/login">Log in</a></p>
+                    </div>
+                    <div class="Email">
+                        <label for="email">E-mail address</label>
+                        <input type="email" id="email" placeholder="E-mail address"  name="email">                    
+                    </div>
+                    <div class="password">
+                        <div class="label-forgot">
+                            <label for="password">New password</label>
+                        </div>
+                        <input type="password" id="password" placeholder="New password"  name = "password">
+                    </div>
+                    <div class="phone">
+                        <label for="phone">Cell phone</label>
+                        <input type="tel" id="phone" placeholder="Cell phone" name ="phone">
+                    </div>
+                    <div class="phone">
+                        <label for="country">Country</label>
+                        <input type="text" id="country" placeholder="Country" name ="country">
+                    </div>
+                    <div class="phone">
+                        <label for="avatar">Avatar</label>
+                        <input type="file" id="avatar" placeholder="img" name ="avatar">
+                    </div>
+                    <p class="contract">By singing in, I agree <a href="#Privace-Policy">Bufé's Privacy Policy</a> and <a href="#Terms-Services">Term of Service</a></p>
+                    <input class="login-button" type="submit" value="Register">
+                    <div class="logIn-alternative">
+                        <p class="login-with">Login with</p>
+                        <div class="alternative">
+                            <a href="#sso" class="sso">
+                                <i class='bx bxs-key'></i>
+                                <p>SSO</p>
+                            </a>
+                            <a href="#Apple" class="apple">
+                                <i class='bx bxl-apple'></i>
+                                <p>Apple</p>
+                            </a>
+                            <a href="#google" class="google">
+                                <i class='bx bxl-google'></i>
+                                <p>Google</p>
+                            </a>
+                            <a href="#facebook" class="facebook">
+                                <i class='bx bxl-facebook-circle'></i>
+                                <p>Facebook</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="login-footer">
+                        <span>Bufé is protected by reCAPTCHA and its <a href="#Privace-Policy">Privacy Policy</a>  and <a href="#Terms-Services">Terms of Service</a> apply.</span>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
-    <script src="/js/validationRegister.js"></script>
-    <script src="https://kit.fontawesome.com/ea2382ba85.js" crossorigin="anonymous"></script>
-
-      <!-- Footer -->
-      <%- include('../partials/footer.ejs') %>
-</body>
-</html>
+    <!-- end Sign-up -->
+<%- include('../partials/endTag.ejs') %>

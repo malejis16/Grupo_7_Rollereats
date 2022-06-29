@@ -1,0 +1,54 @@
+<!-- modal detail product  -->
+<div class="modal-business" id="modal-showproduct">
+    <div class="modal-content">
+        <div class="modal-header">
+            <div class="product-config">
+                <i class='bx bx-dots-vertical-rounded icon-config' id="open-configProduct"></i>
+                <ul class="config-list" id="product-configuration">
+                    <li class="config-item">
+                        <i class='bx bx-edit-alt'></i>
+                        <button class="link-editBusiness" data-open="modal-editproduct" id="boton-editProduct">Edit product</button>
+                    </li>
+                    <form class="delete-item">
+                        <label for="business-delete">
+                            <i class='bx bx-trash-alt'></i>
+                            <input type="submit" id="business-delete">
+                            <span class="link-deleteBusiness">Delete product</span>
+                        </label>
+                    </form>
+                </ul>
+            </div>
+            <button class="close-createBusiness" data-close="">&times</button>
+            <img src="/img/<%=productos[i].productImg%>">
+        </div>
+        <div class="modal-body">
+            <form action="">
+                <div class="detail-product" id="detail-product"> 
+                    <div class="form-group">
+                        <p  class="name-business" id="name-business">Name product</p>
+                    </div>
+                    <div class="form-group">
+                        <p class="description-product" id="description-business">Description product</p>
+                    </div>
+                    <div class="form-group">
+                        <p class="product-cost">$ 0.000</p>
+                    </div>
+                    <div class="quantify">
+                        <span>Quantify</span>
+                        <div class="block-quantify">
+                            <input type="text" class="quantify-number" value="1" min="1">
+                            <div class="quantify-direction">
+                                <button class="quantify-up"><i class='bx bxs-chevron-up'></i></button>
+                                <button class="quantify-down"><i class='bx bxs-chevron-down'></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <input type="submit" class="btn btn-primary" value="Add to cart" form="create-business">
+        </div>
+    </div>
+</div>
+<!-- End modal detail product -->    

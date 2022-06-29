@@ -1,0 +1,23 @@
+<!-- seccion products container -->
+<div class="products-container">
+    <% for( let i=0; i < productos.length; i++){ %>
+        <article class="product" data-open="modal-showproduct">
+            <a> 
+                <i class='bx bxs-heart'></i>
+                <div class="contein-img">
+                    <img src="/img/<%=productos[i].productImg%>" alt="">
+                </div>
+                <div class="data">
+                    <div class="initial-data">
+                        <h3 class="name"><%=productos[i].productName%></h3>
+                        <button class="add-cart"><i class='bx bx-plus'></i></button>
+                    </div>
+                    <div class="footer-data">
+                        <p class="product-price">$<%=productos[i].productPrice%></p> 
+                    </div>
+                </div>
+            </a>
+        </article>
+    <%}%>
+</div>
+<!-- End seccion products container -->
