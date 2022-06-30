@@ -11,20 +11,8 @@ module.exports = function (sequelize, dataTypes){
             primaryKey: true,
             autoIncrement: true
         },
-        businessName: {
+        businessName:{
             type: dataTypes.STRING,
-        },
-        businessEmail1: {
-            type: dataTypes.STRING,
-        },
-        businessEmail2: {
-            type: dataTypes.STRING,
-        },
-        businessPhone1: {
-            type: dataTypes.BIGINT,
-        },
-        businessPhone2: {
-            type: dataTypes.BIGINT,
         },
         businessDeliveryFee: {
             type: dataTypes.BIGINT,
@@ -33,7 +21,7 @@ module.exports = function (sequelize, dataTypes){
             type: dataTypes.STRING,
         },
         businessProfile: {
-            type: dataTypes.BLOB,
+            type: dataTypes.STRING,
         },
         idUser: {
             type: dataTypes.INTEGER,

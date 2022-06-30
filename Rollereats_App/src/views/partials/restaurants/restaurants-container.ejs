@@ -1,139 +1,27 @@
 <!-- restaurant container  -->
 <div class="restaurants-container">
     <div class="restaurants">
-        <article class="restaurant">
-            <a href="/restaurantes">
-            <i class='bx bxs-heart'></i>
-            <img src="https://th.bing.com/th/id/R.e894cb17096dbeee04b521a4443491b9?rik=EDcL60gxXzsFiw&pid=ImgRaw&r=0" alt="">
-            <div class="data">
-                <div class="initial-data">
-                    <h3 class="name">Restaurant name</h3>
-                    <p class="rating">0.0</p>
-                </div>
-                <div class="footer-data">
-                    <div class="delivery-Fee">
-                        <p class="Fee">$0.00</p> 
-                        <p>delivery Fee</p> 
+        <% for( let i=0; i < business.length; i++){ %> 
+            <article class="restaurant">  
+                <a href="/restaurants/<%=business[i].idBusiness%>"> 
+                <i class='bx bxs-heart'></i>
+                <img src="<%=business[i].businessProfile%>" alt="">
+                <div class="data">
+                    <div class="initial-data">
+                        <h3 class="name"><%=business[i].businessName%></h3>
+                        <p class="rating">0.0</p>
                     </div>
-                    <span>00 - 00 min</span>
-                </div>
-            </div>
-            </a>
-        </article>
-        <article class="restaurant">
-            <a href="/business">
-            <i class='bx bxs-heart'></i>
-            <img src="https://th.bing.com/th/id/R.e894cb17096dbeee04b521a4443491b9?rik=EDcL60gxXzsFiw&pid=ImgRaw&r=0" alt="">
-            <div class="data">
-                <div class="initial-data">
-                    <h3 class="name">Restaurant name</h3>
-                    <p class="rating">0.0</p>
-                </div>
-                <div class="footer-data">
-                    <div class="delivery-Fee">
-                        <p class="Fee">$0.00</p> 
-                        <p>delivery Fee</p> 
+                    <div class="footer-data">
+                        <div class="delivery-Fee">
+                            <p class="Fee">$<%=business[i].businessDeliveryFee%></p> 
+                            <p>delivery Fee</p> 
+                        </div>
+                        <span>20 - 30 min</span>
                     </div>
-                    <span>00 - 00 min</span>
                 </div>
-            </div>
-            </a>
-        </article>
-        <article class="restaurant">
-            <a href="/business">
-            <i class='bx bxs-heart'></i>
-            <img src="https://th.bing.com/th/id/R.e894cb17096dbeee04b521a4443491b9?rik=EDcL60gxXzsFiw&pid=ImgRaw&r=0" alt="">
-            <div class="data">
-                <div class="initial-data">
-                    <h3 class="name">Restaurant name</h3>
-                    <p class="rating">0.0</p>
-                </div>
-                <div class="footer-data">
-                    <div class="delivery-Fee">
-                        <p class="Fee">$0.00</p> 
-                        <p>delivery Fee</p> 
-                    </div>
-                    <span>00 - 00 min</span>
-                </div>
-            </div>
-            </a>
-        </article>
-        <article class="restaurant">
-            <a href="/business">
-            <i class='bx bxs-heart'></i>
-            <img src="https://th.bing.com/th/id/R.e894cb17096dbeee04b521a4443491b9?rik=EDcL60gxXzsFiw&pid=ImgRaw&r=0" alt="">
-            <div class="data">
-                <div class="initial-data">
-                    <h3 class="name">Restaurant name</h3>
-                    <p class="rating">0.0</p>
-                </div>
-                <div class="footer-data">
-                    <div class="delivery-Fee">
-                        <p class="Fee">$0.00</p> 
-                        <p>delivery Fee</p> 
-                    </div>
-                    <span>00 - 00 min</span>
-                </div>
-            </div>
-            </a>
-        </article>
-        <article class="restaurant">
-            <a href="/business">
-            <i class='bx bxs-heart'></i>
-            <img src="https://th.bing.com/th/id/R.e894cb17096dbeee04b521a4443491b9?rik=EDcL60gxXzsFiw&pid=ImgRaw&r=0" alt="">
-            <div class="data">
-                <div class="initial-data">
-                    <h3 class="name">Restaurant name</h3>
-                    <p class="rating">0.0</p>
-                </div>
-                <div class="footer-data">
-                    <div class="delivery-Fee">
-                        <p class="Fee">$0.00</p> 
-                        <p>delivery Fee</p> 
-                    </div>
-                    <span>00 - 00 min</span>
-                </div>
-            </div>
-            </a>
-        </article>
-        <article class="restaurant">
-            <a href="/business">
-            <i class='bx bxs-heart'></i>
-            <img src="https://th.bing.com/th/id/R.e894cb17096dbeee04b521a4443491b9?rik=EDcL60gxXzsFiw&pid=ImgRaw&r=0" alt="">
-            <div class="data">
-                <div class="initial-data">
-                    <h3 class="name">Restaurant name</h3>
-                    <p class="rating">0.0</p>
-                </div>
-                <div class="footer-data">
-                    <div class="delivery-Fee">
-                        <p class="Fee">$0.00</p> 
-                        <p>delivery Fee</p> 
-                    </div>
-                    <span>00 - 00 min</span>
-                </div>
-            </div>
-            </a>
-        </article>
-        <article class="restaurant">
-            <a href="/business">
-            <i class='bx bxs-heart'></i>
-            <img src="https://th.bing.com/th/id/R.e894cb17096dbeee04b521a4443491b9?rik=EDcL60gxXzsFiw&pid=ImgRaw&r=0" alt="">
-            <div class="data">
-                <div class="initial-data">
-                    <h3 class="name">Restaurant name</h3>
-                    <p class="rating">0.0</p>
-                </div>
-                <div class="footer-data">
-                    <div class="delivery-Fee">
-                        <p class="Fee">$0.00</p> 
-                        <p>delivery Fee</p> 
-                    </div>
-                    <span>00 - 00 min</span>
-                </div>
-            </div>
-            </a>
-        </article>
+                </a>
+            </article>
+        <%}%>
     </div>
 </div>
 <!-- End restaurant container  -->

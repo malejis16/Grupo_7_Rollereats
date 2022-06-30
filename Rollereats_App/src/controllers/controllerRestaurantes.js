@@ -2,7 +2,7 @@
 const { validationResult } = require("express-validator");
 let db = require("../database/models");
 
-const mainController = {
+const mainController = { 
   restaurantes: (req, res) => {
     db.Product.findAll().then((productos) => {
       res.render("restaurantes/restaurantes", { productos: productos });
@@ -18,7 +18,7 @@ const mainController = {
 
   //Guardar producto CREADO
   storeProducto: (req, res) => {
-    let productoNuevo = {
+    let productoNuevo = { 
       productName: req.body.name,
       productPrice: req.body.price,
     };

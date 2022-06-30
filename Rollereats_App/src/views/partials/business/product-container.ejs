@@ -1,8 +1,8 @@
 <!-- seccion products container -->
 <div class="products-container">
     <% for( let i=0; i < productos.length; i++){ %>
-        <article class="product" data-open="modal-showproduct">
-            <a> 
+        <article class="product" data-open="modal-showproduct" id='<%=productos[i].idProduct%>'>
+            <a href="#<%=productos[i].idProduct%>"> 
                 <i class='bx bxs-heart'></i>
                 <div class="contein-img">
                     <img src="/img/<%=productos[i].productImg%>" alt="">

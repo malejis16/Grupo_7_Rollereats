@@ -5,6 +5,7 @@
             <h3>Your information</h3>
             <p>Update your information!</p> 
         </div>
+        
         <div class="update-email">
             <label for="email">E-mail address</label>
             <input type="email" type="number" id="email" placeholder="E-mail address" value ="<%=usuarioBuscado.email%>" name="email"><!--TODO:-->
@@ -19,7 +20,7 @@
         </div>
         <div class="update-name">
             <label for="country">Country</label> 
-            <input type="text" id="country" placeholder="Country" value ="<%=usuarioBuscado.country%>">
+            <input type="text" id="country" placeholder="Country" name = "country" value ="<%=usuarioBuscado.country%>">
         </div>
         <input class="update-button" type="submit" value="Update">
     </form>
