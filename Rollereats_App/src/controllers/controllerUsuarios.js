@@ -104,10 +104,9 @@ const usersController = {
   detail: (req, res) => {
     db.User.findByPk(req.params.id).then(function (usuarioBuscado) {
       res.render("usuarios/detalleUsuario", { usuarioBuscado: usuarioBuscado });
-      let usuarioG
     });
-  
-
+    // usuarioBuscado = req.session.usuarioLogueado;
+    // res.render("usuarios/detalleUsuario", { usuarioBuscado: usuarioBuscado });
   },
   edit: (req, res) => {
     db.User.findByPk(req.params.id).then(function (usuarioEditable) {

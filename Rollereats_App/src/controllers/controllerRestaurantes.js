@@ -18,7 +18,7 @@ const mainController = {
 
   //Guardar producto CREADO
   storeProducto: (req, res) => {
-    let productoNuevo = {
+    let productoNuevo = { 
       productName: req.body.name,
       productPrice: req.body.price,
     };

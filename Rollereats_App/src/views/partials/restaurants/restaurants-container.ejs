@@ -3,7 +3,7 @@
     <div class="restaurants">
         <% for( let i=0; i < business.length; i++){ %> 
             <article class="restaurant">  
-                <a href="/restaurantes"> 
+                <a href="/restaurants/<%=business[i].idBusiness%>"> 
                 <i class='bx bxs-heart'></i>
                 <img src="<%=business[i].businessProfile%>" alt="">
                 <div class="data">

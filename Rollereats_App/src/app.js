@@ -9,7 +9,7 @@ const routerRepartidor = require("./routes/routerRepartidor");
 const routerRestaurantes = require("./routes/routerRestaurantes");
 const routerUsuarios = require("./routes/routerUsuarios");
 const routerEndpoints = require("./routes/routerEndpoints");
-const restaurants = require("./routes/restaurants");
+const restaurants = require("./routes/routerRestaurants");
 
 
 //restaurants
