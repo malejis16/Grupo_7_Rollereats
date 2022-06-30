@@ -190,7 +190,7 @@ const usersController = {
           idUser: User.idUser,
           phone: User.phone,
           country: User.country,
-          avatar: "http://localhost:3001/img/" + User.avatar,
+          avatar: "http://localhost:3000/img/" + User.avatar,
           status: 200,
         });
       })
