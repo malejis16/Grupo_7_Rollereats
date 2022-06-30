@@ -174,7 +174,7 @@
       .login .login-contain {
         box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.07); } }
     .login .login-contain .contain-left {
-      background: url("https://via.placeholder.com/510x653.png/f2f2f2/dedede?Text=510x653") no-repeat;
+      background: url("https://i.postimg.cc/Mpf6VrYR/OIP.jpg") no-repeat;
       background-size: cover;
       background-position: center;
       width: 50%;
@@ -191,8 +191,7 @@
       @media (max-width: 768px) {
         .login .login-contain .contain-left {
           display: none; } }
-    .login .login-contain .contain-right {
-      width: 50%;
+    .login .login-contain .contain-right { 
       color: #2b2b2b;
       display: flex;
       justify-content: center;
@@ -829,6 +828,9 @@
       box-shadow: rgba(60, 64, 67, 0.26) 0px 1px 2px 0px, rgba(60, 64, 67, 0.05) 0px 1px 3px 1px; }
     .products-container .product:hover .contein-img img {
       transform: scale(1.4) rotate(20deg); }
+    .products-container .product a{
+      text-decoration: none;
+      color: black; }
     .products-container .product .contein-img {
       overflow: hidden; }
       .products-container .product .contein-img img {
