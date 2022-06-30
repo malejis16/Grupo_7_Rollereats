@@ -6,12 +6,6 @@ module.exports = function (sequelize, dataTypes) {
       primaryKey: true,
       autoIncrement: true,
     },
-    firtName: {
-      type: dataTypes.STRING,
-    },
-    lastName: {
-      type: dataTypes.STRING,
-    },
     address: {
       type: dataTypes.STRING,
     },

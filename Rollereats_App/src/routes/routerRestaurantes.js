@@ -22,6 +22,7 @@ var upload = multer({ storage });
 
 //Rutas Restaurantes
 rutas.get("/", logintMiddleware, controller.restaurantes);
+
 //Crear Producto
 //rutas.get("/createProducto", controller.createProducto);
 rutas.post(
