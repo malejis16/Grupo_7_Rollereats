@@ -5,7 +5,7 @@ var restaurantsController = require('../controllers/controllerRestaurants');
 
 /* GET restaurants page. */
 router.get('/restaurants', restaurantsController.getRestaurants);
-router.get('/restaurants/:id', restaurantsController.getRestaurantsDetalle);
+// router.get('/restaurants/:id',restaurantsController.getProduct, /*restaurantsController.getRestaurantsDetalle */);
 
 
 module.exports = router; 
